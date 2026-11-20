@@ -2,3 +2,15 @@
 __pycache__
 models.zip
 models
+
+# Local environments, credentials, and experiment output
+.venv*/
+.env
+.env.*
+!.env.example
+.modal.toml
+wandb/
+outputs/
+checkpoints/
+*.pt
+*.pth

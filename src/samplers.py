@@ -14,6 +14,7 @@ class DataSampler:
 def get_data_sampler(data_name, n_dims, **kwargs):
     names_to_classes = {
         "gaussian": GaussianSampler,
+        "uniform": UniformSampler,
     }
     if data_name in names_to_classes:
         sampler_cls = names_to_classes[data_name]
@@ -56,3 +57,20 @@ class GaussianSampler(DataSampler):
         if n_dims_truncated is not None:
             xs_b[:, :, n_dims_truncated:] = 0
         return xs_b
+
+
+class UniformSampler(DataSampler):
+    """Uniform inputs in [-1, 1], preserving the upstream sampler interface."""
+    def sample_xs(self, n_points, b_size, n_dims_truncated=None, seeds=None):
+        if seeds is None:
+            xs = 2 * torch.rand(b_size, n_points, self.n_dims) - 1
+        else:
+            if len(seeds) != b_size:
+                raise ValueError("One input seed is required per prompt")
+            xs = torch.stack([
+                2 * torch.rand(n_points, self.n_dims, generator=torch.Generator().manual_seed(int(seed))) - 1
+                for seed in seeds
+            ])
+        if n_dims_truncated is not None:
+            xs[:, :, n_dims_truncated:] = 0
+        return xs

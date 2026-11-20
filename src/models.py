@@ -12,6 +12,9 @@ from base_models import NeuralNetwork, ParallelNetworks
 
 
 def build_model(conf):
+    if getattr(conf, "pilot", False):
+        from pilot_models import RegressionModel
+        return RegressionModel(conf)
     if conf.family == "gpt2":
         model = TransformerModel(
             n_dims=conf.n_dims,

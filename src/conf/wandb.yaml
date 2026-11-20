@@ -1,5 +1,5 @@
 wandb:
-    project: in-context-training
-    entity: your-entity
+    project: project182
+    entity: alexander-tian-ucb
     notes:
     log_every_steps: 100
