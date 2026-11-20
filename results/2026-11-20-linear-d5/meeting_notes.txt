@@ -1,0 +1,55 @@
+PROJECT182 — LONGER RUNS AND THREE TRAINING SEEDS
+
+Completed: four architectures × three independent training seeds, each at 10,000 steps, on the same noisy d=5 linear-regression task. Each checkpoint at 2k, 5k, and 10k was evaluated on the same fresh 1,024-prompt confirmation set after all training decisions were fixed.
+
+CONFIRMATION RESULTS (mean ± training-seed standard deviation)
+Normalized excess error is the mean squared distance from the exact Bayesian posterior mean divided by mean Bayes risk. Zero is optimal; lower is better. These are means and SDs across three independent training seeds, not confidence intervals across individual test predictions.
+
+Transformer: 2k: 0.5237 ± 0.1587; 5k: 0.0849 ± 0.0123; 10k: 0.0527 ± 0.0100
+Linear attention: 2k: 1.8155 ± 0.6194; 5k: 0.6246 ± 0.0963; 10k: 0.3953 ± 0.1339
+Mamba-2: 2k: 0.2500 ± 0.0101; 5k: 0.1004 ± 0.0093; 10k: 0.0663 ± 0.0069
+Gated DeltaNet: 2k: 0.0604 ± 0.0031; 5k: 0.0383 ± 0.0087; 10k: 0.0248 ± 0.0063
+
+FINAL SEED VALUES AND ORDERING
+Final values are listed in seed order 182, 183, 184. Ordering sensitivity is mean squared prediction change divided by Bayes risk, after shuffling 32 context pairs while holding the query fixed. It uses 256 prompts × five permutations for each model. The exact Bayesian predictor is order-invariant.
+
+Transformer: error seeds 0.0466, 0.0642, 0.0472; shuffle sensitivity 0.1945 ± 0.0226.
+Linear attention: error seeds 0.5473, 0.2947, 0.3440; shuffle sensitivity 0.8723 ± 0.3714.
+Mamba-2: error seeds 0.0736, 0.0599, 0.0653; shuffle sensitivity 0.0435 ± 0.0126.
+Gated DeltaNet: error seeds 0.0176, 0.0297, 0.0270; shuffle sensitivity 0.0211 ± 0.0046.
+
+WHAT THIS ADDS TO THE FIRST PILOT
+The Transformer’s mean confirmation error fell from 0.5237 to 0.0527, roughly a tenfold reduction. Gated DeltaNet had the lowest final error in every seed. Transformer and Mamba-2 are close overall: their paired three-seed difference has a wide 95% interval spanning zero, so these runs do not establish a reliable winner between them.
+At 32 context examples, Mamba-2’s normalized shuffle sensitivity averaged 0.0435 versus 0.1945 for the Transformer; Gated DeltaNet averaged 0.0211. Prediction quality and order sensitivity provide different information. These are descriptive findings on this control task, not causal evidence about the learned algorithm.
+The 2,000-step comparison was strongly affected by learning speed. The table above compares identical held-out prompts across every checkpoint and seed, so improvements are not caused by using an easier test set for the longer runs.
+10,000 steps is a common training budget, not a guarantee of convergence. We chose this horizon after reviewing the original seed’s validation curves, then fixed it before launching the two additional seeds. Some validation curves were still improving. The confirmation set was not used for learning-rate selection, horizon selection, or early stopping.
+Three seeds allow a preliminary repeatability assessment. Detailed results include Student-t 95% intervals for seed means and paired architecture differences, but with only three seeds those intervals have limited precision and assume a suitable sampling model. Main figures show individual seeds and one-SD error bars explicitly.
+This remains a low-dimensional control, not evidence of a state-capacity threshold. There is no state-size or task-difficulty intervention. Models share depth and width but differ in parameter counts, normalization details, and local convolutions. Linear attention has no short convolution. Persistent gaps can still reflect optimization or input/label binding.
+
+DECAY-GATE EVIDENCE
+The gate figures compare initial, 2k, 5k, and 10k values on fixed validation prompts. Raw snapshots preserve layer/head/token/prompt axes. The scalar product of alpha over 64 tokens is a diagnostic of the decay path, not a measurement of total information retained by the model; delta writes, beta, convolutions, and other layers also matter.
+
+Mamba-2, seed 182: mean alpha 0.884 -> 0.970; alpha > .99 6.1% -> 26.4%; mean 64-token scalar decay product 0.107 -> 0.191.
+Mamba-2, seed 183: mean alpha 0.846 -> 0.952; alpha > .99 18.1% -> 31.9%; mean 64-token scalar decay product 0.179 -> 0.265.
+Mamba-2, seed 184: mean alpha 0.805 -> 0.969; alpha > .99 9.0% -> 28.4%; mean 64-token scalar decay product 0.144 -> 0.249.
+Gated DeltaNet, seed 182: mean alpha 0.901 -> 0.931; alpha > .99 20.9% -> 80.4%; mean 64-token scalar decay product 0.244 -> 0.768.
+Gated DeltaNet, seed 183: mean alpha 0.773 -> 0.810; alpha > .99 9.3% -> 70.4%; mean 64-token scalar decay product 0.136 -> 0.703.
+Gated DeltaNet, seed 184: mean alpha 0.797 -> 0.796; alpha > .99 10.2% -> 55.2%; mean 64-token scalar decay product 0.117 -> 0.553.
+
+EXPERIMENT PROTOCOL
+Learning rate 3e-4, Adam, no weight decay, gradient-norm clipping at 1, batch 64, width 128, four layers and four heads, 33 x/y pairs per prompt. Gaussian N(0,I) weights; uniform [-1,1]^5 inputs; additive noise std 0.5. Fresh training prompts at every update. Full FP32 with PyTorch TF32 disabled. The original seed resumed its saved optimizer and RNG states; new seeds varied both initialization and the training stream.
+Training seeds: 182, 183, 184. Data-stream seeds: 1,000,000; 2,000,000; 3,000,000. Within each seed, every architecture receives identical training prompts at each update. Validation seed 100,000,000 (256 prompts); confirmation seed 300,000,000 (1,024 prompts). Exact posterior means, Bayes risks, and effective dimensions are computed in float64.
+Mean confirmation Bayes risk: 0.543575. Mean effective dimension at 32 observed examples: 4.8653. Zero-prediction normalized excess: 2.5869.
+The model, task sampler, and metric implementations were verified byte-for-byte unchanged from the first pilot. The existing causal leakage, finite-gradient, checkpoint, optimizer-resume, Bayesian-reference, and delta-recurrence checks therefore continue to apply to the same implementations. Follow-up changes add seeds, milestone checkpoints, orchestration, and reporting. New source syntax and file-diff checks passed. All five exported figures were visually inspected.
+Mamba-2 uses FLA’s PyTorch fallback; Gated DeltaNet uses an exact PyTorch triangular-solve recurrence. Linear attention uses its quadratic causal form. Measured execution time is not an optimized-kernel architecture benchmark.
+
+COST AND REPRODUCIBILITY
+Budget: $5 additional. Budget-accounted worker time: 4703.7 seconds. Conservative compute estimate at $3/hour: $3.92; including the $0.50 overhead reserve: $4.42.
+Measured successful calls account for 2783.7 seconds; failed-start timeout reservations account for another 1920.0 seconds. Four queued third-seed starts failed before training because W&B service log files prevented worker reload. Cleanup was corrected and only the unfinished runs were retried. The ledger retains full 480-second reservations for those failed starts, so its estimate substantially overstates their actual cost.
+Modal workspace credit snapshot: $2.77 total, versus $0.52 in the saved pre-follow-up snapshot (approximately $2.25 additional). Billing can lag; the snapshot includes setup and CPU work and is not an exact per-phase invoice. Saved at 2026-11-20T00:25:01-08:00.
+All project apps were verified stopped after completion. Checkpoints remain in the personal Modal Volume project182-artifacts under pilot_v1/runs/<run_id>/checkpoints/. The follow-up manifest, budget ledger, confirmation data and predictions, and reports are under followup_v1/.
+W&B: https://forge.coreweave.com/wandb/alexander-tian-ucb/project182. New runs use alex_261120 names; original runs retain alex_261119. Earlier test/* summaries have a test/step label; confirmation/* summaries refer to 10k checkpoints and the new test set.
+Implementation is published in this repository (code commit f292cc0). This results folder contains the report figures, summary tables, detailed JSON, and these notes. The separately archived full results ZIP additionally includes source, configs, predictions, gate snapshots, and budget records; it omits large model checkpoints and credentials.
+
+NEXT SCIENTIFIC QUESTIONS
+Before interpreting residual gaps as memory limits, establish sufficiently stable training and test an input-pairing control for plain linear attention. Then compare low- versus high-difficulty GP tasks and vary recurrent state size. For the forgetting hypothesis, compare i.i.d. and ordered-time prompts and use targeted gate interventions; gate averages alone cannot establish a causal mechanism.

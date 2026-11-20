@@ -1,5 +1,7 @@
 # Project182: in-context regression pilot
 
+**[Team results: plots, tables, and meeting notes](results/)**
+
 Personal experiment repository: `Alex2262/project182`. Compute runs in the
 `alexander-tian` Modal workspace; W&B logs go to `alexander-tian-ucb/project182`.
 
