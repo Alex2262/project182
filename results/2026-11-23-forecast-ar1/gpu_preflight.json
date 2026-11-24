@@ -1,0 +1,109 @@
+{
+  "cases": [
+    {
+      "family": "gated_deltanet",
+      "length": 64,
+      "batch_size": 32,
+      "steps": 10,
+      "losses": [
+        0.48861750960350037,
+        0.4033915400505066,
+        0.40428510308265686,
+        0.33664295077323914,
+        0.38828331232070923,
+        0.5202198028564453,
+        0.3927948772907257,
+        0.36767899990081787,
+        0.37460342049598694,
+        0.38214343786239624
+      ],
+      "causality_max_error": 0.0,
+      "median_seconds_per_step_after_warmup": 0.01174185199999922,
+      "parameters": 110641,
+      "persistent_state_elements_per_series": 3200,
+      "persistent_state_bytes_fp32_per_series": 12800,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs",
+      "streaming_max_abs_error": 2.086162567138672e-07
+    },
+    {
+      "family": "gated_deltanet",
+      "length": 256,
+      "batch_size": 8,
+      "steps": 10,
+      "losses": [
+        0.5451799631118774,
+        0.38391903042793274,
+        0.3471924066543579,
+        0.29814913868904114,
+        0.6535764932632446,
+        0.4255233705043793,
+        0.3960641324520111,
+        0.37858450412750244,
+        0.419751912355423,
+        0.3184341490268707
+      ],
+      "causality_max_error": 0.0,
+      "median_seconds_per_step_after_warmup": 0.026685158000000264,
+      "parameters": 110641,
+      "persistent_state_elements_per_series": 3200,
+      "persistent_state_bytes_fp32_per_series": 12800,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs",
+      "streaming_max_abs_error": 2.682209014892578e-07,
+      "long_prefix_check_seconds": 0.19832099999999997
+    },
+    {
+      "family": "transformer_nope",
+      "length": 64,
+      "batch_size": 32,
+      "steps": 10,
+      "losses": [
+        0.3947679400444031,
+        0.4841008484363556,
+        0.45384347438812256,
+        0.3348274230957031,
+        0.41485002636909485,
+        0.5734782218933105,
+        0.43726032972335815,
+        0.388933390378952,
+        0.4010987877845764,
+        0.4186423420906067
+      ],
+      "causality_max_error": 0.0,
+      "median_seconds_per_step_after_warmup": 0.0035716644999999048,
+      "parameters": 99841,
+      "persistent_state_elements_per_series": 0,
+      "persistent_state_bytes_fp32_per_series": 0,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs"
+    },
+    {
+      "family": "transformer_nope",
+      "length": 256,
+      "batch_size": 8,
+      "steps": 10,
+      "losses": [
+        0.396915078163147,
+        0.4393971562385559,
+        0.38883650302886963,
+        0.28934937715530396,
+        0.6554440259933472,
+        0.4812183678150177,
+        0.4495508074760437,
+        0.42099663615226746,
+        0.4753175973892212,
+        0.3474142253398895
+      ],
+      "causality_max_error": 0.0,
+      "median_seconds_per_step_after_warmup": 0.003612355500000497,
+      "parameters": 99841,
+      "persistent_state_elements_per_series": 0,
+      "persistent_state_bytes_fp32_per_series": 0,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs",
+      "long_prefix_check_seconds": 0.010879372999999859
+    }
+  ],
+  "elapsed_seconds": 4.210819081000001
+}

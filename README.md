@@ -1,9 +1,24 @@
-# Project182: in-context regression pilot
+# Project182: recurrent in-context forecasting
 
-**[Team results: plots, tables, and meeting notes](results/)**
+We study whether a recurrent forecaster keeps benefiting from a longer observation history, and how training history and optimization affect that behavior. The controlled AR(1) task has an exact Bayesian reference using compact running statistics.
+
+- **[Latest result: paired full-history versus recent-window forecasts](results/2026-11-24-forecast-windows/README.md)** — full history wins at 4k observations, but replaying the latest 2,048 wins at 16k in all three tested models.
+- **[All experiment reports, plots, and tables](results/README.md)** — includes the forecasting pilots, training-history sweep, optimization continuations, and original regression control.
+- **[Forecasting setup and statistical reference](docs/forecast_pilot.md)** and **[latest evaluation protocol](docs/forecast_windows.md)**.
+
+The reports include saved predictions and references so teammates can inspect results and regenerate plots without GPU jobs. Install `requirements-forecast.txt`, then run from this repository's root:
+
+```bash
+python scripts/evaluate_forecast_windows.py --repo . \
+  --output results/2026-11-24-forecast-windows --summarize-only
+```
+
+The latest results remain exploratory: three training seeds on the existing validation cohort, with independent confirmation pending. Raw model checkpoints are excluded from Git; their locations and hashes are recorded in the experiment manifests.
 
 Personal experiment repository: `Alex2262/project182`. Compute runs in the
 `alexander-tian` Modal workspace; W&B logs go to `alexander-tian-ucb/project182`.
+
+## Earlier regression pilot
 
 The first pilot compares HF GPT-2, normalized linear attention, Mamba-2, and
 Gated DeltaNet on noisy linear regression. It uses 4 layers, width 128, 4 heads,

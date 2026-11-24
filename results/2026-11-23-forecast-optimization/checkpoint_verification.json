@@ -1,0 +1,203 @@
+{
+  "checks": [
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s182",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "a206ec67118b8f759f08075a0e014118eec587729c2ab3cf95106075fc750bfa",
+        "15000": "2efcc8779ca723c8fbb515c318c4fc2ff5a603253c90f3f9b31bf4e2d20e9236",
+        "20000": "0b7f5196d1b3b1eda100f0810973287d54ff7bac9fac11676dc0a556c5b1ea3c",
+        "30000": "bfdaa6529b98a20c544e161c744f28e870fcef732f136535b5bc7ea311cfd670"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s182",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "55b0f72229e685be3bfd7e16006ef306f9589881a1f79b5c91b99141a909bcd6",
+        "15000": "4bba86c5209d567058287c9eaad10a896bf10068afe961d03b8d8a24166d0c97",
+        "20000": "d5bcccaafb345e1b5e295cc507c0acf1bd970d2d8d4610c9d279e95246e2a10d",
+        "30000": "42b4f582d9e6045c5f910312b891c43745e50fe66a2ddeb79c1c48e0dd57bce1"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 8.940696716308594e-08
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s183",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "c8dcfc857d75bed662242716bf1149a5196298d2771003d2657b716cc6d57a0b",
+        "15000": "37b33c8823905d763581d66447a35862c174539e2d62b18bf6bae8e068222a75",
+        "20000": "06a1c91b6f5fbf70ba58b704c6db1e61d78714153bedcedf05b45293f9a4b381",
+        "30000": "e359efc4d89db7e0adb31642970f660b9b69b1006635f65543ae70d25bd70e8a"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.1920928955078125e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "014bd5576c842e724d560e40d121e053aeb8ef319c52791bae6c2762454f0cbf",
+        "15000": "ad4c4d145601f9114efd85fb4aac68fd4f856ae4fd99971084a83c148d8ff6a4",
+        "20000": "7f3826348a0e49de9c7e4fbfc97ab701a1ef4bc46cc54e6d4994da1f32b348d0",
+        "30000": "7465d876c68c7b3883967ec35ebf357516cd1dc7469fa410207eff51c08f4111"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s184",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "fef4f85b26150cc44b2d834a93858f32a623be3960b51047eb3e2c22e29f8166",
+        "15000": "0b778ca545e04c3d23b26e2c51823e9e15a85002d9ddb35666098382a5856bc9",
+        "20000": "636f3ec5ea93d97e88222685d9f2f707907671c7eb0cfefce4c5183dad29939c",
+        "30000": "aa9736bd166e2c9381c0cebaf4cc1e50e13dec7e3cc6861b6fa18dfc8257d9ef"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 8.940696716308594e-08
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s184",
+      "verified_steps": [
+        10000,
+        15000,
+        20000,
+        30000
+      ],
+      "checkpoint_sha256": {
+        "10000": "656e0a67e37b048588acc1ef48f5559dfafcb3b96797fdb14929fcea9e73eff1",
+        "15000": "f50df7e2f506ee0badfcf79cc9e38efdfafd2a38735b2b6bb681adb3d5527f6d",
+        "20000": "c9be82845bacf342dd4bbbb96cdbd89ab97624ccd1144c109b11b126a620a804",
+        "30000": "2cd1597dcf7b8dbf552998d6553bf29edaf11d22883f2769565455b96b3fc8e1"
+      },
+      "source_hashes_match": true,
+      "parent_model_and_adam_bit_exact": true,
+      "adam_steps_and_learning_rates_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.1920928955078125e-07
+    }
+  ],
+  "confirmation_set_opened": false
+}

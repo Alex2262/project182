@@ -1,0 +1,152 @@
+[
+  {
+    "run_name": "alex_261123_ar1_horizon_m1024_s182",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m1024_s183",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m1024_s184",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_s182",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_s183",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_s184",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_r256_s182",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_r256_s183",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_m2048_r256_s184",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": null,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_l64_s182",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_l64_s183",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_l64_s184",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_m256_s182",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_m256_s183",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  },
+  {
+    "run_name": "alex_261123_ar1_horizon_eval_m256_s184",
+    "common_validation_max_abs_difference": 0.0,
+    "reused_checkpoint_prefix_prediction_max_abs_difference": 0.0,
+    "metrics_recomputed_steps": [
+      2000,
+      5000,
+      10000
+    ]
+  }
+]

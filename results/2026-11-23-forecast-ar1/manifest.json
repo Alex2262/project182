@@ -1,0 +1,126 @@
+{
+  "prepared_at_utc": "2026-11-24T00:45:47.796000+00:00",
+  "personal_modal_workspace": "alexander-tian",
+  "github_repository": "Alex2262/project182",
+  "scope": "one preflight and four seed-182 pilot training runs",
+  "confirmation_set_opened": false,
+  "training_gpu": "A100-40GB",
+  "max_containers_per_job": 1,
+  "hard_timeout_seconds_per_training_call": 1800,
+  "runs": [
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_s182",
+      "config_file": "configs/alex_261123_ar1_gated_deltanet_short_s182.yaml",
+      "family": "gated_deltanet",
+      "regime": "short",
+      "seed": 182,
+      "steps": 2000,
+      "training_tokens": 4096000,
+      "status": "finished",
+      "remote_directory": "forecast_v1/runs/alex_261123_ar1_gated_deltanet_short_s182",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-bCbLoBN44NDF7LpbiZQ7QU",
+      "result": {
+        "completed_steps": 2000,
+        "planned_steps": 2000,
+        "elapsed_seconds": 112.795721905,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_gated_deltanet_short_s182",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_gated_deltanet_short_s182",
+      "wandb_identity_verified_in_log": true,
+      "final_checkpoint_sha256": "e9dd7e758665194f9278f39e6a97829d77d607e9c5cb3604f317aa24bd7e3482",
+      "modal_final_state": "stopped",
+      "modal_remaining_tasks": 0
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_s182",
+      "config_file": "configs/alex_261123_ar1_gated_deltanet_mixed_s182.yaml",
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "seed": 182,
+      "steps": 2000,
+      "training_tokens": 4096000,
+      "status": "finished",
+      "remote_directory": "forecast_v1/runs/alex_261123_ar1_gated_deltanet_mixed_s182",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-gUMkIkod4j2Exh3BmNi3Kv",
+      "result": {
+        "completed_steps": 2000,
+        "planned_steps": 2000,
+        "elapsed_seconds": 124.45291858899999,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_gated_deltanet_mixed_s182",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_gated_deltanet_mixed_s182",
+      "wandb_identity_verified_in_log": true,
+      "final_checkpoint_sha256": "a5e1487d21bb65bd00724d247a073c79fe412d36312321fe180bc992422c388d",
+      "modal_final_state": "stopped",
+      "modal_remaining_tasks": 0
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_s182",
+      "config_file": "configs/alex_261123_ar1_transformer_nope_short_s182.yaml",
+      "family": "transformer_nope",
+      "regime": "short",
+      "seed": 182,
+      "steps": 2000,
+      "training_tokens": 4096000,
+      "status": "finished",
+      "remote_directory": "forecast_v1/runs/alex_261123_ar1_transformer_nope_short_s182",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-WylAbNxkM5Z3EXT7P8EUuX",
+      "result": {
+        "completed_steps": 2000,
+        "planned_steps": 2000,
+        "elapsed_seconds": 20.369413264,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_transformer_nope_short_s182",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_transformer_nope_short_s182",
+      "wandb_identity_verified_in_log": true,
+      "final_checkpoint_sha256": "41d045207a11b44d4abfea636a2ef7615bc0fa7bda7c195fb39f82d737f63b9c",
+      "modal_final_state": "stopped",
+      "modal_remaining_tasks": 0
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_s182",
+      "config_file": "configs/alex_261123_ar1_transformer_nope_mixed_s182.yaml",
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "seed": 182,
+      "steps": 2000,
+      "training_tokens": 4096000,
+      "status": "finished",
+      "remote_directory": "forecast_v1/runs/alex_261123_ar1_transformer_nope_mixed_s182",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-Zy7paF5my5j2hA2RhWd7VH",
+      "result": {
+        "completed_steps": 2000,
+        "planned_steps": 2000,
+        "elapsed_seconds": 19.310433107,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_transformer_nope_mixed_s182",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_transformer_nope_mixed_s182",
+      "wandb_identity_verified_in_log": true,
+      "final_checkpoint_sha256": "64d66ffa889bf693bd160135ca1b8800d860816887f037c66372dbc379fb6d9f",
+      "modal_final_state": "stopped",
+      "modal_remaining_tasks": 0
+    }
+  ],
+  "preflight": {
+    "status": "passed",
+    "app_url": "https://modal.com/apps/alexander-tian/main/ap-BKD3GMTaQd2OcU8lDcOi0X",
+    "elapsed_function_seconds": 4.210819081000001,
+    "modal_final_state": "stopped",
+    "modal_remaining_tasks": 0
+  },
+  "resource_rate_usd_per_second": {
+    "a100_40gb": 0.000583,
+    "cpu_conservative_2_physical_cores": 2.62e-05,
+    "ram_8_gib": 1.776e-05,
+    "source": "https://modal.com/pricing"
+  },
+  "measured_function_seconds": 281.139305946,
+  "estimated_running_compute_usd": 0.17626309925590414,
+  "compute_estimate_excludes": "image build, container startup/load, artifact commits, scale-down, storage and egress; not a billing receipt",
+  "timing_note": "measured_function_seconds sums instrumented runtime sections, not total container-billed lifetime",
+  "artifacts_verified_at_utc": "2026-11-24T00:56:02.026452+00:00"
+}

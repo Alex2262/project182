@@ -1,0 +1,65 @@
+{
+  "name": "alex_261124_ar1_paired_windows",
+  "status": "complete",
+  "registered_at_utc": "2026-11-24T08:36:51.302392+00:00",
+  "training_seeds": [
+    182,
+    183,
+    184
+  ],
+  "checkpoint_step": 30000,
+  "checkpoint_arm": "cosine",
+  "origins": [
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "primary_origin": 16384,
+  "primary_comparison": "window2048 minus full",
+  "policies": [
+    "full",
+    "window256",
+    "window2048"
+  ],
+  "validation_seed": 920000000,
+  "series": 512,
+  "primary_metric": "squared error against true next-value mean a*y[t]",
+  "additional_metrics": [
+    "squared disagreement with full-history Bayes",
+    "total expected MSE"
+  ],
+  "device": "local CPU",
+  "dtype": "float32",
+  "batch_size": 16,
+  "torch_threads": 2,
+  "new_training_updates": 0,
+  "cloud_jobs": 0,
+  "cloud_compute_cost_usd": 0,
+  "confirmation_set_opened": false,
+  "full_predictions": "Reused saved GPU predictions; CPU replay verifies four series per seed at all origins.",
+  "window_definition": "Reset recurrent and convolution states; replay last W observed transitions ending at the same t; predict y[t+1].",
+  "uncertainty": "5000 paired bootstrap resamples of independent series, seed 261124; average losses across the three fixed models before resampling. Pointwise conditional intervals, not training-population intervals.",
+  "torch_version": "2.10.0",
+  "model_source_sha256": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+  "data_sha256": "9b992c82ae9bc6d004f46aa8affa4e004d502b977bf08c8ea2fa1047dc16d71a",
+  "checkpoints": [
+    {
+      "seed": 182,
+      "path": "outputs/forecast_optimization/alex_261123_ar1_opt30k_cosine_s182/state_step_30000.pt",
+      "sha256": "42b4f582d9e6045c5f910312b891c43745e50fe66a2ddeb79c1c48e0dd57bce1"
+    },
+    {
+      "seed": 183,
+      "path": "outputs/forecast_optimization/alex_261123_ar1_opt30k_cosine_s183/state_step_30000.pt",
+      "sha256": "7465d876c68c7b3883967ec35ebf357516cd1dc7469fa410207eff51c08f4111"
+    },
+    {
+      "seed": 184,
+      "path": "outputs/forecast_optimization/alex_261123_ar1_opt30k_cosine_s184/state_step_30000.pt",
+      "sha256": "2cd1597dcf7b8dbf552998d6553bf29edaf11d22883f2769565455b96b3fc8e1"
+    }
+  ],
+  "elapsed_seconds": 377.24249550001696,
+  "completed_at_utc": "2026-11-24T08:43:08.355778+00:00"
+}

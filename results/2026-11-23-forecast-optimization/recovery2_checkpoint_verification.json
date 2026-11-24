@@ -1,0 +1,26 @@
+[
+  {
+    "run_name": "alex_261123_ar1_opt30k_constant_s182",
+    "saved_step": 28603,
+    "remaining_updates": 1397,
+    "checkpoint_sha256": "d86fd6c231eaa6e1f338ae1cfef437b602191048e70d047d06248a197fb99ac4",
+    "configuration_unchanged": true,
+    "model_finite": true,
+    "adam_steps_verified": true,
+    "resume_lr": 0.0003,
+    "all_interrupted_segments_seconds_to_last_log": 2113.847416392,
+    "last_logged_step": 28600
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+    "saved_step": 27845,
+    "remaining_updates": 2155,
+    "checkpoint_sha256": "2ef1323ef0903ba22619049b1772afab3a077ff5f9f284ed9abdbe664e856bd0",
+    "configuration_unchanged": true,
+    "model_finite": true,
+    "adam_steps_verified": true,
+    "resume_lr": 3.765474621028807e-05,
+    "all_interrupted_segments_seconds_to_last_log": 2109.4432290199998,
+    "last_logged_step": 27825
+  }
+]

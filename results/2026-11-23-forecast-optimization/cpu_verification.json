@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "real_checkpoint_checks": [
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s182",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 0.0003
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s182",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 3e-05
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s183",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 0.0003
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 3e-05
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s184",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 0.0003
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s184",
+      "model_and_adam_preserved": true,
+      "first_lr": 0.0003,
+      "last_lr": 3e-05
+    }
+  ],
+  "restart_checks": [
+    {
+      "arm": "constant",
+      "uninterrupted_vs_continuation_bit_exact": true,
+      "mid_schedule_restart_bit_exact": true
+    },
+    {
+      "arm": "cosine",
+      "uninterrupted_vs_continuation_bit_exact": true,
+      "mid_schedule_restart_bit_exact": true
+    }
+  ],
+  "paired_data_equal": true,
+  "other_hyperparameter_change_rejected": true,
+  "confirmation_set_opened": false
+}

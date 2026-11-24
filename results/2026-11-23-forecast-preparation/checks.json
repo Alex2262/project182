@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "quadrature_max_abs_error": 1.5865087021893487e-13,
+    "prefix_invariance": true,
+    "reference_causality": true,
+    "fixed_data_reload_and_spec_validation": true
+  },
+  "delta": {
+    "forward_max_abs_error": 9.228728892196614e-16,
+    "gradient_max_abs_error": 1.0658141036401503e-14,
+    "nonzero_initial_state_and_uneven_chunks": true
+  },
+  "models": {
+    "gated_deltanet": {
+      "causality_max_abs_error": 0.0,
+      "parameters": 110641,
+      "persistent_state_elements_per_series": 3200,
+      "persistent_state_bytes_fp32_per_series": 12800,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs",
+      "prefix_evaluation_matches_direct_predictions": true,
+      "streaming_chunk_1_max_abs_error": 5.364418029785156e-07,
+      "streaming_chunk_7_max_abs_error": 4.917383193969727e-07,
+      "streaming_chunk_64_max_abs_error": 4.991888999938965e-07,
+      "state_size_verified": true,
+      "three_cpu_optimizer_steps_finite": true,
+      "checkpoint_prediction_exact": true
+    },
+    "transformer_nope": {
+      "causality_max_abs_error": 0.0,
+      "parameters": 99841,
+      "persistent_state_elements_per_series": 0,
+      "persistent_state_bytes_fp32_per_series": 0,
+      "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+      "positional_embedding": "none; both models receive adjacent observed-value pairs",
+      "prefix_evaluation_matches_direct_predictions": true,
+      "three_cpu_optimizer_steps_finite": true,
+      "checkpoint_prediction_exact": true
+    }
+  },
+  "feasibility": {
+    "series": 1024,
+    "max_risk_identity_abs_z": 2.432209113408689,
+    "risk_at_64": 0.2541150452928759,
+    "risk_at_4096": 0.25006133615068993,
+    "epistemic_at_64": 0.004115045292875895,
+    "epistemic_at_4096": 6.133615068991524e-05
+  }
+}

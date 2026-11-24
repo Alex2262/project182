@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-11-24T00:41:26.219669+00:00",
+  "scope": "project182 forecasting pilot only",
+  "github": {
+    "verified_login": "Alex2262",
+    "origin": "https://github.com/Alex2262/project182.git",
+    "commit_email": "81930082+Alex2262@users.noreply.github.com"
+  },
+  "modal": {
+    "verified_profile": "alexander-tian",
+    "verified_workspace": "alexander-tian",
+    "identity_lookup": "read-only; credentials taken from this profile with environment overrides disabled",
+    "personal_app_list_entries": 0,
+    "compute_launched_during_audit": false
+  },
+  "storage": {
+    "volume": "project182-artifacts",
+    "workspace": "alexander-tian"
+  },
+  "wandb": {
+    "configured_entity": "alexander-tian-ucb",
+    "configured_project": "project182",
+    "secret_name": "project182-wandb",
+    "verification": "configuration only; no new login/logging job"
+  },
+  "local_compute": "CPU only for forecasting checks",
+  "code_upload_allowlist": [
+    "src/forecast_data.py",
+    "src/forecast_models.py",
+    "src/forecast_runtime.py",
+    "src/conf/forecast_pilot.yaml"
+  ],
+  "launcher_sha256": "59fd87820339860059b2d0e1a68a2357f5dd9218246353b4fa7757de60380a7e",
+  "guard_checks": [
+    "personal profile accepted",
+    "missing explicit profile rejected",
+    "different profile rejected",
+    "credential environment override rejected",
+    "different W&B destination rejected"
+  ],
+  "work_resources_used_for_pilot": false,
+  "no_new_cloud_experiments_launched": true
+}

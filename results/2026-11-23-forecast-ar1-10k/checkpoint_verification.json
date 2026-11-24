@@ -1,0 +1,305 @@
+{
+  "checkpoint_checks": [
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s182",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s183",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s184",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s182",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s183",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s184",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 7.450580596923828e-08
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s182",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s183",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s184",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.2351741790771484e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s182",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s183",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s184",
+      "completed_steps": 10000,
+      "retained_checkpoints": [
+        2000,
+        5000,
+        10000
+      ],
+      "source_hashes_match": true,
+      "checkpoint_configs_match": true,
+      "continuation_parent_model_and_optimizer_verified": null,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    }
+  ],
+  "confirmation_set_opened": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "seeds": [
+    {
+      "seed": 182,
+      "all_12_cells_rescored_with_existing_score_function": true,
+      "checkpoint_hash_unchanged": true,
+      "independent_window_streaming_max_abs_error": 5.960464477539063e-08
+    },
+    {
+      "seed": 183,
+      "all_12_cells_rescored_with_existing_score_function": true,
+      "checkpoint_hash_unchanged": true,
+      "independent_window_streaming_max_abs_error": 1.043081283569336e-07
+    },
+    {
+      "seed": 184,
+      "all_12_cells_rescored_with_existing_score_function": true,
+      "checkpoint_hash_unchanged": true,
+      "independent_window_streaming_max_abs_error": 2.2351741790771484e-08
+    }
+  ],
+  "fixed_origins_and_targets": true,
+  "confirmation_set_opened": false
+}

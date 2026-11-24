@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "portable_manifest_regeneration": true,
+  "numeric_outputs_identical": true,
+  "excluded_metadata": [
+    "summary.json generated_at_utc"
+  ]
+}

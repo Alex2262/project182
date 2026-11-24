@@ -1,0 +1,302 @@
+{
+  "rows": [
+    {
+      "origin": 2048,
+      "policy": "full",
+      "reducible_error": 0.00019650365063773393,
+      "seed_sd": 7.0998462143144766e-06,
+      "total_expected_mse": 0.2501965036506377,
+      "bayes_disagreement": 7.948705686503097e-05,
+      "seed182_error": 0.00020400577680330096,
+      "seed183_error": 0.00018988965313134734,
+      "seed184_error": 0.00019561552197855343
+    },
+    {
+      "origin": 2048,
+      "policy": "window256",
+      "reducible_error": 0.0009391038839470319,
+      "seed_sd": 5.080881795833686e-06,
+      "total_expected_mse": 0.250939103883947,
+      "bayes_disagreement": 0.0008723092033747328,
+      "seed182_error": 0.0009378225531222304,
+      "seed183_error": 0.0009447027751823752,
+      "seed184_error": 0.0009347863235364901
+    },
+    {
+      "origin": 2048,
+      "policy": "window2048",
+      "reducible_error": 0.00019650349715868252,
+      "seed_sd": 7.099962004931705e-06,
+      "total_expected_mse": 0.25019650349715866,
+      "bayes_disagreement": 7.948696972218061e-05,
+      "seed182_error": 0.00020400580262737106,
+      "seed183_error": 0.00018988947524075015,
+      "seed184_error": 0.00019561521360792635
+    },
+    {
+      "origin": 4096,
+      "policy": "full",
+      "reducible_error": 0.00019028742892725602,
+      "seed_sd": 3.224129326409254e-05,
+      "total_expected_mse": 0.25019028742892724,
+      "bayes_disagreement": 0.00012625049620336958,
+      "seed182_error": 0.00018930725476920055,
+      "seed183_error": 0.00015854739910754867,
+      "seed184_error": 0.00022300763290501884
+    },
+    {
+      "origin": 4096,
+      "policy": "window256",
+      "reducible_error": 0.0009855855921242296,
+      "seed_sd": 3.978485034970851e-05,
+      "total_expected_mse": 0.25098558559212425,
+      "bayes_disagreement": 0.0009548950936626711,
+      "seed182_error": 0.0010262418174065147,
+      "seed183_error": 0.0009837814592578485,
+      "seed184_error": 0.0009467334997083258
+    },
+    {
+      "origin": 4096,
+      "policy": "window2048",
+      "reducible_error": 0.00023769741082448146,
+      "seed_sd": 1.6125955920176053e-05,
+      "total_expected_mse": 0.25023769741082447,
+      "bayes_disagreement": 0.00017608022222218952,
+      "seed182_error": 0.00024050615037016188,
+      "seed183_error": 0.00022035159535299586,
+      "seed184_error": 0.0002522344867502866
+    },
+    {
+      "origin": 8192,
+      "policy": "full",
+      "reducible_error": 0.00026933589381340496,
+      "seed_sd": 5.8945583906602654e-05,
+      "total_expected_mse": 0.2502693358938134,
+      "bayes_disagreement": 0.00023934998777267922,
+      "seed182_error": 0.000270891608283232,
+      "seed183_error": 0.00020962785181332535,
+      "seed184_error": 0.0003274882213436575
+    },
+    {
+      "origin": 8192,
+      "policy": "window256",
+      "reducible_error": 0.0010066406621113,
+      "seed_sd": 5.953761824629287e-06,
+      "total_expected_mse": 0.2510066406621113,
+      "bayes_disagreement": 0.0009599120638688905,
+      "seed182_error": 0.0010049158677937948,
+      "seed183_error": 0.0010017397188076002,
+      "seed184_error": 0.0010132663997325048
+    },
+    {
+      "origin": 8192,
+      "policy": "window2048",
+      "reducible_error": 0.0002463312335278716,
+      "seed_sd": 1.7921753246147507e-05,
+      "total_expected_mse": 0.25024633123352785,
+      "bayes_disagreement": 0.00021231631371824514,
+      "seed182_error": 0.00026648453866119496,
+      "seed183_error": 0.0002321836524960842,
+      "seed184_error": 0.00024032550942633572
+    },
+    {
+      "origin": 16384,
+      "policy": "full",
+      "reducible_error": 0.00032748635709192866,
+      "seed_sd": 0.00012383455156798185,
+      "total_expected_mse": 0.25032748635709196,
+      "bayes_disagreement": 0.0002996747235997593,
+      "seed182_error": 0.0002477238223530019,
+      "seed183_error": 0.00026458898027370456,
+      "seed184_error": 0.00047014626864907966
+    },
+    {
+      "origin": 16384,
+      "policy": "window256",
+      "reducible_error": 0.001239110940801531,
+      "seed_sd": 7.94830174349742e-05,
+      "total_expected_mse": 0.25123911094080154,
+      "bayes_disagreement": 0.0012320952323944593,
+      "seed182_error": 0.0012712434609345037,
+      "seed183_error": 0.0012974971885705532,
+      "seed184_error": 0.0011485921728995358
+    },
+    {
+      "origin": 16384,
+      "policy": "window2048",
+      "reducible_error": 0.0002155635502848977,
+      "seed_sd": 1.66011058909543e-05,
+      "total_expected_mse": 0.2502155635502849,
+      "bayes_disagreement": 0.00020183565464314862,
+      "seed182_error": 0.00023472688693850085,
+      "seed183_error": 0.00020556761992968932,
+      "seed184_error": 0.0002063961439865029
+    }
+  ],
+  "contrasts": [
+    {
+      "origin": 2048,
+      "policy": "window256",
+      "mean_window_minus_full": 0.0007426002333092976,
+      "paired_series_bootstrap_95": [
+        0.0005927318856109368,
+        0.0009068704544462439
+      ],
+      "per_seed_differences": [
+        0.0007338167763189293,
+        0.0007548131220510277,
+        0.0007391708015579361
+      ],
+      "bayes_gap_window_minus_full": 0.0007928221465097018,
+      "relative_reducible_change": 3.7790658387223823,
+      "relative_total_mse_change": 0.002968067988456901
+    },
+    {
+      "origin": 2048,
+      "policy": "window2048",
+      "mean_window_minus_full": -1.5347905134671947e-10,
+      "paired_series_bootstrap_95": [
+        -3.8103437297514543e-10,
+        6.99499812411948e-11
+      ],
+      "per_seed_differences": [
+        2.582407023144364e-11,
+        -1.7789059721299487e-10,
+        -3.0837062705860717e-10
+      ],
+      "bayes_gap_window_minus_full": -8.714285036650443e-11,
+      "relative_reducible_change": -7.810493642956828e-07,
+      "relative_total_mse_change": -6.134340375210046e-10
+    },
+    {
+      "origin": 4096,
+      "policy": "window256",
+      "mean_window_minus_full": 0.0007952981631969735,
+      "paired_series_bootstrap_95": [
+        0.0006086323981034667,
+        0.0010050279991243457
+      ],
+      "per_seed_differences": [
+        0.0008369345626373134,
+        0.0008252340601503003,
+        0.0007237258668033067
+      ],
+      "bayes_gap_window_minus_full": 0.0008286445974593016,
+      "relative_reducible_change": 4.179457191052825,
+      "relative_total_mse_change": 0.0031787731305232933
+    },
+    {
+      "origin": 4096,
+      "policy": "window2048",
+      "mean_window_minus_full": 4.740998189722553e-05,
+      "paired_series_bootstrap_95": [
+        2.561304846374102e-05,
+        7.32628344172909e-05
+      ],
+      "per_seed_differences": [
+        5.119889560096148e-05,
+        6.180419624544708e-05,
+        2.9226853845268003e-05
+      ],
+      "bayes_gap_window_minus_full": 4.982972601881991e-05,
+      "relative_reducible_change": 0.24914931146265862,
+      "relative_total_mse_change": 0.00018949569299604973
+    },
+    {
+      "origin": 8192,
+      "policy": "window256",
+      "mean_window_minus_full": 0.000737304768297895,
+      "paired_series_bootstrap_95": [
+        0.0005181748844512586,
+        0.000984489433455779
+      ],
+      "per_seed_differences": [
+        0.0007340242595105623,
+        0.0007921118669942748,
+        0.0006857781783888477
+      ],
+      "bayes_gap_window_minus_full": 0.0007205620760962114,
+      "relative_reducible_change": 2.737491679474023,
+      "relative_total_mse_change": 0.002946045170354892
+    },
+    {
+      "origin": 8192,
+      "policy": "window2048",
+      "mean_window_minus_full": -2.300466028553328e-05,
+      "paired_series_bootstrap_95": [
+        -5.920456899957089e-05,
+        1.374631871775314e-05
+      ],
+      "per_seed_differences": [
+        -4.407069622036494e-06,
+        2.255580068275884e-05,
+        -8.716271191732219e-05
+      ],
+      "bayes_gap_window_minus_full": -2.7033674054434078e-05,
+      "relative_reducible_change": -0.0854125306501885,
+      "relative_total_mse_change": -9.191961213855616e-05
+    },
+    {
+      "origin": 16384,
+      "policy": "window256",
+      "mean_window_minus_full": 0.0009116245837096021,
+      "paired_series_bootstrap_95": [
+        0.0006482521985862519,
+        0.0012125701432726087
+      ],
+      "per_seed_differences": [
+        0.0010235196385815013,
+        0.0010329082082968493,
+        0.0006784459042504558
+      ],
+      "bayes_gap_window_minus_full": 0.0009324205087946998,
+      "relative_reducible_change": 2.7837024778827666,
+      "relative_total_mse_change": 0.00364172787006366
+    },
+    {
+      "origin": 16384,
+      "policy": "window2048",
+      "mean_window_minus_full": -0.00011192280680703118,
+      "paired_series_bootstrap_95": [
+        -0.00016319859805045592,
+        -6.493184755073151e-05
+      ],
+      "per_seed_differences": [
+        -1.2996935414501593e-05,
+        -5.902136034401533e-05,
+        -0.0002637501246625767
+      ],
+      "bayes_gap_window_minus_full": -9.783906895661071e-05,
+      "relative_reducible_change": -0.3417632655018149,
+      "relative_total_mse_change": -0.00044710554336559416
+    }
+  ],
+  "origins": [
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "bayes_epistemic_risk": [
+    0.0001223363910078813,
+    6.44284442894136e-05,
+    3.1871299995994016e-05,
+    1.542606270324068e-05
+  ],
+  "ridge_reducible_error": [
+    0.00012017504779905468,
+    5.6832827981635633e-05,
+    2.9161850589216223e-05,
+    1.2726470445636084e-05
+  ],
+  "bayes_empirical_reducible_error": [
+    0.00012097901500468706,
+    5.628692420936685e-05,
+    2.829678143508693e-05,
+    1.2563606208495862e-05
+  ],
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 261124,
+  "interval_scope": "Pointwise paired series bootstrap, conditional on these three trained models; training seeds not resampled.",
+  "confirmation_set_opened": false
+}

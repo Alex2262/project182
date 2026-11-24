@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "method": "Regenerated report from downloaded raw artifacts and the portable published manifest.",
+  "byte_identical_outputs": [
+    "metrics.csv",
+    "training_histories.json",
+    "metric_verification.json"
+  ],
+  "summary_numeric_outputs_identical": true,
+  "excluded_metadata": [
+    "summary.json generated_at_utc"
+  ]
+}

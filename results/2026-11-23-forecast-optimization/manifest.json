@@ -1,0 +1,1388 @@
+{
+  "prepared_at_utc": "2026-11-24T05:51:05.764415+00:00",
+  "personal_modal_workspace": "alexander-tian",
+  "github_repository": "Alex2262/project182",
+  "wandb_destination": "alexander-tian-ucb/project182",
+  "jobs": [
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s182",
+      "seed": 182,
+      "arm": "constant",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s182",
+      "config_file": "configs/alex_261123_ar1_opt30k_constant_s182.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s182",
+      "started_at_utc": "2026-11-24T05:51:55.241467+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-JNtQcxjwFRvKKLxCWVyB4T",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:50:38.420094+00:00",
+      "wandb_identity_verified_in_log": true,
+      "attempts": [
+        {
+          "status": "failed",
+          "exit_code": 1,
+          "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-qp8VmjrlLpKna496GaMhn0",
+          "started_at_utc": "2026-11-24T05:51:55.241467+00:00",
+          "ended_at_utc": "2026-11-24T06:22:44.571099+00:00"
+        },
+        {
+          "run_name": "alex_261123_ar1_opt30k_constant_s182",
+          "saved_step": 25847,
+          "remaining_updates": 4153,
+          "checkpoint_sha256": "dc1f094e49234f054d714a0c217496f442e006a7ae2a081307e72157a38e36c2",
+          "configuration_unchanged": true,
+          "model_finite": true,
+          "adam_steps_verified": true,
+          "optimizer_lrs_at_interruption": [
+            0.0003
+          ],
+          "resume_lr": 0.0003,
+          "lr_note": "Cancellation may occur after setting the next update LR; resume recomputes it from the saved completed-step count.",
+          "first_segment_instrumented_seconds_to_last_log": 1826.1989561860003,
+          "first_segment_last_logged_step": 25825,
+          "status": "failed",
+          "started_at_utc": "2026-11-24T06:29:27.356322+00:00",
+          "exit_code": 1,
+          "ended_at_utc": "2026-11-24T06:34:33.857030+00:00",
+          "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-FDaqDMyr1RQg7CQtqjLfKS",
+          "wandb_identity_verified_in_log": true
+        }
+      ],
+      "recovery": {
+        "run_name": "alex_261123_ar1_opt30k_constant_s182",
+        "saved_step": 28603,
+        "remaining_updates": 1397,
+        "checkpoint_sha256": "d86fd6c231eaa6e1f338ae1cfef437b602191048e70d047d06248a197fb99ac4",
+        "configuration_unchanged": true,
+        "model_finite": true,
+        "adam_steps_verified": true,
+        "resume_lr": 0.0003,
+        "all_interrupted_segments_seconds_to_last_log": 2113.847416392,
+        "last_logged_step": 28600,
+        "status": "finished",
+        "started_at_utc": "2026-11-24T06:46:17.398710+00:00",
+        "exit_code": 0,
+        "ended_at_utc": "2026-11-24T06:50:38.420094+00:00",
+        "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-JNtQcxjwFRvKKLxCWVyB4T",
+        "function_call_id": "fc-01M864WB6QC32K3Q13548J7FJK",
+        "wandb_identity_verified_in_log": true,
+        "result": {
+          "completed_steps": 30000,
+          "initial_completed_steps": 28603,
+          "planned_steps": 30000,
+          "elapsed_seconds": 233.60894685899999,
+          "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s182",
+          "status": "finished"
+        }
+      },
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 28603,
+        "planned_steps": 30000,
+        "elapsed_seconds": 233.60894685899999,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s182",
+        "status": "finished"
+      },
+      "interrupted_segment_seconds_to_last_log": 2113.847416392,
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_constant_s182",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 182,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "constant",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410000000,
+          "total_training_tokens": 61440000
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 182,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 182,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s182",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "5f10b0d55068beade3742966c5730d80bf5209530e466290789a0e434e0bf008",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          }
+        }
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s182",
+      "seed": 182,
+      "arm": "cosine",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s182",
+      "config_file": "configs/alex_261123_ar1_opt30k_cosine_s182.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s182",
+      "started_at_utc": "2026-11-24T05:51:55.244319+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-HIroJtBewoLpizPsvaUcci",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:32:51.726927+00:00",
+      "wandb_identity_verified_in_log": true,
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 10000,
+        "planned_steps": 30000,
+        "elapsed_seconds": 2417.2534352459998,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s182",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_cosine_s182",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 182,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "cosine_decay",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410000000,
+          "total_training_tokens": 61440000,
+          "decay_start_step": 10000,
+          "decay_end_step": 30000,
+          "min_learning_rate": 3e-05
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 182,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 182,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s182",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "5f10b0d55068beade3742966c5730d80bf5209530e466290789a0e434e0bf008",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          },
+          "schedule_override": {
+            "schedule": "cosine_decay",
+            "decay_start_step": 10000,
+            "decay_end_step": 30000,
+            "min_learning_rate": 3e-05
+          }
+        }
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s183",
+      "seed": 183,
+      "arm": "constant",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s183",
+      "config_file": "configs/alex_261123_ar1_opt30k_constant_s183.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s183",
+      "started_at_utc": "2026-11-24T05:51:55.246784+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-UGNG3IrdiVaZR237mEkPf9",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:32:06.151500+00:00",
+      "wandb_identity_verified_in_log": true,
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 10000,
+        "planned_steps": 30000,
+        "elapsed_seconds": 2359.757986127,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s183",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_constant_s183",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 183,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "constant",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410100000,
+          "total_training_tokens": 61440000
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 183,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 183,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s183",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "dc49cf889029891d1416297c218552b590b140e24b101ef9666acef4ab9e65c5",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          }
+        }
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+      "seed": 183,
+      "arm": "cosine",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s183",
+      "config_file": "configs/alex_261123_ar1_opt30k_cosine_s183.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183",
+      "started_at_utc": "2026-11-24T05:51:55.249321+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-Bis7aSHsKlXQaHdG2xfKaP",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:52:23.468393+00:00",
+      "wandb_identity_verified_in_log": true,
+      "attempts": [
+        {
+          "status": "failed",
+          "exit_code": 1,
+          "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-QtuB2rjry0mH7pTeqPvWRk",
+          "started_at_utc": "2026-11-24T05:51:55.249321+00:00",
+          "ended_at_utc": "2026-11-24T06:22:39.370236+00:00"
+        },
+        {
+          "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+          "saved_step": 25007,
+          "remaining_updates": 4993,
+          "checkpoint_sha256": "780ebfa64340c2c3a27fb761a02d5ce519e87b5e7d540c61f96bbcec218d192b",
+          "configuration_unchanged": true,
+          "model_finite": true,
+          "adam_steps_verified": true,
+          "optimizer_lrs_at_interruption": [
+            6.942444034259461e-05
+          ],
+          "resume_lr": 6.942444034259461e-05,
+          "lr_note": "Cancellation may occur after setting the next update LR; resume recomputes it from the saved completed-step count.",
+          "first_segment_instrumented_seconds_to_last_log": 1822.3106107529998,
+          "first_segment_last_logged_step": 25000,
+          "status": "failed",
+          "started_at_utc": "2026-11-24T06:29:27.358711+00:00",
+          "exit_code": 1,
+          "ended_at_utc": "2026-11-24T06:34:36.297909+00:00",
+          "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-sadZjp7RTPM6fZBtYo0rIA",
+          "wandb_identity_verified_in_log": true
+        }
+      ],
+      "recovery": {
+        "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+        "saved_step": 27845,
+        "remaining_updates": 2155,
+        "checkpoint_sha256": "2ef1323ef0903ba22619049b1772afab3a077ff5f9f284ed9abdbe664e856bd0",
+        "configuration_unchanged": true,
+        "model_finite": true,
+        "adam_steps_verified": true,
+        "resume_lr": 3.765474621028807e-05,
+        "all_interrupted_segments_seconds_to_last_log": 2109.4432290199998,
+        "last_logged_step": 27825,
+        "status": "finished",
+        "started_at_utc": "2026-11-24T06:46:17.401299+00:00",
+        "exit_code": 0,
+        "ended_at_utc": "2026-11-24T06:52:23.468393+00:00",
+        "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-Bis7aSHsKlXQaHdG2xfKaP",
+        "function_call_id": "fc-01M864WB65K7V2010JWB1GV8AV",
+        "wandb_identity_verified_in_log": true,
+        "result": {
+          "completed_steps": 30000,
+          "initial_completed_steps": 27845,
+          "planned_steps": 30000,
+          "elapsed_seconds": 345.523650872,
+          "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183",
+          "status": "finished"
+        }
+      },
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 27845,
+        "planned_steps": 30000,
+        "elapsed_seconds": 345.523650872,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183",
+        "status": "finished"
+      },
+      "interrupted_segment_seconds_to_last_log": 2109.4432290199998,
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_cosine_s183",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 183,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "cosine_decay",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410100000,
+          "total_training_tokens": 61440000,
+          "decay_start_step": 10000,
+          "decay_end_step": 30000,
+          "min_learning_rate": 3e-05
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 183,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 183,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s183",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "dc49cf889029891d1416297c218552b590b140e24b101ef9666acef4ab9e65c5",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          },
+          "schedule_override": {
+            "schedule": "cosine_decay",
+            "decay_start_step": 10000,
+            "decay_end_step": 30000,
+            "min_learning_rate": 3e-05
+          }
+        }
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_constant_s184",
+      "seed": 184,
+      "arm": "constant",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s184",
+      "config_file": "configs/alex_261123_ar1_opt30k_constant_s184.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s184",
+      "started_at_utc": "2026-11-24T05:51:55.251947+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-M7AGzo6zANQcvhhPCrVjtb",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:34:33.765411+00:00",
+      "wandb_identity_verified_in_log": true,
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 10000,
+        "planned_steps": 30000,
+        "elapsed_seconds": 2483.4114491110004,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_constant_s184",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_constant_s184",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 184,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "constant",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410200000,
+          "total_training_tokens": 61440000
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 184,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 184,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s184",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "921de5ec1d29673f075c8e9ae979a691f20032904b5fc957451370181bf4bddd",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          }
+        }
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_opt30k_cosine_s184",
+      "seed": 184,
+      "arm": "cosine",
+      "action": "train",
+      "parent_run_name": "alex_261123_ar1_horizon_m2048_s184",
+      "config_file": "configs/alex_261123_ar1_opt30k_cosine_s184.yaml",
+      "status": "finished",
+      "remote_directory": "/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s184",
+      "started_at_utc": "2026-11-24T05:51:55.254615+00:00",
+      "modal_app_url": "https://modal.com/apps/alexander-tian/main/ap-X79NP9w6NAI12Z9zP7iHDf",
+      "exit_code": 0,
+      "ended_at_utc": "2026-11-24T06:32:42.719468+00:00",
+      "wandb_identity_verified_in_log": true,
+      "result": {
+        "completed_steps": 30000,
+        "initial_completed_steps": 10000,
+        "planned_steps": 30000,
+        "elapsed_seconds": 2416.295031258,
+        "output": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s184",
+        "status": "finished"
+      },
+      "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261123_ar1_opt30k_cosine_s184",
+      "resolved_launch_config": {
+        "protocol_version": 1,
+        "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+        "data": {
+          "family": "ar1",
+          "bound": 0.95,
+          "noise_std": 0.5,
+          "initial_value": 0.0,
+          "parameter_prior": "uniform[-bound,bound], independent per series",
+          "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+        },
+        "model": {
+          "family": "gated_deltanet",
+          "width": 64,
+          "layers": 2,
+          "heads": 4,
+          "key_dim": 16,
+          "chunk_size": 64,
+          "dtype": "float32"
+        },
+        "training": {
+          "seed": 184,
+          "data_seed": 410000000,
+          "regime": "mixed",
+          "lengths": [
+            64,
+            2048
+          ],
+          "tokens_per_step": 2048,
+          "steps": 30000,
+          "learning_rate": 0.0003,
+          "optimizer": "Adam",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.0,
+          "schedule": "cosine_decay",
+          "grad_clip": 1.0,
+          "log_every": 25,
+          "checkpoint_every": 100,
+          "validation_steps": [
+            15000,
+            20000,
+            30000
+          ],
+          "reset_every": 0,
+          "effective_data_seed": 410200000,
+          "total_training_tokens": 61440000,
+          "decay_start_step": 10000,
+          "decay_end_step": 30000,
+          "min_learning_rate": 3e-05
+        },
+        "evaluation": {
+          "lengths": [
+            16,
+            32,
+            64,
+            128,
+            256,
+            512,
+            1024,
+            2048,
+            4096,
+            8192,
+            16384
+          ],
+          "batch_size": 4,
+          "validation": {
+            "seed": 920000000,
+            "series": 512
+          },
+          "confirmation": {
+            "seed": 940000000,
+            "series": 1024
+          }
+        },
+        "preflight": {
+          "families": [
+            "gated_deltanet"
+          ],
+          "steps_per_case": 10,
+          "gpu": "A100-40GB",
+          "cpu": 2,
+          "memory_mib": 8192,
+          "timeout_seconds": 300,
+          "retries": 0,
+          "registered_cases": [
+            {
+              "length": 64,
+              "reset_every": 0
+            },
+            {
+              "length": 1024,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 0
+            },
+            {
+              "length": 2048,
+              "reset_every": 256
+            }
+          ],
+          "resolved_cases": [
+            {
+              "family": "gated_deltanet",
+              "length": 64,
+              "batch_size": 32,
+              "optimizer_steps": 10,
+              "seed": 184,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            },
+            {
+              "family": "gated_deltanet",
+              "length": 2048,
+              "batch_size": 1,
+              "optimizer_steps": 10,
+              "seed": 184,
+              "parameters": 110641,
+              "persistent_state_elements_per_series": 3200,
+              "persistent_state_bytes_fp32_per_series": 12800,
+              "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+              "positional_embedding": "none; both models receive adjacent observed-value pairs"
+            }
+          ]
+        },
+        "wandb": {
+          "enabled": true,
+          "entity": "alexander-tian-ucb",
+          "project": "project182"
+        },
+        "horizon_protocol": {
+          "primary_step": 30000,
+          "training_seeds": [
+            182,
+            183,
+            184
+          ],
+          "deterioration_threshold_ratio": 1.25,
+          "consecutive_test_points": 2,
+          "normalization": "history divided by maximum uninterrupted training history",
+          "confirmation_set_opened": false
+        },
+        "source_sha256": {
+          "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+          "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+          "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+          "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+        },
+        "model_info": {
+          "parameters": 110641,
+          "persistent_state_elements_per_series": 3200,
+          "persistent_state_bytes_fp32_per_series": 12800,
+          "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+          "positional_embedding": "none; both models receive adjacent observed-value pairs"
+        },
+        "experiment_arm": "m2048",
+        "max_uninterrupted_training_length": 2048,
+        "continuation": {
+          "parent_run_name": "alex_261123_ar1_horizon_m2048_s184",
+          "completed_steps": 10000,
+          "checkpoint_sha256": "921de5ec1d29673f075c8e9ae979a691f20032904b5fc957451370181bf4bddd",
+          "parent_source_sha256": {
+            "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+            "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+            "forecast_runtime.py": "f536979d78232570738685d60e0b620294dccd6b19ce16e638820cfd7cbfd705",
+            "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d"
+          },
+          "schedule_override": {
+            "schedule": "cosine_decay",
+            "decay_start_step": 10000,
+            "decay_end_step": 30000,
+            "min_learning_rate": 3e-05
+          }
+        }
+      }
+    }
+  ],
+  "primary_step": 30000,
+  "checkpoint_steps": [
+    10000,
+    15000,
+    20000,
+    30000
+  ],
+  "evaluation_lengths": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "validation_seed": 920000000,
+  "validation_series": 512,
+  "confirmation_set_opened": false,
+  "new_updates_per_run": 20000,
+  "new_prediction_positions_per_run": 40960000,
+  "max_concurrent_jobs": 6,
+  "gpu": "A100-40GB",
+  "cpu": 2,
+  "memory_mib": 8192,
+  "timeout_seconds": 4800,
+  "internal_budget_seconds": 4500,
+  "retries": 0,
+  "scaledown_window": 2,
+  "cpu_checks": {
+    "status": "passed",
+    "file": "cpu_verification.json"
+  },
+  "resource_rate_usd_per_second": {
+    "a100_40gb": 0.000583,
+    "cpu_conservative_2_physical_cores": 2.62e-05,
+    "ram_8_gib": 1.776e-05,
+    "source": "https://modal.com/pricing"
+  },
+  "measured_runtime_seconds": 14479.141144885,
+  "estimated_running_compute_usd": 9.077842332197099,
+  "compute_estimate_excludes": "image build, startup/load, initial checkpoint loading, artifact commits, scale-down, storage, egress, and the final 22, 7, 3, and 20 unlogged updates before the four interruptions; not a billing receipt",
+  "completed_at_utc": "2026-11-24T06:54:07.719022+00:00"
+}

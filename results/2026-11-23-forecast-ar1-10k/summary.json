@@ -1,0 +1,761 @@
+{
+  "groups": [
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 2000,
+      "length": 64,
+      "conditional_mean_error": 0.005697383976101783,
+      "conditional_mean_error_seed_sd": 0.0003252533519802455,
+      "per_seed_errors": [
+        0.0057730155484190734,
+        0.0053409781054678095,
+        0.005978158274418464
+      ],
+      "excess_vs_bayes": 0.0012035625855692704,
+      "excess_vs_bayes_seed_sd": 0.0002366963233272548,
+      "expected_predictive_mse": 0.25569738397610176
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 2000,
+      "length": 4096,
+      "conditional_mean_error": 0.007197243090046938,
+      "conditional_mean_error_seed_sd": 0.004014206275828692,
+      "per_seed_errors": [
+        0.011787126207658104,
+        0.004342317826207492,
+        0.005462285236275216
+      ],
+      "excess_vs_bayes": 0.007108509443346479,
+      "excess_vs_bayes_seed_sd": 0.003951320242803576,
+      "expected_predictive_mse": 0.25719724309004693
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 5000,
+      "length": 64,
+      "conditional_mean_error": 0.005694318401767785,
+      "conditional_mean_error_seed_sd": 0.000612923067242333,
+      "per_seed_errors": [
+        0.006080720119804808,
+        0.004987605156743563,
+        0.006014629928754983
+      ],
+      "excess_vs_bayes": 0.0012318533939189036,
+      "excess_vs_bayes_seed_sd": 0.0003968006846731508,
+      "expected_predictive_mse": 0.25569431840176776
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 5000,
+      "length": 4096,
+      "conditional_mean_error": 0.008964044546636333,
+      "conditional_mean_error_seed_sd": 0.005802497680573544,
+      "per_seed_errors": [
+        0.010353598214670114,
+        0.002592927801567448,
+        0.013945607623671434
+      ],
+      "excess_vs_bayes": 0.00884353232799213,
+      "excess_vs_bayes_seed_sd": 0.00574086873463198,
+      "expected_predictive_mse": 0.25896404454663635
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 10000,
+      "length": 64,
+      "conditional_mean_error": 0.00541627162327633,
+      "conditional_mean_error_seed_sd": 0.00024160894954824852,
+      "per_seed_errors": [
+        0.005611470681221684,
+        0.005491292719765222,
+        0.005146051468842085
+      ],
+      "excess_vs_bayes": 0.0010813309123041343,
+      "excess_vs_bayes_seed_sd": 0.0003088367292724667,
+      "expected_predictive_mse": 0.25541627162327635
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "short",
+      "label": "GDN \u00b7 train 64",
+      "training_steps": 10000,
+      "length": 4096,
+      "conditional_mean_error": 0.016061761292951705,
+      "conditional_mean_error_seed_sd": 0.014905003263986357,
+      "per_seed_errors": [
+        0.010827175475609855,
+        0.004480164956681441,
+        0.03287794344656382
+      ],
+      "excess_vs_bayes": 0.01590694792584987,
+      "excess_vs_bayes_seed_sd": 0.014740502727688017,
+      "expected_predictive_mse": 0.2660617612929517
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 2000,
+      "length": 64,
+      "conditional_mean_error": 0.0056405490346068295,
+      "conditional_mean_error_seed_sd": 0.0004179059486494076,
+      "per_seed_errors": [
+        0.005314038735648445,
+        0.006111519394015822,
+        0.005496088974156221
+      ],
+      "excess_vs_bayes": 0.0011083310388068474,
+      "excess_vs_bayes_seed_sd": 0.0004105678123815467,
+      "expected_predictive_mse": 0.2556405490346068
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 2000,
+      "length": 4096,
+      "conditional_mean_error": 0.003004745353996167,
+      "conditional_mean_error_seed_sd": 0.00034813853838893094,
+      "per_seed_errors": [
+        0.003149146168918671,
+        0.0026076422758797347,
+        0.003257447617190096
+      ],
+      "excess_vs_bayes": 0.0029266167088010746,
+      "excess_vs_bayes_seed_sd": 0.0003063344124211122,
+      "expected_predictive_mse": 0.25300474535399614
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 5000,
+      "length": 64,
+      "conditional_mean_error": 0.00610115242839232,
+      "conditional_mean_error_seed_sd": 0.0011361955981109405,
+      "per_seed_errors": [
+        0.0057554475859056525,
+        0.005177963537194544,
+        0.0073700461620767625
+      ],
+      "excess_vs_bayes": 0.0016653329113245343,
+      "excess_vs_bayes_seed_sd": 0.0010069102370437487,
+      "expected_predictive_mse": 0.2561011524283923
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 5000,
+      "length": 4096,
+      "conditional_mean_error": 0.0025593240677479214,
+      "conditional_mean_error_seed_sd": 0.0006734838623969462,
+      "per_seed_errors": [
+        0.002547449080131331,
+        0.0018918562219494253,
+        0.0032386669011630082
+      ],
+      "excess_vs_bayes": 0.0025462936370969284,
+      "excess_vs_bayes_seed_sd": 0.0006441099954726625,
+      "expected_predictive_mse": 0.25255932406774795
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 10000,
+      "length": 64,
+      "conditional_mean_error": 0.0052879191085947385,
+      "conditional_mean_error_seed_sd": 0.000267283640537296,
+      "per_seed_errors": [
+        0.005585740964094232,
+        0.005209130583035727,
+        0.005068885778654255
+      ],
+      "excess_vs_bayes": 0.0010214016126359664,
+      "excess_vs_bayes_seed_sd": 0.00015615211101830924,
+      "expected_predictive_mse": 0.2552879191085947
+    },
+    {
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "label": "GDN \u00b7 train 64/256",
+      "training_steps": 10000,
+      "length": 4096,
+      "conditional_mean_error": 0.004559355619756362,
+      "conditional_mean_error_seed_sd": 0.002741817375412575,
+      "per_seed_errors": [
+        0.002395648032748083,
+        0.003639625133606904,
+        0.007642793692914099
+      ],
+      "excess_vs_bayes": 0.004450113689316858,
+      "excess_vs_bayes_seed_sd": 0.0026690861857826616,
+      "expected_predictive_mse": 0.25455935561975634
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 2000,
+      "length": 64,
+      "conditional_mean_error": 0.005393220334656039,
+      "conditional_mean_error_seed_sd": 0.00028047644771450316,
+      "per_seed_errors": [
+        0.005087793964348701,
+        0.005639223856732725,
+        0.00545264318288669
+      ],
+      "excess_vs_bayes": 0.0011380350334649887,
+      "excess_vs_bayes_seed_sd": 0.00033365248531005493,
+      "expected_predictive_mse": 0.25539322033465606
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 2000,
+      "length": 4096,
+      "conditional_mean_error": 0.0017923444024814945,
+      "conditional_mean_error_seed_sd": 8.8739524814412e-05,
+      "per_seed_errors": [
+        0.0017177263400626995,
+        0.0017688355758287784,
+        0.0018904712915530056
+      ],
+      "excess_vs_bayes": 0.0016842329292790581,
+      "excess_vs_bayes_seed_sd": 8.094600603235969e-05,
+      "expected_predictive_mse": 0.2517923444024815
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 5000,
+      "length": 64,
+      "conditional_mean_error": 0.00657756631676006,
+      "conditional_mean_error_seed_sd": 0.0004829838667769965,
+      "per_seed_errors": [
+        0.007081841606243101,
+        0.006119144305476972,
+        0.006531713038560106
+      ],
+      "excess_vs_bayes": 0.0021677207939937997,
+      "excess_vs_bayes_seed_sd": 0.0005471506845997543,
+      "expected_predictive_mse": 0.25657756631676004
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 5000,
+      "length": 4096,
+      "conditional_mean_error": 0.0024142718482231557,
+      "conditional_mean_error_seed_sd": 0.00034093420920382607,
+      "per_seed_errors": [
+        0.0027543410189041573,
+        0.00207247913536116,
+        0.0024159953904041498
+      ],
+      "excess_vs_bayes": 0.002361757310858523,
+      "excess_vs_bayes_seed_sd": 0.00035546462024480115,
+      "expected_predictive_mse": 0.2524142718482232
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 10000,
+      "length": 64,
+      "conditional_mean_error": 0.0058652473768985025,
+      "conditional_mean_error_seed_sd": 0.000573639257470964,
+      "per_seed_errors": [
+        0.006527197493648134,
+        0.005513571354459143,
+        0.005554973282588233
+      ],
+      "excess_vs_bayes": 0.0016240922493657186,
+      "excess_vs_bayes_seed_sd": 0.0007414528685500076,
+      "expected_predictive_mse": 0.25586524737689853
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "short",
+      "label": "Transformer \u00b7 train 64",
+      "training_steps": 10000,
+      "length": 4096,
+      "conditional_mean_error": 0.0015920980446469779,
+      "conditional_mean_error_seed_sd": 0.0004387166643331658,
+      "per_seed_errors": [
+        0.0017930770714108134,
+        0.0010888953769425129,
+        0.0018943216855876075
+      ],
+      "excess_vs_bayes": 0.0015486430814948859,
+      "excess_vs_bayes_seed_sd": 0.00042389544718101583,
+      "expected_predictive_mse": 0.251592098044647
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 2000,
+      "length": 64,
+      "conditional_mean_error": 0.005859309680929952,
+      "conditional_mean_error_seed_sd": 0.0003088095666901292,
+      "per_seed_errors": [
+        0.005516213708524953,
+        0.005946731489464937,
+        0.006114983844799967
+      ],
+      "excess_vs_bayes": 0.0014823251885080844,
+      "excess_vs_bayes_seed_sd": 0.0003777020917888607,
+      "expected_predictive_mse": 0.25585930968092996
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 2000,
+      "length": 4096,
+      "conditional_mean_error": 0.0018504544318392036,
+      "conditional_mean_error_seed_sd": 0.0005885528008579765,
+      "per_seed_errors": [
+        0.0015564355936199888,
+        0.0014668424308412764,
+        0.002528085271056345
+      ],
+      "excess_vs_bayes": 0.0017305182079602208,
+      "excess_vs_bayes_seed_sd": 0.0005677468302538527,
+      "expected_predictive_mse": 0.2518504544318392
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 5000,
+      "length": 64,
+      "conditional_mean_error": 0.006197201613231739,
+      "conditional_mean_error_seed_sd": 0.001215347820744265,
+      "per_seed_errors": [
+        0.005753135484302603,
+        0.005266336468728467,
+        0.007572132886664147
+      ],
+      "excess_vs_bayes": 0.0017623798873347446,
+      "excess_vs_bayes_seed_sd": 0.001076414725111841,
+      "expected_predictive_mse": 0.25619720161323173
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 5000,
+      "length": 4096,
+      "conditional_mean_error": 0.0019185316777686936,
+      "conditional_mean_error_seed_sd": 0.0009396923137593524,
+      "per_seed_errors": [
+        0.0015958166706453007,
+        0.001182719792267535,
+        0.002977058570393245
+      ],
+      "excess_vs_bayes": 0.001882457091780904,
+      "excess_vs_bayes_seed_sd": 0.0009433825083654119,
+      "expected_predictive_mse": 0.2519185316777687
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 10000,
+      "length": 64,
+      "conditional_mean_error": 0.005794316935424174,
+      "conditional_mean_error_seed_sd": 0.0003142475127210361,
+      "per_seed_errors": [
+        0.006138225682350767,
+        0.0055221299345789045,
+        0.005722595189342853
+      ],
+      "excess_vs_bayes": 0.001607196920635852,
+      "excess_vs_bayes_seed_sd": 0.000396580212195638,
+      "expected_predictive_mse": 0.25579431693542415
+    },
+    {
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "label": "Transformer \u00b7 train 64/256",
+      "training_steps": 10000,
+      "length": 4096,
+      "conditional_mean_error": 0.0012757267381814212,
+      "conditional_mean_error_seed_sd": 0.0003959802924826297,
+      "per_seed_errors": [
+        0.0015201612177830276,
+        0.0008188615775428398,
+        0.001488157419218396
+      ],
+      "excess_vs_bayes": 0.0012082077882330702,
+      "excess_vs_bayes_seed_sd": 0.00040097730850001477,
+      "expected_predictive_mse": 0.25127572673818144
+    }
+  ],
+  "runs": [
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s182",
+      "family": "gated_deltanet",
+      "regime": "short",
+      "seed": 182,
+      "error_64": 0.005611470681221684,
+      "error_4096": 0.010827175475609855,
+      "history_error_reduction_percent": -92.94719852751064,
+      "long_error_by_step": {
+        "2000": 0.011787126207658104,
+        "5000": 0.010353598214670114,
+        "10000": 0.010827175475609855
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s183",
+      "family": "gated_deltanet",
+      "regime": "short",
+      "seed": 183,
+      "error_64": 0.005491292719765222,
+      "error_4096": 0.004480164956681441,
+      "history_error_reduction_percent": 18.413292000339986,
+      "long_error_by_step": {
+        "2000": 0.004342317826207492,
+        "5000": 0.002592927801567448,
+        "10000": 0.004480164956681441
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_10k_s184",
+      "family": "gated_deltanet",
+      "regime": "short",
+      "seed": 184,
+      "error_64": 0.005146051468842085,
+      "error_4096": 0.03287794344656382,
+      "history_error_reduction_percent": -538.8965140677401,
+      "long_error_by_step": {
+        "2000": 0.005462285236275216,
+        "5000": 0.013945607623671434,
+        "10000": 0.03287794344656382
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s182",
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "seed": 182,
+      "error_64": 0.005585740964094232,
+      "error_4096": 0.002395648032748083,
+      "history_error_reduction_percent": 57.11136538289948,
+      "long_error_by_step": {
+        "2000": 0.003149146168918671,
+        "5000": 0.002547449080131331,
+        "10000": 0.002395648032748083
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s183",
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "seed": 183,
+      "error_64": 0.005209130583035727,
+      "error_4096": 0.003639625133606904,
+      "history_error_reduction_percent": 30.129892587836828,
+      "long_error_by_step": {
+        "2000": 0.0026076422758797347,
+        "5000": 0.0018918562219494253,
+        "10000": 0.003639625133606904
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_10k_s184",
+      "family": "gated_deltanet",
+      "regime": "mixed",
+      "seed": 184,
+      "error_64": 0.005068885778654255,
+      "error_4096": 0.007642793692914099,
+      "history_error_reduction_percent": -50.77857396390559,
+      "long_error_by_step": {
+        "2000": 0.003257447617190096,
+        "5000": 0.0032386669011630082,
+        "10000": 0.007642793692914099
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s182",
+      "family": "transformer_nope",
+      "regime": "short",
+      "seed": 182,
+      "error_64": 0.006527197493648134,
+      "error_4096": 0.0017930770714108134,
+      "history_error_reduction_percent": 72.52914327847861,
+      "long_error_by_step": {
+        "2000": 0.0017177263400626995,
+        "5000": 0.0027543410189041573,
+        "10000": 0.0017930770714108134
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s183",
+      "family": "transformer_nope",
+      "regime": "short",
+      "seed": 183,
+      "error_64": 0.005513571354459143,
+      "error_4096": 0.0010888953769425129,
+      "history_error_reduction_percent": 80.25063417267901,
+      "long_error_by_step": {
+        "2000": 0.0017688355758287784,
+        "5000": 0.00207247913536116,
+        "10000": 0.0010888953769425129
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_10k_s184",
+      "family": "transformer_nope",
+      "regime": "short",
+      "seed": 184,
+      "error_64": 0.005554973282588233,
+      "error_4096": 0.0018943216855876075,
+      "history_error_reduction_percent": 65.89863552494019,
+      "long_error_by_step": {
+        "2000": 0.0018904712915530056,
+        "5000": 0.0024159953904041498,
+        "10000": 0.0018943216855876075
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s182",
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "seed": 182,
+      "error_64": 0.006138225682350767,
+      "error_4096": 0.0015201612177830276,
+      "history_error_reduction_percent": 75.23451732714967,
+      "long_error_by_step": {
+        "2000": 0.0015564355936199888,
+        "5000": 0.0015958166706453007,
+        "10000": 0.0015201612177830276
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s183",
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "seed": 183,
+      "error_64": 0.0055221299345789045,
+      "error_4096": 0.0008188615775428398,
+      "history_error_reduction_percent": 85.17127291020032,
+      "long_error_by_step": {
+        "2000": 0.0014668424308412764,
+        "5000": 0.001182719792267535,
+        "10000": 0.0008188615775428398
+      }
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_10k_s184",
+      "family": "transformer_nope",
+      "regime": "mixed",
+      "seed": 184,
+      "error_64": 0.005722595189342853,
+      "error_4096": 0.001488157419218396,
+      "history_error_reduction_percent": 73.99506045806315,
+      "long_error_by_step": {
+        "2000": 0.002528085271056345,
+        "5000": 0.002977058570393245,
+        "10000": 0.001488157419218396
+      }
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "family": "gated_deltanet",
+      "training_steps": 2000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": -0.00419249773605077,
+      "difference_seed_sd": 0.0038570711388776742,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.008637980038739432,
+          "paired_series_se": 0.0007936622192524788,
+          "error_reduction_percent": 73.28317256098718
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.0017346755503277575,
+          "paired_series_se": 0.0002952053061516907,
+          "error_reduction_percent": 39.9481479650879
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": -0.00220483761908512,
+          "paired_series_se": 0.0004935867846927892,
+          "error_reduction_percent": 40.364747055732664
+        }
+      ]
+    },
+    {
+      "family": "gated_deltanet",
+      "training_steps": 5000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": -0.006404720478888411,
+      "difference_seed_sd": 0.005148043903641469,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.007806149134538783,
+          "paired_series_se": 0.0008423025074985822,
+          "error_reduction_percent": 75.39551924545589
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.0007010715796180227,
+          "paired_series_se": 0.000337035818582619,
+          "error_reduction_percent": 27.037836502590572
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": -0.010706940722508426,
+          "paired_series_se": 0.0009639928088987378,
+          "error_reduction_percent": 76.77643750950186
+        }
+      ]
+    },
+    {
+      "family": "gated_deltanet",
+      "training_steps": 10000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": -0.011502405673195345,
+      "difference_seed_sd": 0.012483868320572031,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.008431527442861773,
+          "paired_series_se": 0.000842997059573493,
+          "error_reduction_percent": 77.87374890021216
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.0008405398230745367,
+          "paired_series_se": 0.00042050122691048605,
+          "error_reduction_percent": 18.76135881606341
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": -0.025235149753649728,
+          "paired_series_se": 0.0026557737895203035,
+          "error_reduction_percent": 76.75403966389854
+        }
+      ]
+    },
+    {
+      "family": "transformer_nope",
+      "training_steps": 2000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": 5.811002935770886e-05,
+      "difference_seed_sd": 0.0005067720517302195,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.00016129074644271043,
+          "paired_series_se": 0.00022401944083564788,
+          "error_reduction_percent": 9.38978128709509
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.00030199314498750206,
+          "paired_series_se": 0.0003261264066338777,
+          "error_reduction_percent": 17.072991357379543
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": 0.0006376139795033391,
+          "paired_series_se": 0.00024905728889016777,
+          "error_reduction_percent": -33.727779012160774
+        }
+      ]
+    },
+    {
+      "family": "transformer_nope",
+      "training_steps": 5000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": -0.0004957401704544619,
+      "difference_seed_sd": 0.0009250317011497026,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.0011585243482588564,
+          "paired_series_se": 0.0002764850068587243,
+          "error_reduction_percent": 42.06176142705043
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.0008897593430936246,
+          "paired_series_se": 0.00024413502782237183,
+          "error_reduction_percent": 42.93212548740913
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": 0.0005610631799890953,
+          "paired_series_se": 0.0001775012665841894,
+          "error_reduction_percent": -23.222858049213425
+        }
+      ]
+    },
+    {
+      "family": "transformer_nope",
+      "training_steps": 10000,
+      "length": 4096,
+      "comparison": "mixed minus short",
+      "mean_difference": -0.00031637130646555673,
+      "difference_seed_sd": 7.777633505982352e-05,
+      "per_seed": [
+        {
+          "seed": 182,
+          "paired_error_difference": -0.00027291585362778585,
+          "paired_series_se": 0.00011033172025114583,
+          "error_reduction_percent": 15.220531118221958
+        },
+        {
+          "seed": 183,
+          "paired_error_difference": -0.000270033799399673,
+          "paired_series_se": 0.00010385447070115695,
+          "error_reduction_percent": 24.79887463182142
+        },
+        {
+          "seed": 184,
+          "paired_error_difference": -0.0004061642663692113,
+          "paired_series_se": 0.00023492604124889579,
+          "error_reduction_percent": 21.441145369310476
+        }
+      ]
+    }
+  ],
+  "training_seeds": [
+    182,
+    183,
+    184
+  ],
+  "confirmation_set_opened": false,
+  "bayes_epistemic_at_64": 0.004557286389160788,
+  "bayes_epistemic_at_4096": 6.44284442894136e-05,
+  "generated_at_utc": "2026-11-24T01:15:05.902868+00:00"
+}

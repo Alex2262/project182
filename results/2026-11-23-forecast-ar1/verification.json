@@ -1,0 +1,89 @@
+{
+  "checkpoint_replays": [
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_mixed_s182",
+      "completed_steps": 2000,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.1920928955078125e-07,
+      "source_hashes_match": true,
+      "checkpoint_config_matches": true
+    },
+    {
+      "run_name": "alex_261123_ar1_gated_deltanet_short_s182",
+      "completed_steps": 2000,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.2665987014770508e-07,
+      "source_hashes_match": true,
+      "checkpoint_config_matches": true
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_mixed_s182",
+      "completed_steps": 2000,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 3.46451997756958e-07,
+      "source_hashes_match": true,
+      "checkpoint_config_matches": true
+    },
+    {
+      "run_name": "alex_261123_ar1_transformer_nope_short_s182",
+      "completed_steps": 2000,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 3.8743019104003906e-07,
+      "source_hashes_match": true,
+      "checkpoint_config_matches": true
+    }
+  ],
+  "prediction_metrics_recomputed_for_checkpoints": [
+    500,
+    1000,
+    2000
+  ],
+  "common_validation_observations_bit_identical": true,
+  "confirmation_set_opened": false,
+  "modal_apps_stopped": true,
+  "modal_remaining_tasks": 0
+}

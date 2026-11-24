@@ -1,0 +1,455 @@
+{
+  "checks": [
+    {
+      "run_name": "alex_261123_ar1_horizon_m1024_s182",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "c27b958ccc2834201e7256d4cb4ef576d84c929030a6898ebe54d35e7e941a81",
+        "5000": "d3a088666c8498973a1338c4b58579aeae0fd360b1f1cafe907e6b42fab5f371",
+        "10000": "4ee6262734400d0ee68a6b8f763ab84fb8637ecc67e7a9fce1223b8f6d63326f"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.0116567611694336e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m1024_s183",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "500171424a0cb27a3dbd7e7f03015a11f70cd278b9aef570441fffd0d8eb914c",
+        "5000": "77c7e245a2fcd759ab4bb53f3a7d651796fe8288f3ad63654973bb7c684987ef",
+        "10000": "56b69fe0f15ea72f8bc9ba0d91b0176d345b633cfe109c86951a759faf1142af"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m1024_s184",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "c8457542793e303b659fc99451a8ffd36a05107bc7f3e847466be9889777b832",
+        "5000": "aa92bbb5ac52652c6ada27c8a4ff9569002350f085d7d2cb3eed191bef1473cf",
+        "10000": "2b18ae1a00523ee8bfa220e437441756ac977b3b39aa7cb214792cc2bce6fb77"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_s182",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "68e057da6fea0af36a852c6aad47e370a9823f9b0c879134ffc52dc2137ef6c4",
+        "5000": "754d1fe6f51bae80655d79b5b5a63720446e8128715e4b167c1930f096f71b24",
+        "10000": "5f10b0d55068beade3742966c5730d80bf5209530e466290789a0e434e0bf008"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_s183",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "eea596fc62d44f5b73283efbeeb71238b75e5bfadfabcf059144fa1b73ecbad1",
+        "5000": "dd6b3fb28bae0b078fc770fe03c866a851792ce61ad29745b7d45ce942453feb",
+        "10000": "dc49cf889029891d1416297c218552b590b140e24b101ef9666acef4ab9e65c5"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.601874828338623e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_s184",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "442c0e8142947947a2b5f6fb3d19bc987d5324a821bf69373e6f03cb08f3e719",
+        "5000": "a269313a4c3203de83f60d276a64ebd7eb417de14f00daf305b71c4d1447700b",
+        "10000": "921de5ec1d29673f075c8e9ae979a691f20032904b5fc957451370181bf4bddd"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_r256_s182",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "cca5eaa757022dcdb2796d9171bd32c5217b64f40a83cd2f5a3fb64eccffd692",
+        "5000": "468144bfeb286276d9d0120407800c76a950e1f22247b399127245dfce9d6d3f",
+        "10000": "0c97a122f727a3ed117027f1429912a49ca6941cafccdbfb2375b73b597224ab"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_r256_s183",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "e18f9588e34eb86bad183910d19c337404e53fb68bfa9a492a19be4c777bbd91",
+        "5000": "692bf18121424b5d5b4f87d072ba9d554d24493f55d57a908f7e027754b4a22f",
+        "10000": "3b1a6e9a1d496a35bf0ddec9a10bb79d60ed6def42750b0d2761644685f7ce7a"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_m2048_r256_s184",
+      "action": "train",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "a11172d95c0598d6211278211ec30ec59b6bc36049f095595ce7b1c102e6a10d",
+        "5000": "438413bcc205f2a774bc392678bb9ab4791a91d055ec17cc4aebc552e5fd1377",
+        "10000": "37ab1a869458afbe6f597294286c49d224b12a8b16f72dd57ddfdfb9b0f3d706"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_l64_s182",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "904aa11f1384a40ebeae4c58feabce28a5a37a0bcfa8b6c6e915de1aa025934a",
+        "5000": "60224f26fe917276ff1fafa6e47ec8cb381cff6b0cd712168359ae64c55e8804",
+        "10000": "e20ab6fa790c7c81a377fd860a51bfaf08e5a617c85a9a5a0667bc9b25d78e00"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_l64_s183",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "f97e2d4f9b3d4628a9fddca58d5d78559f50a86dc1c671b10aa06399513c6cb7",
+        "5000": "8ce21e253a16bc39ac8853634de0537af03ab9b4f4718c8b85215dc006097320",
+        "10000": "8562e0f449be9097cca789bdde771ba880e0951dbbe0a5086ba5e76602fa37f3"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_l64_s184",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "a8f2d605f2845c5521e9682b1d792682201689e42f81b9ab4824913ee5f07c52",
+        "5000": "312638961a0ae614a19ed491ea9a4559449dc1307447d851a2a0dbae075fbbb2",
+        "10000": "c22bfd679cfb4432be93b31a17492c2c19e3107f538493d80f72680aed603c5e"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.7881393432617188e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_m256_s182",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "31a2567f34dae19ed8435fc80ac846c2d36e6c4abd22b26e1e793cb88efe00ca",
+        "5000": "b4cd27cf8beb2fec50e6cb43d34999aba29ea8089077017eae3499d26bc3dfc9",
+        "10000": "f24369290c41dfc6fbcaf858cd0fdad6b99e5c473acbb00b47e21bb13c713183"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_m256_s183",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "12c54eee87276a56849f1d37de49275d83789db76f1a88f44b3cb6f4d5757b83",
+        "5000": "ca1d6f5aee678046c025e13bf9e022b3008af7dd603cfa97c6253f46f13303fb",
+        "10000": "5d49ce388078216720538005c308fe9fbe1e5f322588f81776cedf3ca6347d4a"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 1.4901161193847656e-07
+    },
+    {
+      "run_name": "alex_261123_ar1_horizon_eval_m256_s184",
+      "action": "evaluate",
+      "verified_steps": [
+        2000,
+        5000,
+        10000
+      ],
+      "checkpoint_sha256": {
+        "2000": "02bf86a7e52828e5aa0c708df5297d8ba9978ca5ae4d820614535295048a83b6",
+        "5000": "6565170faad01f3140e885f03c98f7c1d38e874501e5a9601166b2efbc08e1b6",
+        "10000": "87fb3c7def15cdf291214e5dfb9edd10328a5dad4083bad40cc45f65dcc9d199"
+      },
+      "source_hashes_match": true,
+      "replay_series": 2,
+      "replay_lengths": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384
+      ],
+      "cpu_vs_gpu_prediction_max_abs_error": 2.086162567138672e-07
+    }
+  ],
+  "confirmation_set_opened": false
+}

@@ -1,0 +1,135 @@
+protocol_version: 1
+question: Can short-sequence pretraining produce a recurrent forecaster that keeps
+  improving on long deployment streams?
+data:
+  family: ar1
+  bound: 0.95
+  noise_std: 0.5
+  initial_value: 0.0
+  parameter_prior: uniform[-bound,bound], independent per series
+  tokenization: observed pair (y[t-1], y[t]); target y[t+1]
+model:
+  family: gated_deltanet
+  width: 64
+  layers: 2
+  heads: 4
+  key_dim: 16
+  chunk_size: 64
+  dtype: float32
+training:
+  seed: 182
+  data_seed: 410000000
+  regime: mixed
+  lengths:
+  - 64
+  - 256
+  tokens_per_step: 2048
+  steps: 10000
+  learning_rate: 0.0003
+  optimizer: Adam
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  schedule: constant
+  grad_clip: 1.0
+  log_every: 25
+  checkpoint_every: 100
+  validation_steps:
+  - 2000
+  - 5000
+  - 10000
+  effective_data_seed: 410000000
+  total_training_tokens: 20480000
+evaluation:
+  lengths:
+  - 16
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  - 1024
+  - 2048
+  - 4096
+  batch_size: 4
+  validation:
+    seed: 920000000
+    series: 512
+  confirmation:
+    seed: 940000000
+    series: 1024
+preflight:
+  families:
+  - gated_deltanet
+  - transformer_nope
+  steps_per_case: 10
+  gpu: A100-40GB
+  cpu: 2
+  memory_mib: 8192
+  timeout_seconds: 300
+  retries: 0
+  resolved_cases:
+  - family: gated_deltanet
+    length: 64
+    batch_size: 32
+    optimizer_steps: 10
+    seed: 182
+    parameters: 110641
+    persistent_state_elements_per_series: 3200
+    persistent_state_bytes_fp32_per_series: 12800
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+  - family: gated_deltanet
+    length: 256
+    batch_size: 8
+    optimizer_steps: 10
+    seed: 182
+    parameters: 110641
+    persistent_state_elements_per_series: 3200
+    persistent_state_bytes_fp32_per_series: 12800
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+  - family: transformer_nope
+    length: 64
+    batch_size: 32
+    optimizer_steps: 10
+    seed: 182
+    parameters: 99841
+    persistent_state_elements_per_series: 0
+    persistent_state_bytes_fp32_per_series: 0
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+  - family: transformer_nope
+    length: 256
+    batch_size: 8
+    optimizer_steps: 10
+    seed: 182
+    parameters: 99841
+    persistent_state_elements_per_series: 0
+    persistent_state_bytes_fp32_per_series: 0
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+wandb:
+  enabled: true
+  entity: alexander-tian-ucb
+  project: project182
+source_sha256:
+  forecast_data.py: e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e
+  forecast_models.py: a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4
+  forecast_runtime.py: 8760f70cfebcd29500864acd53858b47bbf96e0836c2539bd51c7d719d1673a1
+model_info:
+  parameters: 110641
+  persistent_state_elements_per_series: 3200
+  persistent_state_bytes_fp32_per_series: 12800
+  state_excludes: model weights, temporary chunk activations, last scalar observation
+  positional_embedding: none; both models receive adjacent observed-value pairs
+continuation:
+  parent_run_name: alex_261123_ar1_gated_deltanet_mixed_s182
+  checkpoint_sha256: a5e1487d21bb65bd00724d247a073c79fe412d36312321fe180bc992422c388d
+  parent_source_sha256:
+    forecast_data.py: e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e
+    forecast_models.py: a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4
+    forecast_runtime.py: e06a73b1b077479b65e35a07b67f05f9a96ddbec863346a8a0d56cf29abdc4ea
+  completed_steps: 2000

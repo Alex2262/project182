@@ -1,0 +1,11 @@
+{
+  "reset_targets_and_inputs_identical": true,
+  "reset_forward_matches_separate_calls": true,
+  "reset_gradient_max_abs_difference": 1.1920928955078125e-07,
+  "cross_reset_influence_max_abs_difference": 0.0,
+  "no_reset_forward_bit_exact": true,
+  "same_platform_extended_validation_prefix_bit_identical": true,
+  "cross_platform_prefix_max_abs_difference": 7.549516567451064e-15,
+  "deterioration_rule_cases_passed": true,
+  "reset_training_and_16k_evaluation_passed": true
+}

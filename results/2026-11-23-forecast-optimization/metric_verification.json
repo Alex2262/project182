@@ -1,0 +1,98 @@
+[
+  {
+    "run_name": "alex_261123_ar1_opt30k_constant_s182",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 0.0,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 0.0
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_cosine_s182",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 0.0,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 5.421010862427522e-20
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_constant_s183",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 0.0,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 0.0
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_cosine_s183",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 0.0,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 5.421010862427522e-20
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_constant_s184",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 2.220446049250313e-16,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 0.0
+  },
+  {
+    "run_name": "alex_261123_ar1_opt30k_cosine_s184",
+    "identical_validation_inputs_and_targets": true,
+    "bayes_reference_absolute_tolerance": 1e-14,
+    "bayes_reference_max_abs_difference": 2.220446049250313e-16,
+    "parent_10k_predictions_identical": true,
+    "recomputed_steps": [
+      10000,
+      15000,
+      20000,
+      30000
+    ],
+    "all_logged_learning_rates_match": true,
+    "learning_rate_absolute_tolerance": 1e-18,
+    "learning_rate_max_abs_error": 5.421010862427522e-20
+  }
+]

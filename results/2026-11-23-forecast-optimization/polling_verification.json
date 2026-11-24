@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "transient_read_errors_retried": true,
+  "same_existing_call_used": true,
+  "training_errors_not_swallowed": true
+}

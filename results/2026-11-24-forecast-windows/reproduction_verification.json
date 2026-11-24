@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "bit_identical_regenerated_tables_and_summary": [
+    "summary.json",
+    "metrics.csv",
+    "paired_contrasts.csv"
+  ],
+  "plots_regenerated": true,
+  "no_checkpoint_loading_or_cloud_access": true
+}

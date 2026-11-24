@@ -1,0 +1,12 @@
+[
+  {
+    "family": "gated_deltanet",
+    "resumed_vs_uninterrupted_model_and_optimizer_bit_exact": true,
+    "changed_optimizer_rejected": true
+  },
+  {
+    "family": "transformer_nope",
+    "resumed_vs_uninterrupted_model_and_optimizer_bit_exact": true,
+    "changed_optimizer_rejected": true
+  }
+]
