@@ -1,0 +1,34 @@
+# Approved ten-job batch, November 24, 2026. Runtime configs inherit the 40k model/data settings.
+seeds: [185, 186]
+parent_batch: alex_261124_ref4x256_40k_200555
+fresh:
+  steps: 80000
+  architectures: [gated_deltanet, transformer_nope]
+  peak_lr: 0.0001
+  warmup_steps: 1000
+  final_lr: 0.00001
+adaptation:
+  steps: 5000
+  source_checkpoint_step: 40000
+  tokens_per_step: 65536
+  arms: [long_adaptation, reset_adaptation]
+  reset_control_chunk: 2048
+  reset_control_microbatch_chunks: 4
+  restore_optimizer: true
+  warmup_steps: 200
+  initial_lr: 0.00001
+  peak_lr: 0.00003
+  final_lr: 0.000003
+ablation:
+  origins: [16384, 65536]
+  final_suffix: 2048
+  series: 64
+  cohort_size: 512
+  conditions: [carry, layer_1, layer_2, layer_3, layer_4, all_recurrent, conv_only, all_states]
+modal:
+  profile: alexander-tian
+  gpu: H100
+  jobs: 10
+  budget_usd: 35
+  precision_experiments: false
+  automatic_retries: 0

@@ -1,4 +1,4 @@
-"""Approved 6x256 reference runs; paired fresh-window evaluation, no confirmation set."""
+"""Reference training and matched adaptation; paired history evaluation, no confirmation set."""
 import hashlib
 import importlib.metadata
 import json
@@ -156,7 +156,8 @@ def scheduled_lr(training, step):
     assert 1 < warmup < total-1 and 0 < minimum <= peak
     assert 0 <= step < total
     if step < warmup:
-        return peak*(.1+.9*step/(warmup-1))
+        start=training.get('warmup_start_learning_rate',peak*.1)
+        return start+(peak-start)*step/(warmup-1)
     fraction = (step-warmup)/(total-1-warmup)
     return minimum+(peak-minimum)*.5*(1+math.cos(math.pi*fraction))
 
@@ -186,7 +187,15 @@ def run(config, output, persist=lambda:None):
     tr=config['training']; torch.manual_seed(tr['seed'])
     model=ReferenceForecaster(config['model']).cuda().float()
     optimizer=torch.optim.Adam(model.parameters(),lr=tr['learning_rate'],betas=tuple(tr['betas']),eps=tr['eps'],weight_decay=tr['weight_decay'])
-    state=dict(status='starting',run_name=output.name,completed_steps=0,config=config,
+    parent_completed=0
+    if config.get('resume_from'):
+        parent=Path(config['resume_from'])
+        assert hashlib.sha256(parent.read_bytes()).hexdigest()==config['resume_sha256']
+        saved=torch.load(parent,map_location='cpu',weights_only=False)
+        assert saved['completed_steps']==40000 and saved['config']['model']==config['model']
+        model.load_state_dict(saved['model']);optimizer.load_state_dict(saved['optimizer'])
+        parent_completed=saved['completed_steps'];del saved
+    state=dict(status='starting',run_name=output.name,completed_steps=0,parent_completed_steps=parent_completed,config=config,
                model=model.description(),gpu=torch.cuda.get_device_name(),
                versions={n:importlib.metadata.version(n) for n in ['torch','transformers','fla-core','triton']},
                triton_f32_default=os.environ.get('TRITON_F32_DEFAULT'),confirmation_set_opened=False)
@@ -217,7 +226,7 @@ def run(config, output, persist=lambda:None):
     completed=0; history=[]; training_start=time.monotonic()
     def checkpoint(step):
         path=output/f'state_step_{step}.pt'; tmp=path.with_suffix('.tmp')
-        torch.save(dict(model=model.state_dict(),optimizer=optimizer.state_dict(),completed_steps=step,config=config),tmp)
+        torch.save(dict(model=model.state_dict(),optimizer=optimizer.state_dict(),completed_steps=step,total_optimizer_steps=parent_completed+step,config=config),tmp)
         tmp.replace(path)
         state.setdefault('checkpoints',{})[str(step)]=hashlib.sha256(path.read_bytes()).hexdigest()
         save(output/'training.json',history)
@@ -227,14 +236,21 @@ def run(config, output, persist=lambda:None):
         for step in range(tr['steps']):
             if time.monotonic()-started > config['modal']['train_soft_limit_seconds']:
                 break
-            length=tr['lengths'][step%len(tr['lengths'])]
-            data=sample_streams(tr['effective_data_seed']+step,tr['tokens_per_step']//length,length,config['data']['bound'],config['data']['noise_std'])
-            x=torch.as_tensor(transition_tokens(data['values']),dtype=torch.float32,device='cuda')
-            y=torch.as_tensor(data['values'][:,2:],dtype=torch.float32,device='cuda')
             lr=scheduled_lr(tr,step)
             for group in optimizer.param_groups: group['lr']=lr
             optimizer.zero_grad(set_to_none=True)
-            loss=(model(x)-y).square().mean(); loss.backward()
+            kind=config.get('kind','fresh')
+            if kind in ('long_adaptation','reset_adaptation'):
+                from forecast_adaptation import sample_long,adaptation_backward
+                length=65536
+                data=sample_long(tr['effective_data_seed']+step,length,config['data']['bound'],config['data']['noise_std'])
+                loss,x,y=adaptation_backward(model,data,kind,tr['microbatch_chunks'])
+            else:
+                length=tr['lengths'][step%len(tr['lengths'])]
+                data=sample_streams(tr['effective_data_seed']+step,tr['tokens_per_step']//length,length,config['data']['bound'],config['data']['noise_std'])
+                x=torch.as_tensor(transition_tokens(data['values']),dtype=torch.float32,device='cuda')
+                y=torch.as_tensor(data['values'][:,2:],dtype=torch.float32,device='cuda')
+                loss=(model(x)-y).square().mean(); loss.backward()
             grad=torch.nn.utils.clip_grad_norm_(model.parameters(),tr['grad_clip'],error_if_nonfinite=True)
             optimizer.step(); completed=step+1
             if not torch.isfinite(loss): raise FloatingPointError('Nonfinite training loss')
@@ -269,7 +285,7 @@ def run(config, output, persist=lambda:None):
             save(output/'manifest.json',state);persist()
         state['status']='finished' if completed==tr['steps'] and all(state['evaluations'].get(str(s),{}).get('status')=='finished' for s in tr['checkpoint_steps']) else 'partial_time_limit'
         # Only two primary-seed workers compile the precision diagnostics.
-        if config['arm']==config['evaluation'].get('precision_audit_arm','main') and tr['seed']==config['evaluation']['precision_audit_seed'] and time.monotonic()<deadline-180:
+        if config['evaluation'].get('precision_audit_enabled',True) and config['arm']==config['evaluation'].get('precision_audit_arm','main') and tr['seed']==config['evaluation']['precision_audit_seed'] and time.monotonic()<deadline-180:
             saved=torch.load(output/f'state_step_{completed}.pt',map_location='cpu',weights_only=False)
             model.load_state_dict(saved['model']);del saved
             state['precision_audit']=precision_audit(model,data,config,output,deadline)
