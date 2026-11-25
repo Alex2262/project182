@@ -1,0 +1,10 @@
+{
+  "status": "finished",
+  "elapsed_seconds": 68.80385396499992,
+  "inference_seconds": 67.0094126580002,
+  "family": "gated_deltanet",
+  "seed": 183,
+  "output": "/artifacts/forecast_warmup/runs/alex_261124_ar1_warmup_reset_s183/long_evaluation",
+  "confirmation_set_opened": false,
+  "checkpoint_sha256": "b057b8f74f5283bcf15f94da75e2d54bbe5bb629fbf984fd8e580326d9990741"
+}

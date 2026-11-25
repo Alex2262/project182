@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": {
+    "transformer_exact_attention_max_abs_error": 3.725290298461914e-08,
+    "transformer_causal_error": 0.0
+  },
+  "benchmark": {
+    "train_64_seconds_per_step": 0.005517794000000187,
+    "train_2048_seconds_per_step": 0.012857324000000503,
+    "transformer_nope_full64k_seconds_per_series": 1.4021188315000002,
+    "transformer_nope_peak_device_bytes": 188210688,
+    "transformer_nope_six_windows_seconds_per_series": 0.003806130000000074,
+    "gated_deltanet_full64k_seconds_per_series": 0.10831544093749995,
+    "gated_deltanet_peak_device_bytes": 42250240,
+    "gated_deltanet_six_windows_seconds_per_series": 0.009897926843750016
+  },
+  "transformer_train_plus_eval_seconds_with_headroom": 1673.1905254320156,
+  "gdn_eval_seconds_with_headroom": 150.78786645599996,
+  "projected_running_compute_usd": 3.4379171927402243,
+  "rate_usd_per_second": 0.00062696,
+  "budget_gate_passed": true,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "elapsed_seconds": 11.536166591,
+  "confirmation_set_opened": false,
+  "wandb_identity": "alexander-tian"
+}

@@ -1,0 +1,556 @@
+{
+  "batch_name": "alex_261124_ar1_64k",
+  "source_sha256": {
+    "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+    "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+    "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+    "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d",
+    "forecast_long.py": "4b15fc4d24596f6dbf2bd02b058069f00411509269426299be4b07346a6afe44"
+  },
+  "transformer_configs": [
+    {
+      "protocol_version": 1,
+      "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0,
+        "parameter_prior": "uniform[-bound,bound], independent per series",
+        "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+      },
+      "model": {
+        "family": "transformer_nope",
+        "width": 64,
+        "layers": 2,
+        "heads": 4,
+        "key_dim": 16,
+        "chunk_size": 64,
+        "dtype": "float32"
+      },
+      "training": {
+        "seed": 182,
+        "data_seed": 410000000,
+        "regime": "mixed",
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 2048,
+        "steps": 30000,
+        "learning_rate": 0.0003,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "cosine_decay",
+        "grad_clip": 1.0,
+        "log_every": 25,
+        "checkpoint_every": 100,
+        "validation_steps": [
+          2000,
+          5000,
+          10000,
+          20000,
+          30000
+        ],
+        "reset_every": 0,
+        "effective_data_seed": 410000000,
+        "total_training_tokens": 61440000,
+        "decay_start_step": 10000,
+        "decay_end_step": 30000,
+        "min_learning_rate": 3e-05
+      },
+      "evaluation": {
+        "lengths": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "batch_size": 4,
+        "validation": {
+          "seed": 920000000,
+          "series": 512
+        },
+        "confirmation": {
+          "seed": 940000000,
+          "series": 1024
+        }
+      },
+      "preflight": {
+        "families": [
+          "transformer_nope"
+        ],
+        "steps_per_case": 10,
+        "gpu": "A100-40GB",
+        "cpu": 2,
+        "memory_mib": 8192,
+        "timeout_seconds": 300,
+        "retries": 0,
+        "resolved_cases": [
+          {
+            "family": "transformer_nope",
+            "length": 64,
+            "batch_size": 32,
+            "optimizer_steps": 10,
+            "seed": 182,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          },
+          {
+            "family": "transformer_nope",
+            "length": 2048,
+            "batch_size": 1,
+            "optimizer_steps": 10,
+            "seed": 182,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          }
+        ]
+      },
+      "wandb": {
+        "enabled": true,
+        "entity": "alexander-tian-ucb",
+        "project": "project182"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+        "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+        "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d",
+        "forecast_long.py": "4b15fc4d24596f6dbf2bd02b058069f00411509269426299be4b07346a6afe44"
+      },
+      "model_info": {
+        "parameters": 99841,
+        "persistent_state_elements_per_series": 0,
+        "persistent_state_bytes_fp32_per_series": 0,
+        "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+        "positional_embedding": "none; both models receive adjacent observed-value pairs"
+      },
+      "max_uninterrupted_training_length": 2048
+    },
+    {
+      "protocol_version": 1,
+      "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0,
+        "parameter_prior": "uniform[-bound,bound], independent per series",
+        "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+      },
+      "model": {
+        "family": "transformer_nope",
+        "width": 64,
+        "layers": 2,
+        "heads": 4,
+        "key_dim": 16,
+        "chunk_size": 64,
+        "dtype": "float32"
+      },
+      "training": {
+        "seed": 183,
+        "data_seed": 410000000,
+        "regime": "mixed",
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 2048,
+        "steps": 30000,
+        "learning_rate": 0.0003,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "cosine_decay",
+        "grad_clip": 1.0,
+        "log_every": 25,
+        "checkpoint_every": 100,
+        "validation_steps": [
+          2000,
+          5000,
+          10000,
+          20000,
+          30000
+        ],
+        "reset_every": 0,
+        "effective_data_seed": 410100000,
+        "total_training_tokens": 61440000,
+        "decay_start_step": 10000,
+        "decay_end_step": 30000,
+        "min_learning_rate": 3e-05
+      },
+      "evaluation": {
+        "lengths": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "batch_size": 4,
+        "validation": {
+          "seed": 920000000,
+          "series": 512
+        },
+        "confirmation": {
+          "seed": 940000000,
+          "series": 1024
+        }
+      },
+      "preflight": {
+        "families": [
+          "transformer_nope"
+        ],
+        "steps_per_case": 10,
+        "gpu": "A100-40GB",
+        "cpu": 2,
+        "memory_mib": 8192,
+        "timeout_seconds": 300,
+        "retries": 0,
+        "resolved_cases": [
+          {
+            "family": "transformer_nope",
+            "length": 64,
+            "batch_size": 32,
+            "optimizer_steps": 10,
+            "seed": 183,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          },
+          {
+            "family": "transformer_nope",
+            "length": 2048,
+            "batch_size": 1,
+            "optimizer_steps": 10,
+            "seed": 183,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          }
+        ]
+      },
+      "wandb": {
+        "enabled": true,
+        "entity": "alexander-tian-ucb",
+        "project": "project182"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+        "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+        "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d",
+        "forecast_long.py": "4b15fc4d24596f6dbf2bd02b058069f00411509269426299be4b07346a6afe44"
+      },
+      "model_info": {
+        "parameters": 99841,
+        "persistent_state_elements_per_series": 0,
+        "persistent_state_bytes_fp32_per_series": 0,
+        "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+        "positional_embedding": "none; both models receive adjacent observed-value pairs"
+      },
+      "max_uninterrupted_training_length": 2048
+    },
+    {
+      "protocol_version": 1,
+      "question": "Can short-sequence pretraining produce a recurrent forecaster that keeps improving on long deployment streams?",
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0,
+        "parameter_prior": "uniform[-bound,bound], independent per series",
+        "tokenization": "observed pair (y[t-1], y[t]); target y[t+1]"
+      },
+      "model": {
+        "family": "transformer_nope",
+        "width": 64,
+        "layers": 2,
+        "heads": 4,
+        "key_dim": 16,
+        "chunk_size": 64,
+        "dtype": "float32"
+      },
+      "training": {
+        "seed": 184,
+        "data_seed": 410000000,
+        "regime": "mixed",
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 2048,
+        "steps": 30000,
+        "learning_rate": 0.0003,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "cosine_decay",
+        "grad_clip": 1.0,
+        "log_every": 25,
+        "checkpoint_every": 100,
+        "validation_steps": [
+          2000,
+          5000,
+          10000,
+          20000,
+          30000
+        ],
+        "reset_every": 0,
+        "effective_data_seed": 410200000,
+        "total_training_tokens": 61440000,
+        "decay_start_step": 10000,
+        "decay_end_step": 30000,
+        "min_learning_rate": 3e-05
+      },
+      "evaluation": {
+        "lengths": [
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "batch_size": 4,
+        "validation": {
+          "seed": 920000000,
+          "series": 512
+        },
+        "confirmation": {
+          "seed": 940000000,
+          "series": 1024
+        }
+      },
+      "preflight": {
+        "families": [
+          "transformer_nope"
+        ],
+        "steps_per_case": 10,
+        "gpu": "A100-40GB",
+        "cpu": 2,
+        "memory_mib": 8192,
+        "timeout_seconds": 300,
+        "retries": 0,
+        "resolved_cases": [
+          {
+            "family": "transformer_nope",
+            "length": 64,
+            "batch_size": 32,
+            "optimizer_steps": 10,
+            "seed": 184,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          },
+          {
+            "family": "transformer_nope",
+            "length": 2048,
+            "batch_size": 1,
+            "optimizer_steps": 10,
+            "seed": 184,
+            "parameters": 99841,
+            "persistent_state_elements_per_series": 0,
+            "persistent_state_bytes_fp32_per_series": 0,
+            "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+            "positional_embedding": "none; both models receive adjacent observed-value pairs"
+          }
+        ]
+      },
+      "wandb": {
+        "enabled": true,
+        "entity": "alexander-tian-ucb",
+        "project": "project182"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_models.py": "a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4",
+        "forecast_runtime.py": "900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86",
+        "forecast_horizon.py": "e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d",
+        "forecast_long.py": "4b15fc4d24596f6dbf2bd02b058069f00411509269426299be4b07346a6afe44"
+      },
+      "model_info": {
+        "parameters": 99841,
+        "persistent_state_elements_per_series": 0,
+        "persistent_state_bytes_fp32_per_series": 0,
+        "state_excludes": "model weights, temporary chunk activations, last scalar observation",
+        "positional_embedding": "none; both models receive adjacent observed-value pairs"
+      },
+      "max_uninterrupted_training_length": 2048
+    }
+  ],
+  "transformer_evaluations": [
+    {
+      "seed": 182,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "transformer_nope"
+    },
+    {
+      "seed": 183,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "transformer_nope"
+    },
+    {
+      "seed": 184,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "transformer_nope"
+    }
+  ],
+  "gdn_evaluations": [
+    {
+      "seed": 182,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "gated_deltanet",
+      "checkpoint_sha256": "42b4f582d9e6045c5f910312b891c43745e50fe66a2ddeb79c1c48e0dd57bce1",
+      "old_data_directory": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s182"
+    },
+    {
+      "seed": 183,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "gated_deltanet",
+      "checkpoint_sha256": "7465d876c68c7b3883967ec35ebf357516cd1dc7469fa410207eff51c08f4111",
+      "old_data_directory": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183"
+    },
+    {
+      "seed": 184,
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "series": 512,
+      "evaluation_seed": 920000000,
+      "confirmation_set_opened": false,
+      "family": "gated_deltanet",
+      "checkpoint_sha256": "2cd1597dcf7b8dbf552998d6553bf29edaf11d22883f2769565455b96b3fc8e1",
+      "old_data_directory": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s184"
+    }
+  ],
+  "preflight_parents": {
+    "transformer": "/artifacts/forecast_v1/runs/alex_261123_ar1_transformer_nope_mixed_10k_s182/state_step_10000.pt",
+    "transformer_sha256": "d9c3d457a7cbdc27c785f8370da7a8d635ae5ca83424eb5e58cd36267aa940ec",
+    "gdn": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s182/state_step_30000.pt",
+    "gdn_sha256": "42b4f582d9e6045c5f910312b891c43745e50fe66a2ddeb79c1c48e0dd57bce1"
+  },
+  "preflight_result_file": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/preflight_result.json",
+  "budget": {
+    "allowance_usd": 15,
+    "rate_usd_per_second": 0.00062696,
+    "timeout_reservation_usd": 13.730424,
+    "no_automatic_retries": true,
+    "pricing_source": "https://modal.com/pricing",
+    "excludes": "storage and startup overhead; allowance includes remaining headroom"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "finished",
+  "arm": "carry",
+  "seed": 183,
+  "training": {
+    "status": "finished",
+    "additional_steps": 3000,
+    "completed_steps": 33000,
+    "elapsed_seconds": 1595.389249253
+  },
+  "evaluation": {
+    "status": "finished",
+    "elapsed_seconds": 57.14460740499999,
+    "inference_seconds": 55.57602019500018,
+    "family": "gated_deltanet",
+    "seed": 183,
+    "output": "/artifacts/forecast_warmup/runs/alex_261124_ar1_warmup_carry_s183/long_evaluation",
+    "confirmation_set_opened": false,
+    "checkpoint_sha256": "7040c634694597e936ba02874c4504a29f05dc6b3ef618a904e8c77f83927c69"
+  },
+  "total_elapsed_seconds": 1652.992342111,
+  "output": "/artifacts/forecast_warmup/runs/alex_261124_ar1_warmup_carry_s183"
+}

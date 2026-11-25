@@ -1,0 +1,88 @@
+protocol_version: 1
+question: Can short-sequence pretraining produce a recurrent forecaster that keeps
+  improving on long deployment streams?
+data:
+  family: ar1
+  bound: 0.95
+  noise_std: 0.5
+  initial_value: 0.0
+  parameter_prior: uniform[-bound,bound], independent per series
+  tokenization: observed pair (y[t-1], y[t]); target y[t+1]
+model:
+  family: gated_deltanet
+  width: 64
+  layers: 2
+  heads: 4
+  key_dim: 16
+  chunk_size: 64
+  dtype: float32
+training:
+  seed: 183
+  data_seed: 440000000
+  regime: warmup
+  lengths:
+  - 2048
+  tokens_per_step: 2048
+  steps: 33000
+  learning_rate: 3.0e-05
+  optimizer: Adam
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  schedule: constant
+  grad_clip: 1.0
+  log_every: 25
+  checkpoint_every: 100
+  validation_steps:
+  - 33000
+  reset_every: 0
+  effective_data_seed: 440100000
+  total_training_tokens: 67584000
+evaluation:
+  lengths:
+  - 2048
+  - 4096
+  - 8192
+  - 16384
+  - 32768
+  - 65536
+  batch_size: 4
+  validation:
+    seed: 920000000
+    series: 512
+  confirmation:
+    seed: 940000000
+    series: 1024
+wandb:
+  enabled: true
+  entity: alexander-tian-ucb
+  project: project182
+source_sha256:
+  forecast_data.py: e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e
+  forecast_models.py: a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4
+  forecast_runtime.py: 900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86
+  forecast_horizon.py: e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d
+  forecast_long.py: e19f6f5a22bed98ffc13c024f5d3ce6d8aebdcd44b2d0b7ae1df760d09e79741
+  forecast_warmup.py: 36250f612a80c746422d9447bdc67baee7111fba0d7f71ea33644b366d6730d6
+model_info:
+  parameters: 110641
+  persistent_state_elements_per_series: 3200
+  persistent_state_bytes_fp32_per_series: 12800
+  state_excludes: model weights, temporary chunk activations, last scalar observation
+  positional_embedding: none; both models receive adjacent observed-value pairs
+max_uninterrupted_training_length: 2048
+warmup_protocol:
+  arm: reset
+  warmup_length: 16384
+  scored_length: 2048
+  additional_updates: 3000
+  effective_data_seed: 440100000
+  prefix_no_grad: true
+  gradient_length: 2048
+  execute_prefix_in_both_arms: true
+  restore_parent_adam_state: true
+  parent_checkpoint: /artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183/state_step_30000.pt
+  parent_checkpoint_sha256: 7465d876c68c7b3883967ec35ebf357516cd1dc7469fa410207eff51c08f4111
+  confirmation_set_opened: false

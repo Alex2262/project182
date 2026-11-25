@@ -1,0 +1,10 @@
+{
+  "status": "finished",
+  "elapsed_seconds": 681.805380704,
+  "inference_seconds": 679.9773355149999,
+  "family": "transformer_nope",
+  "seed": 183,
+  "output": "/artifacts/forecast_long/runs/alex_261124_ar1_64k_transformer_s183/long_evaluation",
+  "confirmation_set_opened": false,
+  "checkpoint_sha256": "704dca3a133d4ef4ce28af173aba95e6c045cb9ddb9bf4bcc8340d44e09531c8"
+}

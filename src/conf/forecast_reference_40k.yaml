@@ -1,0 +1,85 @@
+protocol_version: 1
+purpose: Assess convergence and long-history generalization at 4x256 across fresh
+  seeds and peak learning rates
+model:
+  implementation: reference
+  layers: 4
+  width: 256
+  heads: 4
+  key_dim: 64
+  expand_v: 2.0
+  intermediate_size: 768
+  chunk_size: 64
+  dtype: float32
+  precision: bfloat16
+data:
+  family: ar1
+  bound: 0.95
+  noise_std: 0.5
+  initial_value: 0.0
+training:
+  seeds:
+  - 185
+  - 186
+  - 187
+  data_seed: 410000000
+  lengths:
+  - 64
+  - 2048
+  tokens_per_step: 8192
+  steps: 40000
+  optimizer: Adam
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  schedule: warmup_cosine
+  grad_clip: 1.0
+  checkpoint_steps:
+  - 10000
+  - 20000
+  - 40000
+  log_every: 100
+  reset_every: 0
+  warmup_steps: 1000
+  peak_learning_rates:
+  - 0.0001
+  - 0.0003
+evaluation:
+  origins:
+  - 2048
+  - 4096
+  - 8192
+  - 16384
+  - 32768
+  - 65536
+  policies:
+  - full
+  - window2048
+  window: 2048
+  seed: 920000000
+  series: 512
+  confirmation_set_opened: false
+  precision_audit_seed: 185
+  precision_audit_origins:
+  - 2048
+  - 16384
+  precision_audit_series: 4
+  during_training_every: 10000
+  precision_audit_arm: lr1e4
+modal:
+  profile: alexander-tian
+  gpu: H100
+  cpu: 4
+  memory_mib: 16384
+  max_containers: 10
+  timeout_seconds: 2700
+  train_soft_limit_seconds: 2160
+  work_soft_limit_seconds: 2600
+  retries: 0
+  budget_usd: 40
+wandb:
+  entity: alexander-tian-ucb
+  project: project182
+  username: alexander-tian

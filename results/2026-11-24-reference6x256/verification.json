@@ -1,0 +1,11 @@
+{
+  "all_eight_runs_finished": true,
+  "all_24_checkpoint_curves_complete": true,
+  "all_predictions_finite": true,
+  "same_validation_series": true,
+  "full_and_window_identical_at_2k": true,
+  "source_hashes_verified_on_download": true,
+  "window_posterior_cross_worker_tolerance": 1e-12,
+  "maximum_observed_window_posterior_cross_worker_difference": 8.881784197001252e-16,
+  "confirmation_set_opened": false
+}

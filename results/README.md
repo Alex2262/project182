@@ -1,6 +1,12 @@
 # Experiment results
 
-- **[November 24: paired full-history versus recent-window forecasts](2026-11-24-forecast-windows/)** — three frozen models on the same targets: full history wins at 4k, but latest-2,048 replay wins at 16k; local CPU evaluation, paired uncertainty, and reproducible artifacts. Latest forecasting results.
+- **[November 24: 4×256 reference models, 40k steps](2026-11-24-reference4x256-40k/FINDINGS.md)** — latest results: 12 completed runs, warmup/cosine schedules, full versus latest-2k histories through 64k, and 36 checkpoint evaluations.
+- **[November 24: 6×256 reference models, 20k steps](2026-11-24-reference6x256/FINDINGS.md)** — eight runs, constant-LR controls and seed-dependent long-history behavior.
+- **[November 24: learning curves across earlier model sizes](2026-11-24-learning-curves/README.md)** — comparable fixed-history validation and training curves; different architectures and schedules prevent a depth-only interpretation.
+- **[November 24: legacy 64k evaluation](2026-11-24-forecast-64k/README.md)** — extended Transformer and GDN results.
+- **[November 24: carried-state training](2026-11-24-forecast-warmup/README.md)** — carry-versus-reset training intervention.
+
+- **[November 24: paired full-history versus recent-window forecasts](2026-11-24-forecast-windows/)** — three frozen models on the same targets: full history wins at 4k, but latest-2,048 replay wins at 16k; local CPU evaluation, paired uncertainty, and reproducible artifacts.
 
 - **[November 23: 30k optimization continuations](2026-11-23-forecast-optimization/)** — three paired seeds, constant versus cosine learning rate; large accuracy gains from decay, with long-history deterioration remaining.
 

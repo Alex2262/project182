@@ -2,7 +2,7 @@
 
 We study whether a recurrent forecaster keeps benefiting from a longer observation history, and how training history and optimization affect that behavior. The controlled AR(1) task has an exact Bayesian reference using compact running statistics.
 
-- **[Latest result: paired full-history versus recent-window forecasts](results/2026-11-24-forecast-windows/README.md)** — full history wins at 4k observations, but replaying the latest 2,048 wins at 16k in all three tested models.
+- **[Latest result: 4×256 reference models, 40k steps](results/2026-11-24-reference4x256-40k/FINDINGS.md)** — 12 runs across three seeds and two learning rates: latest-2k replay improves all six GDN models at 64k, while full history improves all six Transformers. Includes learning curves, per-seed plots, predictions and verified run records.
 - **[All experiment reports, plots, and tables](results/README.md)** — includes the forecasting pilots, training-history sweep, optimization continuations, and original regression control.
 - **[Forecasting setup and statistical reference](docs/forecast_pilot.md)** and **[latest evaluation protocol](docs/forecast_windows.md)**.
 

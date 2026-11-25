@@ -15,7 +15,15 @@ import torch
 import yaml
 
 from forecast_data import fixed_dataset, sample_streams, transition_tokens, score
-from forecast_models import Forecaster
+from forecast_models import Forecaster as LegacyForecaster
+
+
+def Forecaster(config):
+    """Explicit backend selection; historical configurations retain legacy models."""
+    if config.get('implementation', 'legacy') == 'reference':
+        from forecast_reference import ReferenceForecaster
+        return ReferenceForecaster(config)
+    return LegacyForecaster(config)
 
 
 def write_json(path, data):
@@ -55,7 +63,10 @@ def load_config(path, family=None, regime=None, seed=None):
         if config["training"]["tokens_per_step"] % length:
             raise ValueError("Training token budget must be divisible by each length")
     sources = {}
-    for name in ("forecast_data.py", "forecast_models.py", "forecast_runtime.py"):
+    source_names = ["forecast_data.py", "forecast_models.py", "forecast_runtime.py"]
+    if config['model'].get('implementation') == 'reference':
+        source_names.append('forecast_reference.py')
+    for name in source_names:
         path = Path(__file__).with_name(name)
         sources[name] = hashlib.sha256(path.read_bytes()).hexdigest()
     config["source_sha256"] = sources

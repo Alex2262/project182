@@ -1,0 +1,24 @@
+{
+  "status": "finished",
+  "run_name": "alex_261124_ar1_64k_transformer_s182",
+  "training": {
+    "completed_steps": 30000,
+    "initial_completed_steps": 0,
+    "planned_steps": 30000,
+    "elapsed_seconds": 233.725939575,
+    "output": "/artifacts/forecast_long/runs/alex_261124_ar1_64k_transformer_s182",
+    "status": "finished"
+  },
+  "evaluation": {
+    "status": "finished",
+    "elapsed_seconds": 674.3777768570001,
+    "inference_seconds": 672.72180901,
+    "family": "transformer_nope",
+    "seed": 182,
+    "output": "/artifacts/forecast_long/runs/alex_261124_ar1_64k_transformer_s182/long_evaluation",
+    "confirmation_set_opened": false,
+    "checkpoint_sha256": "448c6d00d6d16283a7a73e2b1fdae40c4e8bca7f5c448924fa4b69358f89ea4f"
+  },
+  "total_elapsed_seconds": 910.3460965009999,
+  "wandb_identity": "alexander-tian"
+}

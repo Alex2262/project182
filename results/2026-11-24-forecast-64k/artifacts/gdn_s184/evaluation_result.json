@@ -1,0 +1,10 @@
+{
+  "status": "finished",
+  "elapsed_seconds": 49.117938148,
+  "inference_seconds": 46.007262512,
+  "family": "gated_deltanet",
+  "seed": 184,
+  "output": "/artifacts/forecast_long/evaluations/alex_261124_ar1_64k_gdn_s184",
+  "confirmation_set_opened": false,
+  "checkpoint_sha256": "2cd1597dcf7b8dbf552998d6553bf29edaf11d22883f2769565455b96b3fc8e1"
+}

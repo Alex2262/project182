@@ -1,0 +1,21 @@
+{
+  "seed": 183,
+  "origins": [
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "policies": [
+    "full",
+    "window2048"
+  ],
+  "series": 512,
+  "evaluation_seed": 920000000,
+  "confirmation_set_opened": false,
+  "family": "gated_deltanet",
+  "checkpoint_sha256": "7465d876c68c7b3883967ec35ebf357516cd1dc7469fa410207eff51c08f4111",
+  "old_data_directory": "/artifacts/forecast_v1/runs/alex_261123_ar1_opt30k_cosine_s183"
+}

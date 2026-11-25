@@ -1,0 +1,26 @@
+{
+  "carry_182": {
+    "cpu_gpu_prediction_max_abs_error": 1.4901161193847656e-08,
+    "completed_steps": 33000
+  },
+  "carry_183": {
+    "cpu_gpu_prediction_max_abs_error": 1.1920928955078125e-07,
+    "completed_steps": 33000
+  },
+  "carry_184": {
+    "cpu_gpu_prediction_max_abs_error": 4.842877388000488e-08,
+    "completed_steps": 33000
+  },
+  "reset_182": {
+    "cpu_gpu_prediction_max_abs_error": 5.960464477539063e-08,
+    "completed_steps": 33000
+  },
+  "reset_183": {
+    "cpu_gpu_prediction_max_abs_error": 5.960464477539063e-08,
+    "completed_steps": 33000
+  },
+  "reset_184": {
+    "cpu_gpu_prediction_max_abs_error": 1.1920928955078125e-07,
+    "completed_steps": 33000
+  }
+}

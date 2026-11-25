@@ -1,0 +1,50 @@
+protocol_version: 1
+purpose: Throughput and correctness only; not a convergence experiment
+model:
+  implementation: reference
+  layers: 6
+  width: 256
+  heads: 4
+  key_dim: 64
+  expand_v: 2.0
+  intermediate_size: 768
+  chunk_size: 64
+  dtype: float32
+  precision: bfloat16
+families: [transformer_nope, gated_deltanet]
+precisions: [bfloat16, float32]
+training:
+  seed: 182
+  data_seed: 410000000
+  lengths: [64, 2048]
+  tokens_per_step_cases: [2048, 8192]
+  optimizer: Adam
+  learning_rate: 0.0003
+  betas: [0.9, 0.999]
+  eps: 0.00000001
+  weight_decay: 0.0
+  grad_clip: 1.0
+  warmup_updates: 4
+  measured_updates: 20
+evaluation:
+  lengths: [2048, 16384, 65536]
+  series_per_batch: 1
+  warmup_calls: 1
+  measured_calls: 3
+  long_precision: bfloat16
+  note: Fresh benchmark-only seeds; no validation or confirmation sets opened
+modal:
+  profile: alexander-tian
+  gpus: [A100-40GB, H100]
+  cpu: 4
+  memory_mib: 16384
+  timeout_seconds_per_gpu: 1200
+  max_containers_per_gpu: 1
+  retries: 0
+  budget_usd: 5
+dependencies:
+  torch: 2.10.0
+  transformers: 5.6.2
+  flash-linear-attention: 0.6.0
+  fla-core: 0.6.0
+  triton: 3.7.1

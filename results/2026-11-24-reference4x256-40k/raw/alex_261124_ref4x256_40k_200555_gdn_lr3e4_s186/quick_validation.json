@@ -1,0 +1,34 @@
+[
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0008624845201461581,
+    "series_se": 7.329652217224613e-05,
+    "step": 10000,
+    "learning_rate": 0.0002660544980967281
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.00048424066842972323,
+    "series_se": 3.918848108200463e-05,
+    "step": 20000,
+    "learning_rate": 0.00017044147432191794
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0002913750808431671,
+    "series_se": 3.4865513647598703e-05,
+    "step": 30000,
+    "learning_rate": 7.148422334562721e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.00015144670607956034,
+    "series_se": 1.3527661398349772e-05,
+    "step": 40000,
+    "learning_rate": 2.9999999999999997e-05
+  }
+]

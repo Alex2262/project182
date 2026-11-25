@@ -1,0 +1,8 @@
+{
+  "completed_steps": 30000,
+  "initial_completed_steps": 0,
+  "planned_steps": 30000,
+  "elapsed_seconds": 233.725939575,
+  "output": "/artifacts/forecast_long/runs/alex_261124_ar1_64k_transformer_s182",
+  "status": "finished"
+}

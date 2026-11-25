@@ -1,0 +1,874 @@
+{
+  "batch_name": "alex_261124_ref6x256_192325",
+  "budget_usd": 20,
+  "configs": [
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 182,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410000000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_tf_main_s182"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 183,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410100000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_tf_main_s183"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 184,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410200000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_tf_main_s184"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 182,
+        "learning_rate": 0.0003,
+        "effective_data_seed": 410000000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "lrcheck",
+      "run_name": "alex_261124_ref6x256_192325_tf_lrcheck_s182"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 182,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410000000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_gdn_main_s182"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 183,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410100000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_gdn_main_s183"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 184,
+        "learning_rate": 0.0001,
+        "effective_data_seed": 410200000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "main",
+      "run_name": "alex_261124_ref6x256_192325_gdn_main_s184"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Replicate long-history deterioration and latest-2k benefit at 6x256",
+      "model": {
+        "implementation": "reference",
+        "layers": 6,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          182,
+          183,
+          184
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 20000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "constant",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          5000,
+          10000,
+          20000
+        ],
+        "log_every": 100,
+        "main_learning_rate": 0.0001,
+        "sensitivity_learning_rate": 0.0003,
+        "sensitivity_seed": 182,
+        "reset_every": 0,
+        "seed": 182,
+        "learning_rate": 0.0003,
+        "effective_data_seed": 410000000,
+        "total_training_tokens": 163840000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 182,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 8,
+        "timeout_seconds": 2040,
+        "train_soft_limit_seconds": 1500,
+        "work_soft_limit_seconds": 1950,
+        "retries": 0,
+        "budget_usd": 20
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "d99c690477a0e8008c404243e5b839abf495c37baeeff49452ef43a1cf881a6c"
+      },
+      "arm": "lrcheck",
+      "run_name": "alex_261124_ref6x256_192325_gdn_lrcheck_s182"
+    }
+  ],
+  "max_worker_seconds": 2040,
+  "workers": 8,
+  "estimated_max_compute_usd": 19.35685312,
+  "launcher_sha256": "d7b90cac7eca047365bab98a0cf552660760f2eeef35b19515b4c7dc02b23e2a"
+}

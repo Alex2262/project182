@@ -1,0 +1,106 @@
+{
+  "status": "submitted",
+  "personal_modal_profile": "alexander-tian",
+  "github_account_verified": "Alex2262",
+  "preflight": {
+    "checks": {
+      "reset": {
+        "reset_matches_fresh_forward": true,
+        "reset_gradient_max_abs_error": 0.0,
+        "carry_matches_continuous_max_abs_error": 0.0,
+        "prefix_input_gradient_zero_both_arms": true,
+        "suffix_input_gradient_nonzero": true
+      },
+      "carry": {
+        "reset_matches_fresh_forward": true,
+        "reset_gradient_max_abs_error": 0.0,
+        "carry_matches_continuous_max_abs_error": 0.0,
+        "prefix_input_gradient_zero_both_arms": true,
+        "suffix_input_gradient_nonzero": true
+      }
+    },
+    "seconds_per_update": {
+      "reset": 0.5819084570000008,
+      "carry": 0.5558222000000015
+    },
+    "peak_device_bytes": {
+      "reset": 91468800,
+      "carry": 91468800
+    },
+    "status": "passed",
+    "elapsed_seconds": 16.805751269,
+    "seconds_per_job_with_headroom": {
+      "reset": 2798.588056500004,
+      "carry": 2681.199900000007
+    },
+    "projected_running_compute_usd": 10.317360105437352,
+    "rate_usd_per_second": 0.00062696,
+    "confirmation_set_opened": false,
+    "budget_gate_passed": true,
+    "wandb_identity": "alexander-tian"
+  },
+  "runs": [
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_carry_s182",
+      "action": "train",
+      "arm": "carry",
+      "seed": 182,
+      "function_call_id": "fc-01M884YZ42518QBWSSJ0M14Y77",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-lgmtOo7Eq4d6MMoqUPFcKj",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/carry_s182.log"
+    },
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_carry_s183",
+      "action": "train",
+      "arm": "carry",
+      "seed": 183,
+      "function_call_id": "fc-01M884YZ3WJZW20YDXZGD5CS4C",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-dHro0t3peMFfBAZc7H17gs",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/carry_s183.log"
+    },
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_carry_s184",
+      "action": "train",
+      "arm": "carry",
+      "seed": 184,
+      "function_call_id": "fc-01M884YZ3WS0C7EVKV7SCYRMTS",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-RV55hPqkASgv4riKklQy0D",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/carry_s184.log"
+    },
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_reset_s182",
+      "action": "train",
+      "arm": "reset",
+      "seed": 182,
+      "function_call_id": "fc-01M884YZ3Z81A3R25TQ50HTYME",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-Hb4k7sI5uYFwHmyye6yiNu",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/reset_s182.log"
+    },
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_reset_s183",
+      "action": "train",
+      "arm": "reset",
+      "seed": 183,
+      "function_call_id": "fc-01M884YZ3VZ3QTCXD4EKDJHJG0",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-5yxTU1SqYm7B1nUse9h1GE",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/reset_s183.log"
+    },
+    {
+      "event": "submitted",
+      "run_name": "alex_261124_ar1_warmup_reset_s184",
+      "action": "train",
+      "arm": "reset",
+      "seed": 184,
+      "function_call_id": "fc-01M884YZ3WEVBJB27BJJ3A31WY",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-lVIhHSH9ZFCGWK2r0cV950",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_warmup_control/reset_s184.log"
+    }
+  ],
+  "launcher_sha256": "bf7f6034ef5e4679954676ad84903a9d1d9bb7190941382a67952f49198da2f9",
+  "confirmation_set_opened": false
+}

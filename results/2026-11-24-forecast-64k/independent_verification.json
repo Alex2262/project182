@@ -1,0 +1,80 @@
+{
+  "GDN_182": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 0.0,
+      "bayes_epistemic_risk": 0.0
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 7.152557373046875e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000,
+    "old_full_history_max_abs_error": 4.76837158203125e-07,
+    "original_data_prefix_bit_identical": true
+  },
+  "GDN_183": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 8.470329472543003e-22,
+      "bayes_epistemic_risk": 8.470329472543003e-22
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 3.5762786865234375e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000,
+    "old_full_history_max_abs_error": 4.76837158203125e-07,
+    "original_data_prefix_bit_identical": true
+  },
+  "GDN_184": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 8.470329472543003e-22,
+      "bayes_epistemic_risk": 8.470329472543003e-22
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 3.5762786865234375e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000,
+    "old_full_history_max_abs_error": 4.76837158203125e-07,
+    "original_data_prefix_bit_identical": true
+  },
+  "Transformer_182": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 0.0,
+      "bayes_epistemic_risk": 0.0
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 2.384185791015625e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000
+  },
+  "Transformer_183": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 8.470329472543003e-22,
+      "bayes_epistemic_risk": 8.470329472543003e-22
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 2.384185791015625e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000
+  },
+  "Transformer_184": {
+    "rescored_all_metrics": true,
+    "targets_parameters_and_reference_means_bit_identical": true,
+    "reference_variance_max_abs_errors": {
+      "bayes_parameter_variance": 0.0,
+      "bayes_epistemic_risk": 0.0
+    },
+    "checkpoint_sha256_verified": true,
+    "full_equals_window_at_2048_max_abs_error": 2.384185791015625e-07,
+    "confirmation_set_opened": false,
+    "checkpoint_step": 30000
+  }
+}

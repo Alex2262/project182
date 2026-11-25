@@ -1,0 +1,17 @@
+{
+  "182": {
+    "cpu_gpu_max_abs_error": 4.470348358154297e-08,
+    "ordinary_vs_bounded_cpu_max_abs_error": 5.960464477539063e-08,
+    "matched_training_recipe_except_validation_cadence": true
+  },
+  "183": {
+    "cpu_gpu_max_abs_error": 1.1920928955078125e-07,
+    "ordinary_vs_bounded_cpu_max_abs_error": 8.940696716308594e-08,
+    "matched_training_recipe_except_validation_cadence": true
+  },
+  "184": {
+    "cpu_gpu_max_abs_error": 8.940696716308594e-08,
+    "ordinary_vs_bounded_cpu_max_abs_error": 1.1920928955078125e-07,
+    "matched_training_recipe_except_validation_cadence": true
+  }
+}

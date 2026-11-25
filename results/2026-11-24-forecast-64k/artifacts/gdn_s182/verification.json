@@ -1,0 +1,7 @@
+{
+  "full_equals_window_at_2048_max_abs_error": 7.152557373046875e-07,
+  "confirmation_set_opened": false,
+  "checkpoint_step": 30000,
+  "old_full_history_max_abs_error": 4.76837158203125e-07,
+  "original_data_prefix_bit_identical": true
+}

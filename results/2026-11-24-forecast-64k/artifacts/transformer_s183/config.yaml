@@ -1,0 +1,114 @@
+protocol_version: 1
+question: Can short-sequence pretraining produce a recurrent forecaster that keeps
+  improving on long deployment streams?
+data:
+  family: ar1
+  bound: 0.95
+  noise_std: 0.5
+  initial_value: 0.0
+  parameter_prior: uniform[-bound,bound], independent per series
+  tokenization: observed pair (y[t-1], y[t]); target y[t+1]
+model:
+  family: transformer_nope
+  width: 64
+  layers: 2
+  heads: 4
+  key_dim: 16
+  chunk_size: 64
+  dtype: float32
+training:
+  seed: 183
+  data_seed: 410000000
+  regime: mixed
+  lengths:
+  - 64
+  - 2048
+  tokens_per_step: 2048
+  steps: 30000
+  learning_rate: 0.0003
+  optimizer: Adam
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  schedule: cosine_decay
+  grad_clip: 1.0
+  log_every: 25
+  checkpoint_every: 100
+  validation_steps:
+  - 2000
+  - 5000
+  - 10000
+  - 20000
+  - 30000
+  reset_every: 0
+  effective_data_seed: 410100000
+  total_training_tokens: 61440000
+  decay_start_step: 10000
+  decay_end_step: 30000
+  min_learning_rate: 3.0e-05
+evaluation:
+  lengths:
+  - 16
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  - 1024
+  - 2048
+  batch_size: 4
+  validation:
+    seed: 920000000
+    series: 512
+  confirmation:
+    seed: 940000000
+    series: 1024
+preflight:
+  families:
+  - transformer_nope
+  steps_per_case: 10
+  gpu: A100-40GB
+  cpu: 2
+  memory_mib: 8192
+  timeout_seconds: 300
+  retries: 0
+  resolved_cases:
+  - family: transformer_nope
+    length: 64
+    batch_size: 32
+    optimizer_steps: 10
+    seed: 183
+    parameters: 99841
+    persistent_state_elements_per_series: 0
+    persistent_state_bytes_fp32_per_series: 0
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+  - family: transformer_nope
+    length: 2048
+    batch_size: 1
+    optimizer_steps: 10
+    seed: 183
+    parameters: 99841
+    persistent_state_elements_per_series: 0
+    persistent_state_bytes_fp32_per_series: 0
+    state_excludes: model weights, temporary chunk activations, last scalar observation
+    positional_embedding: none; both models receive adjacent observed-value pairs
+wandb:
+  enabled: true
+  entity: alexander-tian-ucb
+  project: project182
+source_sha256:
+  forecast_data.py: e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e
+  forecast_models.py: a62aa97303b1a38b9026f13048563f377b6e2043c12202511576a4894a2550b4
+  forecast_runtime.py: 900f3d63e82ae17d7e6120ec5b1249388db3617c09ecf6a081dae96c37d73f86
+  forecast_horizon.py: e51738d12b6641ae39514744778e1731a33d64a7936a8ebcc4a2fbd26104281d
+  forecast_long.py: 4b15fc4d24596f6dbf2bd02b058069f00411509269426299be4b07346a6afe44
+model_info:
+  parameters: 99841
+  persistent_state_elements_per_series: 0
+  persistent_state_bytes_fp32_per_series: 0
+  state_excludes: model weights, temporary chunk activations, last scalar observation
+  positional_embedding: none; both models receive adjacent observed-value pairs
+max_uninterrupted_training_length: 2048

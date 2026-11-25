@@ -1,0 +1,19 @@
+{
+  "seed": 183,
+  "origins": [
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "policies": [
+    "full",
+    "window2048"
+  ],
+  "series": 512,
+  "evaluation_seed": 920000000,
+  "confirmation_set_opened": false,
+  "family": "transformer_nope"
+}

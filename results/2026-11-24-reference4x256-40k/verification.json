@@ -1,0 +1,87 @@
+{
+  "all_complete": true,
+  "runs": 12,
+  "checkpoint_evaluations": 36,
+  "metric_rows": 432,
+  "quick_validation_checks": 48,
+  "source_hashes_verified": true,
+  "saved_prediction_metrics_recomputed": true,
+  "identical_validation_series_verified": true,
+  "full_equals_window_at_2k": true,
+  "containers_remaining": 0,
+  "confirmed_personal_profile": "alexander-tian",
+  "checks": [
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr1e4_s186",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr1e4_s187",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr3e4_s185",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr3e4_s186",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_gdn_lr3e4_s187",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr1e4_s185",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr1e4_s186",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr1e4_s187",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr3e4_s185",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr3e4_s186",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    },
+    {
+      "run": "alex_261124_ref4x256_40k_200555_tf_lr3e4_s187",
+      "logged_schedule_verified": true,
+      "finite_losses_and_gradients": true,
+      "training_steps": 40000
+    }
+  ]
+}

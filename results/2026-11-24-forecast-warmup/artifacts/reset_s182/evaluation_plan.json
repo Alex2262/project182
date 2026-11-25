@@ -1,0 +1,26 @@
+{
+  "family": "gated_deltanet",
+  "seed": 182,
+  "arm": "reset",
+  "checkpoint_step": 33000,
+  "training_lengths": [
+    2048
+  ],
+  "training_schedule": "constant",
+  "checkpoint_sha256": "28fa5b6a73099f8749b2ec508afeadfcd824525dd651ae0666ba033afd9b3164",
+  "origins": [
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "policies": [
+    "full",
+    "window2048"
+  ],
+  "series": 512,
+  "evaluation_seed": 920000000,
+  "confirmation_set_opened": false
+}

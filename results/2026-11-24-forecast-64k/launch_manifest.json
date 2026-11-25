@@ -1,0 +1,82 @@
+{
+  "status": "submitted",
+  "personal_modal_profile": "alexander-tian",
+  "github_account_verified": "Alex2262",
+  "preflight": {
+    "status": "passed",
+    "checks": {
+      "transformer_exact_attention_max_abs_error": 3.725290298461914e-08,
+      "transformer_causal_error": 0.0
+    },
+    "benchmark": {
+      "train_64_seconds_per_step": 0.005517794000000187,
+      "train_2048_seconds_per_step": 0.012857324000000503,
+      "transformer_nope_full64k_seconds_per_series": 1.4021188315000002,
+      "transformer_nope_peak_device_bytes": 188210688,
+      "transformer_nope_six_windows_seconds_per_series": 0.003806130000000074,
+      "gated_deltanet_full64k_seconds_per_series": 0.10831544093749995,
+      "gated_deltanet_peak_device_bytes": 42250240,
+      "gated_deltanet_six_windows_seconds_per_series": 0.009897926843750016
+    },
+    "transformer_train_plus_eval_seconds_with_headroom": 1673.1905254320156,
+    "gdn_eval_seconds_with_headroom": 150.78786645599996,
+    "projected_running_compute_usd": 3.4379171927402243,
+    "rate_usd_per_second": 0.00062696,
+    "budget_gate_passed": true,
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "elapsed_seconds": 11.536166591,
+    "confirmation_set_opened": false,
+    "wandb_identity": "alexander-tian"
+  },
+  "runs": [
+    {
+      "event": "submitted",
+      "action": "evaluate",
+      "seed": 182,
+      "function_call_id": "fc-01M881S81NA4BTG6EZAPFG2KV8",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-La8h9z8rpu6pGQv86lYub9",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/evaluate_s182.log"
+    },
+    {
+      "event": "submitted",
+      "action": "evaluate",
+      "seed": 183,
+      "function_call_id": "fc-01M881S81SQKSK66AYN76J35BW",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-Cw8t6BjGoQ3oRgdv9GPH5j",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/evaluate_s183.log"
+    },
+    {
+      "event": "submitted",
+      "action": "evaluate",
+      "seed": 184,
+      "function_call_id": "fc-01M881S851N35VZTRY4FZZKX24",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-OkSr7uFt2URP9Z63iyZJD5",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/evaluate_s184.log"
+    },
+    {
+      "event": "submitted",
+      "action": "train",
+      "seed": 182,
+      "function_call_id": "fc-01M881S821NWCBVCPK22WHRZGN",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-c5goKYSlVfuJsq7m2eLkEY",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/train_s182.log"
+    },
+    {
+      "event": "submitted",
+      "action": "train",
+      "seed": 183,
+      "function_call_id": "fc-01M881S81S5HZY8W4V4SGQRSN8",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-zWtiFSLKPFeyxU27TOkVYn",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/train_s183.log"
+    },
+    {
+      "event": "submitted",
+      "action": "train",
+      "seed": 184,
+      "function_call_id": "fc-01M881S93NC2A0MYKZ9C979MSB",
+      "app_url": "https://modal.com/apps/alexander-tian/main/ap-12dXYXzWB4jKJ62kCjpu81",
+      "log": "/Users/alexander/personal/projects/project182/outputs/forecast_long_control/train_s184.log"
+    }
+  ],
+  "launcher_sha256": "2f773a4ee5a67d681bfc793924f8cd53256dbe5028d7c61d8f03c07b0e49254e"
+}

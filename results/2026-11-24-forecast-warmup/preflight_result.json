@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "reset": {
+      "reset_matches_fresh_forward": true,
+      "reset_gradient_max_abs_error": 0.0,
+      "carry_matches_continuous_max_abs_error": 0.0,
+      "prefix_input_gradient_zero_both_arms": true,
+      "suffix_input_gradient_nonzero": true
+    },
+    "carry": {
+      "reset_matches_fresh_forward": true,
+      "reset_gradient_max_abs_error": 0.0,
+      "carry_matches_continuous_max_abs_error": 0.0,
+      "prefix_input_gradient_zero_both_arms": true,
+      "suffix_input_gradient_nonzero": true
+    }
+  },
+  "seconds_per_update": {
+    "reset": 0.5819084570000008,
+    "carry": 0.5558222000000015
+  },
+  "peak_device_bytes": {
+    "reset": 91468800,
+    "carry": 91468800
+  },
+  "status": "passed",
+  "elapsed_seconds": 16.805751269,
+  "seconds_per_job_with_headroom": {
+    "reset": 2798.588056500004,
+    "carry": 2681.199900000007
+  },
+  "projected_running_compute_usd": 10.317360105437352,
+  "rate_usd_per_second": 0.00062696,
+  "confirmation_set_opened": false,
+  "budget_gate_passed": true,
+  "wandb_identity": "alexander-tian"
+}

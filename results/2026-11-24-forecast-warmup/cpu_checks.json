@@ -1,0 +1,7 @@
+{
+  "reset_matches_fresh_forward": true,
+  "reset_gradient_max_abs_error": 0.0,
+  "carry_matches_continuous_max_abs_error": 1.1920928955078125e-07,
+  "prefix_input_gradient_zero_both_arms": true,
+  "suffix_input_gradient_nonzero": true
+}
