@@ -1,5 +1,7 @@
 # Experiment results
 
+- **[V1 figures and CPU reproduction](../report/v1/README.md)** — the four manuscript figures with a single script that rebuilds them from committed predictions and logs.
+
 - **[November 24: long-context adaptation versus matched reset training](2026-11-24-long-context-adaptation/README.md)** — latest results: ten completed jobs, fresh 80k baselines, two paired adaptation seeds, layer resets, verified cloud completion, and report-ready PDF plots.
 - **[November 24: 4×256 reference models, 40k steps](2026-11-24-reference4x256-40k/FINDINGS.md)** — 12 completed runs, warmup/cosine schedules, full versus latest-2k histories through 64k, and 36 checkpoint evaluations.
 - **[November 24: 6×256 reference models, 20k steps](2026-11-24-reference6x256/FINDINGS.md)** — eight runs, constant-LR controls and seed-dependent long-history behavior.

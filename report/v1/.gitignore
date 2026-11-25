@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# Keep the manuscript, source bundle, and review notes local.
+*.tex
+*.bib
+*.sty
+main.pdf
+project182-v1-overleaf/
+project182-v1-overleaf.zip
+review_notes.md
