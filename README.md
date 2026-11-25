@@ -2,7 +2,8 @@
 
 We study whether a recurrent forecaster keeps benefiting from a longer observation history, and how training history and optimization affect that behavior. The controlled AR(1) task has an exact Bayesian reference using compact running statistics.
 
-- **[Latest result: 4×256 reference models, 40k steps](results/2026-11-24-reference4x256-40k/FINDINGS.md)** — 12 runs across three seeds and two learning rates: latest-2k replay improves all six GDN models at 64k, while full history improves all six Transformers. Includes learning curves, per-seed plots, predictions and verified run records.
+- **[Latest result: long-context adaptation and matched reset controls](results/2026-11-24-long-context-adaptation/README.md)** — all ten follow-up jobs completed: fresh 80k baselines, paired long-context/reset adaptations, and layer-state ablations. Long-context adaptation repairs the tested GDN failure in both seeds.
+- **[40k baseline: 4×256 reference models](results/2026-11-24-reference4x256-40k/FINDINGS.md)** — 12 runs across three seeds and two learning rates: latest-2k replay improves all six GDN models at 64k, while full history improves all six Transformers. Includes learning curves, per-seed plots, predictions and verified run records.
 - **[All experiment reports, plots, and tables](results/README.md)** — includes the forecasting pilots, training-history sweep, optimization continuations, and original regression control.
 - **[Forecasting setup and statistical reference](docs/forecast_pilot.md)** and **[latest evaluation protocol](docs/forecast_windows.md)**.
 

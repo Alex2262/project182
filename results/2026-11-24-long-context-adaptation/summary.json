@@ -1,0 +1,488 @@
+{
+  "batch": "alex_261124_next_205830",
+  "verification": {
+    "all_complete": true,
+    "jobs": 10,
+    "training_jobs": 8,
+    "checkpoint_evaluations": 24,
+    "ablation_jobs": 2,
+    "source_hashes_verified": true,
+    "saved_metrics_recomputed": true,
+    "full_equals_window_at_2k": true,
+    "identical_validation_series": true,
+    "ablation_checks": [
+      {
+        "seed": 185,
+        "all_states_equals_fresh": true
+      },
+      {
+        "seed": 186,
+        "all_states_equals_fresh": true
+      }
+    ],
+    "checks": [
+      {
+        "run": "alex_261124_next_205830_gdn_fresh_s185",
+        "status": "finished",
+        "steps": 80000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          40000,
+          60000,
+          80000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_fresh_s186",
+        "status": "finished",
+        "steps": 80000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          40000,
+          60000,
+          80000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_tf_fresh_s185",
+        "status": "finished",
+        "steps": 80000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          40000,
+          60000,
+          80000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_tf_fresh_s186",
+        "status": "finished",
+        "steps": 80000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          40000,
+          60000,
+          80000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_long_adaptation_s185",
+        "status": "finished",
+        "steps": 5000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          1000,
+          2500,
+          5000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_long_adaptation_s186",
+        "status": "finished",
+        "steps": 5000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          1000,
+          2500,
+          5000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_reset_adaptation_s185",
+        "status": "finished",
+        "steps": 5000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          1000,
+          2500,
+          5000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_reset_adaptation_s186",
+        "status": "finished",
+        "steps": 5000,
+        "source_hashes_verified": true,
+        "checkpoints": [
+          1000,
+          2500,
+          5000
+        ]
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_layer_ablation_s185",
+        "status": "finished",
+        "steps": 0,
+        "source_hashes_verified": true,
+        "checkpoints": []
+      },
+      {
+        "run": "alex_261124_next_205830_gdn_layer_ablation_s186",
+        "status": "finished",
+        "steps": 0,
+        "source_hashes_verified": true,
+        "checkpoints": []
+      }
+    ],
+    "containers_remaining": 0
+  },
+  "finals": [
+    {
+      "model": "GDN: original 40k",
+      "origin": 2048,
+      "full": 0.00018332934442758702,
+      "window": 0.00018332934442758702,
+      "per_seed_full": {
+        "185": 0.0002074765361869855,
+        "186": 0.0001591821526681885
+      }
+    },
+    {
+      "model": "GDN: original 40k",
+      "origin": 4096,
+      "full": 0.00014322031159707442,
+      "window": 0.00019172920547165002,
+      "per_seed_full": {
+        "185": 0.00015268960297255412,
+        "186": 0.0001337510202215947
+      }
+    },
+    {
+      "model": "GDN: original 40k",
+      "origin": 8192,
+      "full": 0.000356392326389927,
+      "window": 0.0001897738848479535,
+      "per_seed_full": {
+        "185": 0.0005346097490822046,
+        "186": 0.0001781749036976494
+      }
+    },
+    {
+      "model": "GDN: original 40k",
+      "origin": 16384,
+      "full": 0.0007719934540931166,
+      "window": 0.00018727385679836566,
+      "per_seed_full": {
+        "185": 0.001204219018728696,
+        "186": 0.00033976788945753723
+      }
+    },
+    {
+      "model": "GDN: original 40k",
+      "origin": 32768,
+      "full": 0.001599052316784329,
+      "window": 0.0002045686095891574,
+      "per_seed_full": {
+        "185": 0.002762569856792616,
+        "186": 0.0004355347767760417
+      }
+    },
+    {
+      "model": "GDN: original 40k",
+      "origin": 65536,
+      "full": 0.002214578608135487,
+      "window": 0.0001993548894202054,
+      "per_seed_full": {
+        "185": 0.004049855826144346,
+        "186": 0.00037930139012662753
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 2048,
+      "full": 0.0001561459622822954,
+      "window": 0.0001561459622822954,
+      "per_seed_full": {
+        "185": 0.00015528321372739397,
+        "186": 0.00015700871083719687
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 4096,
+      "full": 0.00013032999209313217,
+      "window": 0.00017375443253412145,
+      "per_seed_full": {
+        "185": 0.00014505019862377796,
+        "186": 0.00011560978556248637
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 8192,
+      "full": 0.0002676157222910346,
+      "window": 0.00018629172584716476,
+      "per_seed_full": {
+        "185": 0.0003899349622130697,
+        "186": 0.00014529648236899956
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 16384,
+      "full": 0.0009565849352625279,
+      "window": 0.00016634297871646455,
+      "per_seed_full": {
+        "185": 0.0013996929450586372,
+        "186": 0.0005134769254664187
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 32768,
+      "full": 0.0014805638782389283,
+      "window": 0.00018029123336707405,
+      "per_seed_full": {
+        "185": 0.0025531782123012986,
+        "186": 0.00040794954417655777
+      }
+    },
+    {
+      "model": "GDN: fresh 80k",
+      "origin": 65536,
+      "full": 0.002959268317481256,
+      "window": 0.0001831600107777812,
+      "per_seed_full": {
+        "185": 0.0054288460768244454,
+        "186": 0.0004896905581380667
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 2048,
+      "full": 0.0001360057553059633,
+      "window": 0.0001360057553059633,
+      "per_seed_full": {
+        "185": 0.00014125376332138452,
+        "186": 0.0001307577472905421
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 4096,
+      "full": 9.781493195941645e-05,
+      "window": 0.00014647831727849085,
+      "per_seed_full": {
+        "185": 0.000122472192096547,
+        "186": 7.315767182228592e-05
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 8192,
+      "full": 0.00037339572608699624,
+      "window": 0.00014932831603931977,
+      "per_seed_full": {
+        "185": 0.0006118822989665403,
+        "186": 0.00013490915320745218
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 16384,
+      "full": 0.0011304742803702175,
+      "window": 0.00012665987121835773,
+      "per_seed_full": {
+        "185": 0.0019419727937602569,
+        "186": 0.00031897576698017814
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 32768,
+      "full": 0.0033683895678882107,
+      "window": 0.00016096112040216187,
+      "per_seed_full": {
+        "185": 0.006364587639377812,
+        "186": 0.0003721914963986096
+      }
+    },
+    {
+      "model": "GDN: +5k matched reset training",
+      "origin": 65536,
+      "full": 0.006749626037864367,
+      "window": 0.0001546102499605275,
+      "per_seed_full": {
+        "185": 0.013144158970917585,
+        "186": 0.00035509310481114876
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 2048,
+      "full": 0.00016131907469207587,
+      "window": 0.00016131907469207587,
+      "per_seed_full": {
+        "185": 0.0001631187503171318,
+        "186": 0.00015951939906701994
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 4096,
+      "full": 0.0001153768230037745,
+      "window": 0.0001907290115136834,
+      "per_seed_full": {
+        "185": 0.00012192998176056797,
+        "186": 0.00010882366424698104
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 8192,
+      "full": 6.993684820141773e-05,
+      "window": 0.0001885738255068527,
+      "per_seed_full": {
+        "185": 7.279598283971097e-05,
+        "186": 6.707771356312449e-05
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 16384,
+      "full": 7.10059333340952e-05,
+      "window": 0.00016549473939398497,
+      "per_seed_full": {
+        "185": 8.128772125121122e-05,
+        "186": 6.0724145416979195e-05
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 32768,
+      "full": 5.528400916390326e-05,
+      "window": 0.0001919254029313082,
+      "per_seed_full": {
+        "185": 6.572277905381115e-05,
+        "186": 4.4845239273995374e-05
+      }
+    },
+    {
+      "model": "Transformer: fresh 80k",
+      "origin": 65536,
+      "full": 5.2840267519915416e-05,
+      "window": 0.00020125903585684862,
+      "per_seed_full": {
+        "185": 5.712210564826123e-05,
+        "186": 4.85584293915696e-05
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 2048,
+      "full": 0.00014738279621749015,
+      "window": 0.00014738279621749015,
+      "per_seed_full": {
+        "185": 0.00014774861763608622,
+        "186": 0.00014701697479889406
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 4096,
+      "full": 7.166059881827069e-05,
+      "window": 0.00014948326974496216,
+      "per_seed_full": {
+        "185": 7.477213169970504e-05,
+        "186": 6.854906593683635e-05
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 8192,
+      "full": 4.1961619982971334e-05,
+      "window": 0.0001560109564948573,
+      "per_seed_full": {
+        "185": 4.436765489408429e-05,
+        "186": 3.955558507185838e-05
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 16384,
+      "full": 2.529343526278218e-05,
+      "window": 0.0001328241029546204,
+      "per_seed_full": {
+        "185": 2.3626808992514438e-05,
+        "186": 2.696006153304992e-05
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 32768,
+      "full": 1.80978790853686e-05,
+      "window": 0.00016248522392789817,
+      "per_seed_full": {
+        "185": 1.6214838403459126e-05,
+        "186": 1.9980919767278076e-05
+      }
+    },
+    {
+      "model": "GDN: +5k long-context training",
+      "origin": 65536,
+      "full": 2.3695572558714598e-05,
+      "window": 0.0001615846676409349,
+      "per_seed_full": {
+        "185": 1.8922230937468106e-05,
+        "186": 2.846891417996109e-05
+      }
+    }
+  ],
+  "paired": [
+    {
+      "origin": 2048,
+      "long_minus_reset": 1.1377040911526841e-05,
+      "conditional_series_ci_low": 3.0511980570044894e-06,
+      "conditional_series_ci_high": 2.0109502280993555e-05
+    },
+    {
+      "origin": 4096,
+      "long_minus_reset": -2.6154333141145764e-05,
+      "conditional_series_ci_low": -3.768598829052508e-05,
+      "conditional_series_ci_high": -1.4999534657864497e-05
+    },
+    {
+      "origin": 8192,
+      "long_minus_reset": -0.0003314341061040249,
+      "conditional_series_ci_low": -0.0003825945636195029,
+      "conditional_series_ci_high": -0.0002829205539475506
+    },
+    {
+      "origin": 16384,
+      "long_minus_reset": -0.0011051808451074353,
+      "conditional_series_ci_low": -0.0012601168986256404,
+      "conditional_series_ci_high": -0.0009590779244805366
+    },
+    {
+      "origin": 32768,
+      "long_minus_reset": -0.0033502916888028425,
+      "conditional_series_ci_low": -0.003915669127420371,
+      "conditional_series_ci_high": -0.0028371231883734865
+    },
+    {
+      "origin": 65536,
+      "long_minus_reset": -0.006725930465305651,
+      "conditional_series_ci_low": -0.008041345584959624,
+      "conditional_series_ci_high": -0.005509870493144181
+    }
+  ],
+  "bayes": [
+    0.00012097901500468706,
+    5.628692420936685e-05,
+    2.829678143508693e-05,
+    1.2563606208495862e-05,
+    6.852165534772359e-06,
+    3.5915295039691025e-06
+  ],
+  "window_bayes": [
+    0.00012097901500468214,
+    0.00013082355339501923,
+    0.00012944523935029504,
+    0.0001166534165911545,
+    0.00015098522470016485,
+    0.00013987675180455973
+  ],
+  "estimated_worker_compute_usd": 17.755384584890102,
+  "uncertainty": "Two paired seeds. Shading is min/max across seeds; bootstrap resamples series conditional on these trained models.",
+  "confirmation_set_opened": false
+}

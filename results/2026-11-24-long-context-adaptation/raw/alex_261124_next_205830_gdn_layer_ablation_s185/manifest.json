@@ -1,0 +1,250 @@
+{
+  "status": "finished",
+  "run_name": "alex_261124_next_205830_gdn_layer_ablation_s185",
+  "config": {
+    "protocol_version": 1,
+    "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+    "model": {
+      "implementation": "reference",
+      "layers": 4,
+      "width": 256,
+      "heads": 4,
+      "key_dim": 64,
+      "expand_v": 2.0,
+      "intermediate_size": 768,
+      "chunk_size": 64,
+      "dtype": "float32",
+      "precision": "bfloat16",
+      "family": "gated_deltanet"
+    },
+    "data": {
+      "family": "ar1",
+      "bound": 0.95,
+      "noise_std": 0.5,
+      "initial_value": 0.0
+    },
+    "training": {
+      "seeds": [
+        185,
+        186,
+        187
+      ],
+      "data_seed": 410000000,
+      "lengths": [
+        65536
+      ],
+      "tokens_per_step": 65536,
+      "steps": 0,
+      "optimizer": "Adam",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "schedule": "warmup_cosine",
+      "grad_clip": 1.0,
+      "checkpoint_steps": [],
+      "log_every": 100,
+      "reset_every": 0,
+      "warmup_steps": 200,
+      "peak_learning_rates": [
+        0.0001,
+        0.0003
+      ],
+      "seed": 185,
+      "learning_rate": 3e-05,
+      "min_learning_rate": 3e-06,
+      "effective_data_seed": 630000000,
+      "total_training_tokens": 0,
+      "warmup_start_learning_rate": 1e-05,
+      "lifetime_training_tokens": 655360000,
+      "microbatch_chunks": 4
+    },
+    "evaluation": {
+      "origins": [
+        16384,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "window": 2048,
+      "seed": 920000000,
+      "series": 64,
+      "confirmation_set_opened": false,
+      "precision_audit_seed": 185,
+      "precision_audit_origins": [
+        2048,
+        16384
+      ],
+      "precision_audit_series": 4,
+      "during_training_every": 1000,
+      "precision_audit_arm": "lr1e4",
+      "precision_audit_enabled": false,
+      "cohort_size": 512
+    },
+    "modal": {
+      "profile": "alexander-tian",
+      "gpu": "H100",
+      "cpu": 4,
+      "memory_mib": 16384,
+      "max_containers": 10,
+      "timeout_seconds": 900,
+      "train_soft_limit_seconds": 420,
+      "work_soft_limit_seconds": 840,
+      "retries": 0,
+      "budget_usd": 35
+    },
+    "wandb": {
+      "entity": "alexander-tian-ucb",
+      "project": "project182",
+      "username": "alexander-tian"
+    },
+    "source_sha256": {
+      "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+      "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+      "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+      "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+    },
+    "kind": "layer_ablation",
+    "arm": "layer_ablation",
+    "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185/state_step_40000.pt",
+    "resume_sha256": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb",
+    "run_name": "alex_261124_next_205830_gdn_layer_ablation_s185"
+  },
+  "completed_steps": 0,
+  "model": {
+    "parameters": 4484897,
+    "backbone_class": "GatedDeltaNetModel",
+    "recurrent_state_elements_per_series": 131072,
+    "convolution_cache_elements_per_series": 16384,
+    "persistent_state_elements_per_series": 147456,
+    "positional_embedding": "none",
+    "precision": "bfloat16",
+    "state_excludes": "weights, transient activations; Transformer KV cache grows with history",
+    "adaptations": [
+      "continuous input/output projections",
+      "identity rotary for Transformer",
+      "unused vocabulary embedding removed"
+    ]
+  },
+  "source_checkpoint_sha256": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb",
+  "rows": [
+    {
+      "origin": 16384,
+      "condition": "carry",
+      "conditional_mean_mse": 0.0013773673385684237,
+      "delta_vs_carry": 0.0,
+      "paired_series_se": 0.0
+    },
+    {
+      "origin": 16384,
+      "condition": "layer_1",
+      "conditional_mean_mse": 0.0013731829789472554,
+      "delta_vs_carry": -4.184359621168353e-06,
+      "paired_series_se": 7.5290974691763545e-06
+    },
+    {
+      "origin": 16384,
+      "condition": "layer_2",
+      "conditional_mean_mse": 0.0013901174977835914,
+      "delta_vs_carry": 1.2750159215167583e-05,
+      "paired_series_se": 7.3087886502389695e-06
+    },
+    {
+      "origin": 16384,
+      "condition": "layer_3",
+      "conditional_mean_mse": 0.0007815183137448278,
+      "delta_vs_carry": -0.0005958490248235959,
+      "paired_series_se": 0.0002779588638245294
+    },
+    {
+      "origin": 16384,
+      "condition": "layer_4",
+      "conditional_mean_mse": 0.002861197899654125,
+      "delta_vs_carry": 0.0014838305610857011,
+      "paired_series_se": 0.0004880517366242105
+    },
+    {
+      "origin": 16384,
+      "condition": "all_recurrent",
+      "conditional_mean_mse": 0.00024489858792560453,
+      "delta_vs_carry": -0.0011324687506428191,
+      "paired_series_se": 0.00026580989931315545
+    },
+    {
+      "origin": 16384,
+      "condition": "conv_only",
+      "conditional_mean_mse": 0.001388852303195334,
+      "delta_vs_carry": 1.1484964626910281e-05,
+      "paired_series_se": 5.589801576676512e-06
+    },
+    {
+      "origin": 16384,
+      "condition": "all_states",
+      "conditional_mean_mse": 0.0002473331684722254,
+      "delta_vs_carry": -0.0011300341700961982,
+      "paired_series_se": 0.00026593475927703627
+    },
+    {
+      "origin": 65536,
+      "condition": "carry",
+      "conditional_mean_mse": 0.00461282818985087,
+      "delta_vs_carry": 0.0,
+      "paired_series_se": 0.0
+    },
+    {
+      "origin": 65536,
+      "condition": "layer_1",
+      "conditional_mean_mse": 0.004608140661377106,
+      "delta_vs_carry": -4.6875284737634925e-06,
+      "paired_series_se": 8.038788920696662e-06
+    },
+    {
+      "origin": 65536,
+      "condition": "layer_2",
+      "conditional_mean_mse": 0.004629428057851232,
+      "delta_vs_carry": 1.6599868000363326e-05,
+      "paired_series_se": 2.1202658497830616e-05
+    },
+    {
+      "origin": 65536,
+      "condition": "layer_3",
+      "conditional_mean_mse": 0.0011636321786723566,
+      "delta_vs_carry": -0.003449196011178513,
+      "paired_series_se": 0.0010332732826283898
+    },
+    {
+      "origin": 65536,
+      "condition": "layer_4",
+      "conditional_mean_mse": 0.0027500472122517234,
+      "delta_vs_carry": -0.0018627809775991462,
+      "paired_series_se": 0.001095380428503297
+    },
+    {
+      "origin": 65536,
+      "condition": "all_recurrent",
+      "conditional_mean_mse": 0.00027067305489336495,
+      "delta_vs_carry": -0.004342155134957504,
+      "paired_series_se": 0.0011237168788072935
+    },
+    {
+      "origin": 65536,
+      "condition": "conv_only",
+      "conditional_mean_mse": 0.004639656252925419,
+      "delta_vs_carry": 2.682806307454926e-05,
+      "paired_series_se": 1.985989319498643e-05
+    },
+    {
+      "origin": 65536,
+      "condition": "all_states",
+      "conditional_mean_mse": 0.00027749457267913706,
+      "delta_vs_carry": -0.004335333617171732,
+      "paired_series_se": 0.001123273333237171
+    }
+  ],
+  "zero_state_vs_fresh_prediction_mse": 0.0,
+  "elapsed_seconds": 160.192531013
+}

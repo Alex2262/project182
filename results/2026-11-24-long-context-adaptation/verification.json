@@ -1,0 +1,126 @@
+{
+  "all_complete": true,
+  "jobs": 10,
+  "training_jobs": 8,
+  "checkpoint_evaluations": 24,
+  "ablation_jobs": 2,
+  "source_hashes_verified": true,
+  "saved_metrics_recomputed": true,
+  "full_equals_window_at_2k": true,
+  "identical_validation_series": true,
+  "ablation_checks": [
+    {
+      "seed": 185,
+      "all_states_equals_fresh": true
+    },
+    {
+      "seed": 186,
+      "all_states_equals_fresh": true
+    }
+  ],
+  "checks": [
+    {
+      "run": "alex_261124_next_205830_gdn_fresh_s185",
+      "status": "finished",
+      "steps": 80000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        40000,
+        60000,
+        80000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_fresh_s186",
+      "status": "finished",
+      "steps": 80000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        40000,
+        60000,
+        80000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_tf_fresh_s185",
+      "status": "finished",
+      "steps": 80000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        40000,
+        60000,
+        80000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_tf_fresh_s186",
+      "status": "finished",
+      "steps": 80000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        40000,
+        60000,
+        80000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_long_adaptation_s185",
+      "status": "finished",
+      "steps": 5000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        1000,
+        2500,
+        5000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_long_adaptation_s186",
+      "status": "finished",
+      "steps": 5000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        1000,
+        2500,
+        5000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_reset_adaptation_s185",
+      "status": "finished",
+      "steps": 5000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        1000,
+        2500,
+        5000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_reset_adaptation_s186",
+      "status": "finished",
+      "steps": 5000,
+      "source_hashes_verified": true,
+      "checkpoints": [
+        1000,
+        2500,
+        5000
+      ]
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_layer_ablation_s185",
+      "status": "finished",
+      "steps": 0,
+      "source_hashes_verified": true,
+      "checkpoints": []
+    },
+    {
+      "run": "alex_261124_next_205830_gdn_layer_ablation_s186",
+      "status": "finished",
+      "steps": 0,
+      "source_hashes_verified": true,
+      "checkpoints": []
+    }
+  ],
+  "containers_remaining": 0
+}

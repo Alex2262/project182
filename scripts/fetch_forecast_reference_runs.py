@@ -37,6 +37,8 @@ def main():
                 for kind,ext in [('metrics','json'),('predictions','npz')]:read(f'{kind}_step_{step}.{ext}',optional=True)
             read('precision_audit.json',optional=True)
             read('quick_validation.json',optional=True)
+            if c.get('kind')=='layer_ablation':
+                for filename in ['ablation_predictions.npz','ablation_metrics.json','state_norms.json']:read(filename,optional=True)
             for filename,sha in c['source_sha256'].items():
                 assert hashlib.sha256((out/filename).read_bytes()).hexdigest()==sha
         return dict(run=name,status=manifest['status'],step=manifest['completed_steps'],

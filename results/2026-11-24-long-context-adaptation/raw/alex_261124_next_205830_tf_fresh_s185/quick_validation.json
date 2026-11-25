@@ -1,0 +1,66 @@
+[
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0007309705573109091,
+    "series_se": 0.00012435533529429717,
+    "step": 10000,
+    "learning_rate": 9.714906287196108e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0006552193529797035,
+    "series_se": 4.669307105651133e-05,
+    "step": 20000,
+    "learning_rate": 8.775547842348733e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0004143891761599199,
+    "series_se": 3.1884371115524326e-05,
+    "step": 30000,
+    "learning_rate": 7.324967473916991e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.00022767939816065622,
+    "series_se": 2.3129834060682927e-05,
+    "step": 40000,
+    "learning_rate": 5.589560436055269e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.00021668646286721792,
+    "series_se": 2.4820944794509574e-05,
+    "step": 50000,
+    "learning_rate": 3.840175504845361e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0001573582878861332,
+    "series_se": 1.5836432312327062e-05,
+    "step": 60000,
+    "learning_rate": 2.3498430167885847e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.00015220555200555784,
+    "series_se": 1.2909736786026109e-05,
+    "step": 70000,
+    "learning_rate": 1.3511624263866776e-05
+  },
+  {
+    "origin": 2048,
+    "series": 512,
+    "conditional_mean_mse": 0.0001631187503171318,
+    "series_se": 1.4600967670893514e-05,
+    "step": 80000,
+    "learning_rate": 1e-05
+  }
+]

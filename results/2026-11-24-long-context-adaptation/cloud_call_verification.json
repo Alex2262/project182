@@ -1,0 +1,46 @@
+[
+  {
+    "run": "alex_261124_next_205830_gdn_fresh_s185",
+    "remote_status": "finished",
+    "steps": 80000
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_fresh_s186",
+    "remote_status": "finished",
+    "steps": 80000
+  },
+  {
+    "run": "alex_261124_next_205830_tf_fresh_s185",
+    "local_status": "finished"
+  },
+  {
+    "run": "alex_261124_next_205830_tf_fresh_s186",
+    "remote_status": "finished",
+    "steps": 80000
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_long_adaptation_s185",
+    "local_status": "finished"
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_long_adaptation_s186",
+    "local_status": "finished"
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_reset_adaptation_s185",
+    "remote_status": "finished",
+    "steps": 5000
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_reset_adaptation_s186",
+    "local_status": "finished"
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_layer_ablation_s185",
+    "local_status": "finished"
+  },
+  {
+    "run": "alex_261124_next_205830_gdn_layer_ablation_s186",
+    "local_status": "finished"
+  }
+]

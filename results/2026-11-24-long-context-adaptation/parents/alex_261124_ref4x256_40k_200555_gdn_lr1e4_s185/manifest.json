@@ -1,0 +1,460 @@
+{
+  "status": "finished",
+  "run_name": "alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185",
+  "completed_steps": 40000,
+  "config": {
+    "protocol_version": 1,
+    "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+    "model": {
+      "implementation": "reference",
+      "layers": 4,
+      "width": 256,
+      "heads": 4,
+      "key_dim": 64,
+      "expand_v": 2.0,
+      "intermediate_size": 768,
+      "chunk_size": 64,
+      "dtype": "float32",
+      "precision": "bfloat16",
+      "family": "gated_deltanet"
+    },
+    "data": {
+      "family": "ar1",
+      "bound": 0.95,
+      "noise_std": 0.5,
+      "initial_value": 0.0
+    },
+    "training": {
+      "seeds": [
+        185,
+        186,
+        187
+      ],
+      "data_seed": 410000000,
+      "lengths": [
+        64,
+        2048
+      ],
+      "tokens_per_step": 8192,
+      "steps": 40000,
+      "optimizer": "Adam",
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "schedule": "warmup_cosine",
+      "grad_clip": 1.0,
+      "checkpoint_steps": [
+        10000,
+        20000,
+        40000
+      ],
+      "log_every": 100,
+      "reset_every": 0,
+      "warmup_steps": 1000,
+      "peak_learning_rates": [
+        0.0001,
+        0.0003
+      ],
+      "seed": 185,
+      "learning_rate": 0.0001,
+      "min_learning_rate": 1e-05,
+      "effective_data_seed": 410300000,
+      "total_training_tokens": 327680000
+    },
+    "evaluation": {
+      "origins": [
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "policies": [
+        "full",
+        "window2048"
+      ],
+      "window": 2048,
+      "seed": 920000000,
+      "series": 512,
+      "confirmation_set_opened": false,
+      "precision_audit_seed": 185,
+      "precision_audit_origins": [
+        2048,
+        16384
+      ],
+      "precision_audit_series": 4,
+      "during_training_every": 10000,
+      "precision_audit_arm": "lr1e4"
+    },
+    "modal": {
+      "profile": "alexander-tian",
+      "gpu": "H100",
+      "cpu": 4,
+      "memory_mib": 16384,
+      "max_containers": 10,
+      "timeout_seconds": 2700,
+      "train_soft_limit_seconds": 2160,
+      "work_soft_limit_seconds": 2600,
+      "retries": 0,
+      "budget_usd": 40
+    },
+    "wandb": {
+      "entity": "alexander-tian-ucb",
+      "project": "project182",
+      "username": "alexander-tian"
+    },
+    "source_sha256": {
+      "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+      "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+      "forecast_reference_train.py": "71596bb677bf57cde3d344d3164d049dee5ec08646a88120c17c0eedc7b58b64"
+    },
+    "arm": "lr1e4",
+    "run_name": "alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185"
+  },
+  "model": {
+    "parameters": 4484897,
+    "backbone_class": "GatedDeltaNetModel",
+    "recurrent_state_elements_per_series": 131072,
+    "convolution_cache_elements_per_series": 16384,
+    "persistent_state_elements_per_series": 147456,
+    "positional_embedding": "none",
+    "precision": "bfloat16",
+    "state_excludes": "weights, transient activations; Transformer KV cache grows with history",
+    "adaptations": [
+      "continuous input/output projections",
+      "identity rotary for Transformer",
+      "unused vocabulary embedding removed"
+    ]
+  },
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "versions": {
+    "torch": "2.10.0+cu128",
+    "transformers": "5.6.2",
+    "fla-core": "0.6.0",
+    "triton": "3.7.1"
+  },
+  "triton_f32_default": "ieee",
+  "confirmation_set_opened": false,
+  "wandb_url": "https://forge.coreweave.com/wandb/alexander-tian-ucb/project182/runs/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185",
+  "training_elapsed_seconds": 1619.802616733,
+  "checkpoints": {
+    "10000": "2b390c923a43e9e065f6bc5ee68f11127591826295615044c2e15c39141c660f",
+    "20000": "2eb1edcff6a100a55128b227493f6ecca5b6f72797dbf2f6fdf74671cadbb6d5",
+    "40000": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb"
+  },
+  "quick_validation": [
+    {
+      "origin": 2048,
+      "series": 512,
+      "conditional_mean_mse": 0.0014956605837833348,
+      "series_se": 0.00021404618276968254,
+      "step": 10000,
+      "learning_rate": 8.868483269890937e-05
+    },
+    {
+      "origin": 2048,
+      "series": 512,
+      "conditional_mean_mse": 0.0014146678035727475,
+      "series_se": 9.507257176338513e-05,
+      "step": 20000,
+      "learning_rate": 5.6813824773972656e-05
+    },
+    {
+      "origin": 2048,
+      "series": 512,
+      "conditional_mean_mse": 0.00021889703458323478,
+      "series_se": 1.8785237232916468e-05,
+      "step": 30000,
+      "learning_rate": 2.382807444854241e-05
+    },
+    {
+      "origin": 2048,
+      "series": 512,
+      "conditional_mean_mse": 0.0002074765361869855,
+      "series_se": 1.917217025501893e-05,
+      "step": 40000,
+      "learning_rate": 1e-05
+    }
+  ],
+  "evaluations": {
+    "40000": {
+      "status": "finished",
+      "rows": [
+        {
+          "step": 40000,
+          "origin": 2048,
+          "full_error": 0.0002074765361869855,
+          "window_error": 0.0002074765361869855,
+          "window_minus_full": 0.0,
+          "paired_series_se": 0.0,
+          "full_excess_vs_full_bayes": 8.245372327439826e-05,
+          "window_excess_vs_full_bayes": 8.245372327439826e-05,
+          "full_bayes_error": 0.00012097901500468706,
+          "window_bayes_error": 0.00012097901500468224
+        },
+        {
+          "step": 40000,
+          "origin": 4096,
+          "full_error": 0.00015268960297255412,
+          "window_error": 0.00018854556290755515,
+          "window_minus_full": 3.5855959935001e-05,
+          "paired_series_se": 1.9084193368319314e-05,
+          "full_excess_vs_full_bayes": 0.00011589220135105198,
+          "window_excess_vs_full_bayes": 0.0001396878819249049,
+          "full_bayes_error": 5.628692420936685e-05,
+          "window_bayes_error": 0.0001308235533950194
+        },
+        {
+          "step": 40000,
+          "origin": 8192,
+          "full_error": 0.0005346097490822046,
+          "window_error": 0.00020039265713635897,
+          "window_minus_full": -0.0003342170919458455,
+          "paired_series_se": 3.991859410258257e-05,
+          "full_excess_vs_full_bayes": 0.0004725923799229941,
+          "window_excess_vs_full_bayes": 0.0001787529384220309,
+          "full_bayes_error": 2.829678143508693e-05,
+          "window_bayes_error": 0.00012944523935029496
+        },
+        {
+          "step": 40000,
+          "origin": 16384,
+          "full_error": 0.001204219018728696,
+          "window_error": 0.0001970753664324254,
+          "window_minus_full": -0.0010071436522962707,
+          "paired_series_se": 8.328456887767084e-05,
+          "full_excess_vs_full_bayes": 0.001180367999491167,
+          "window_excess_vs_full_bayes": 0.00018699467551039226,
+          "full_bayes_error": 1.2563606208495862e-05,
+          "window_bayes_error": 0.00011665341659115454
+        },
+        {
+          "step": 40000,
+          "origin": 32768,
+          "full_error": 0.002762569856792616,
+          "window_error": 0.0002196018322186855,
+          "window_minus_full": -0.00254296802457393,
+          "paired_series_se": 0.00020321023013387002,
+          "full_excess_vs_full_bayes": 0.0027599345369973315,
+          "window_excess_vs_full_bayes": 0.00020872598334670972,
+          "full_bayes_error": 6.852165534772359e-06,
+          "window_bayes_error": 0.0001509852247001649
+        },
+        {
+          "step": 40000,
+          "origin": 65536,
+          "full_error": 0.004049855826144346,
+          "window_error": 0.00022330883999509027,
+          "window_minus_full": -0.0038265469861492553,
+          "paired_series_se": 0.0003575214741843907,
+          "full_excess_vs_full_bayes": 0.004038847757482209,
+          "window_excess_vs_full_bayes": 0.00021783289385543796,
+          "full_bayes_error": 3.5915295039691025e-06,
+          "window_bayes_error": 0.00013987675180455965
+        }
+      ],
+      "full_equals_window_at_2048": true
+    },
+    "20000": {
+      "status": "finished",
+      "rows": [
+        {
+          "step": 20000,
+          "origin": 2048,
+          "full_error": 0.0014146678035727475,
+          "window_error": 0.0014146678035727475,
+          "window_minus_full": 0.0,
+          "paired_series_se": 0.0,
+          "full_excess_vs_full_bayes": 0.0013075355358940762,
+          "window_excess_vs_full_bayes": 0.0013075355358940762,
+          "full_bayes_error": 0.00012097901500468706,
+          "window_bayes_error": 0.00012097901500468224
+        },
+        {
+          "step": 20000,
+          "origin": 4096,
+          "full_error": 0.0012697335642797383,
+          "window_error": 0.001385184552050744,
+          "window_minus_full": 0.00011545098777100563,
+          "paired_series_se": 3.8535283641673804e-05,
+          "full_excess_vs_full_bayes": 0.0011949425234979941,
+          "window_excess_vs_full_bayes": 0.0013051622276262153,
+          "full_bayes_error": 5.628692420936685e-05,
+          "window_bayes_error": 0.0001308235533950194
+        },
+        {
+          "step": 20000,
+          "origin": 8192,
+          "full_error": 0.0013962734907421814,
+          "window_error": 0.0014677303394205943,
+          "window_minus_full": 7.145684867841266e-05,
+          "paired_series_se": 7.45742880606082e-05,
+          "full_excess_vs_full_bayes": 0.0013385609021083875,
+          "window_excess_vs_full_bayes": 0.001439561019321533,
+          "full_bayes_error": 2.829678143508693e-05,
+          "window_bayes_error": 0.00012944523935029496
+        },
+        {
+          "step": 20000,
+          "origin": 16384,
+          "full_error": 0.0014546325024750889,
+          "window_error": 0.0012117241132253954,
+          "window_minus_full": -0.0002429083892496934,
+          "paired_series_se": 7.81638592756291e-05,
+          "full_excess_vs_full_bayes": 0.0014220180985723644,
+          "window_excess_vs_full_bayes": 0.0011940028260364285,
+          "full_bayes_error": 1.2563606208495862e-05,
+          "window_bayes_error": 0.00011665341659115454
+        },
+        {
+          "step": 20000,
+          "origin": 32768,
+          "full_error": 0.0014651934960584353,
+          "window_error": 0.0013230352592563273,
+          "window_minus_full": -0.0001421582368021078,
+          "paired_series_se": 9.599358241889148e-05,
+          "full_excess_vs_full_bayes": 0.0014617688879212994,
+          "window_excess_vs_full_bayes": 0.0013091900157722104,
+          "full_bayes_error": 6.852165534772359e-06,
+          "window_bayes_error": 0.0001509852247001649
+        },
+        {
+          "step": 20000,
+          "origin": 65536,
+          "full_error": 0.0014582862410297832,
+          "window_error": 0.0012777752443875975,
+          "window_minus_full": -0.0001805109966421857,
+          "paired_series_se": 8.520981422911863e-05,
+          "full_excess_vs_full_bayes": 0.0014629346167010734,
+          "window_excess_vs_full_bayes": 0.001277046102676608,
+          "full_bayes_error": 3.5915295039691025e-06,
+          "window_bayes_error": 0.00013987675180455965
+        }
+      ],
+      "full_equals_window_at_2048": true
+    },
+    "10000": {
+      "status": "finished",
+      "rows": [
+        {
+          "step": 10000,
+          "origin": 2048,
+          "full_error": 0.0014956605837833348,
+          "window_error": 0.0014956605837833348,
+          "window_minus_full": 0.0,
+          "paired_series_se": 0.0,
+          "full_excess_vs_full_bayes": 0.0013482662094987858,
+          "window_excess_vs_full_bayes": 0.0013482662094987858,
+          "full_bayes_error": 0.00012097901500468706,
+          "window_bayes_error": 0.00012097901500468224
+        },
+        {
+          "step": 10000,
+          "origin": 4096,
+          "full_error": 0.0014823615498738003,
+          "window_error": 0.0010748525596421489,
+          "window_minus_full": -0.00040750899023165134,
+          "paired_series_se": 6.349808506969432e-05,
+          "full_excess_vs_full_bayes": 0.0013948817706079327,
+          "window_excess_vs_full_bayes": 0.0009937469195398228,
+          "full_bayes_error": 5.628692420936685e-05,
+          "window_bayes_error": 0.0001308235533950194
+        },
+        {
+          "step": 10000,
+          "origin": 8192,
+          "full_error": 0.002446657789303729,
+          "window_error": 0.0013608063190741497,
+          "window_minus_full": -0.0010858514702295787,
+          "paired_series_se": 0.00010033620943156761,
+          "full_excess_vs_full_bayes": 0.0023781589263752578,
+          "window_excess_vs_full_bayes": 0.0013112835219739887,
+          "full_bayes_error": 2.829678143508693e-05,
+          "window_bayes_error": 0.00012944523935029496
+        },
+        {
+          "step": 10000,
+          "origin": 16384,
+          "full_error": 0.0026845738888289635,
+          "window_error": 0.001151360108202431,
+          "window_minus_full": -0.0015332137806265324,
+          "paired_series_se": 0.0001449879283760896,
+          "full_excess_vs_full_bayes": 0.002632838627121022,
+          "window_excess_vs_full_bayes": 0.001120759756049865,
+          "full_bayes_error": 1.2563606208495862e-05,
+          "window_bayes_error": 0.00011665341659115454
+        },
+        {
+          "step": 10000,
+          "origin": 32768,
+          "full_error": 0.0031876478416537333,
+          "window_error": 0.0010758942830249559,
+          "window_minus_full": -0.002111753558628777,
+          "paired_series_se": 0.00020904427933570634,
+          "full_excess_vs_full_bayes": 0.003177645160898577,
+          "window_excess_vs_full_bayes": 0.00106500060772488,
+          "full_bayes_error": 6.852165534772359e-06,
+          "window_bayes_error": 0.0001509852247001649
+        },
+        {
+          "step": 10000,
+          "origin": 65536,
+          "full_error": 0.004948987928468789,
+          "window_error": 0.0013850971496163845,
+          "window_minus_full": -0.0035638907788524046,
+          "paired_series_se": 0.0004029439020137488,
+          "full_excess_vs_full_bayes": 0.004924040168604067,
+          "window_excess_vs_full_bayes": 0.0013648227207775018,
+          "full_bayes_error": 3.5915295039691025e-06,
+          "window_bayes_error": 0.00013987675180455965
+        }
+      ],
+      "full_equals_window_at_2048": true
+    }
+  },
+  "precision_audit": {
+    "scope": "4 series at 2k and 16k; not a 64k precision guarantee",
+    "rows": [
+      {
+        "origin": 2048,
+        "prediction_mse": 2.0300962548860935e-07,
+        "max_abs": 0.0008371360599994659,
+        "bf16": [
+          0.020073870196938515,
+          0.43711596727371216,
+          0.20736269652843475,
+          0.03314347192645073
+        ],
+        "fp32": [
+          0.019777746871113777,
+          0.4369625151157379,
+          0.2073604315519333,
+          0.03230633586645126
+        ]
+      },
+      {
+        "origin": 16384,
+        "prediction_mse": 1.4713996897459947e-06,
+        "max_abs": 0.0022661983966827393,
+        "bf16": [
+          -0.04621812328696251,
+          -0.3205077350139618,
+          -0.1245710700750351,
+          0.3884679973125458
+        ],
+        "fp32": [
+          -0.04608006030321121,
+          -0.3201690912246704,
+          -0.1237860843539238,
+          0.3907341957092285
+        ]
+      }
+    ],
+    "status": "finished"
+  },
+  "elapsed_seconds": 2077.493409816
+}

@@ -1,6 +1,7 @@
 # Experiment results
 
-- **[November 24: 4×256 reference models, 40k steps](2026-11-24-reference4x256-40k/FINDINGS.md)** — latest results: 12 completed runs, warmup/cosine schedules, full versus latest-2k histories through 64k, and 36 checkpoint evaluations.
+- **[November 24: long-context adaptation versus matched reset training](2026-11-24-long-context-adaptation/README.md)** — latest results: ten completed jobs, fresh 80k baselines, two paired adaptation seeds, layer resets, verified cloud completion, and report-ready PDF plots.
+- **[November 24: 4×256 reference models, 40k steps](2026-11-24-reference4x256-40k/FINDINGS.md)** — 12 completed runs, warmup/cosine schedules, full versus latest-2k histories through 64k, and 36 checkpoint evaluations.
 - **[November 24: 6×256 reference models, 20k steps](2026-11-24-reference6x256/FINDINGS.md)** — eight runs, constant-LR controls and seed-dependent long-history behavior.
 - **[November 24: learning curves across earlier model sizes](2026-11-24-learning-curves/README.md)** — comparable fixed-history validation and training curves; different architectures and schedules prevent a depth-only interpretation.
 - **[November 24: legacy 64k evaluation](2026-11-24-forecast-64k/README.md)** — extended Transformer and GDN results.

@@ -1,0 +1,1241 @@
+{
+  "batch_name": "alex_261124_next_205830",
+  "budget_usd": 35,
+  "configs": [
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 80000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          40000,
+          60000,
+          80000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 1000,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 185,
+        "learning_rate": 0.0001,
+        "min_learning_rate": 1e-05,
+        "effective_data_seed": 410300000,
+        "total_training_tokens": 655360000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 10000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3900,
+        "train_soft_limit_seconds": 3420,
+        "work_soft_limit_seconds": 3840,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "fresh",
+      "arm": "fresh",
+      "run_name": "alex_261124_next_205830_gdn_fresh_s185"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 80000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          40000,
+          60000,
+          80000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 1000,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 186,
+        "learning_rate": 0.0001,
+        "min_learning_rate": 1e-05,
+        "effective_data_seed": 410400000,
+        "total_training_tokens": 655360000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 10000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3900,
+        "train_soft_limit_seconds": 3420,
+        "work_soft_limit_seconds": 3840,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "fresh",
+      "arm": "fresh",
+      "run_name": "alex_261124_next_205830_gdn_fresh_s186"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 80000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          40000,
+          60000,
+          80000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 1000,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 185,
+        "learning_rate": 0.0001,
+        "min_learning_rate": 1e-05,
+        "effective_data_seed": 410300000,
+        "total_training_tokens": 655360000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 10000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 2400,
+        "train_soft_limit_seconds": 1920,
+        "work_soft_limit_seconds": 2340,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "fresh",
+      "arm": "fresh",
+      "run_name": "alex_261124_next_205830_tf_fresh_s185"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "transformer_nope"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          64,
+          2048
+        ],
+        "tokens_per_step": 8192,
+        "steps": 80000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          40000,
+          60000,
+          80000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 1000,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 186,
+        "learning_rate": 0.0001,
+        "min_learning_rate": 1e-05,
+        "effective_data_seed": 410400000,
+        "total_training_tokens": 655360000
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 10000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 2400,
+        "train_soft_limit_seconds": 1920,
+        "work_soft_limit_seconds": 2340,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "fresh",
+      "arm": "fresh",
+      "run_name": "alex_261124_next_205830_tf_fresh_s186"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 5000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          1000,
+          2500,
+          5000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 185,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630000000,
+        "total_training_tokens": 327680000,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3000,
+        "train_soft_limit_seconds": 2520,
+        "work_soft_limit_seconds": 2940,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "long_adaptation",
+      "arm": "long_adaptation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185/state_step_40000.pt",
+      "resume_sha256": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb",
+      "run_name": "alex_261124_next_205830_gdn_long_adaptation_s185"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 5000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          1000,
+          2500,
+          5000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 186,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630100000,
+        "total_training_tokens": 327680000,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3000,
+        "train_soft_limit_seconds": 2520,
+        "work_soft_limit_seconds": 2940,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "long_adaptation",
+      "arm": "long_adaptation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s186/state_step_40000.pt",
+      "resume_sha256": "8e45eb75935ab77930b348ae4fd09a16f5937127fa8224334d1247ce2637efc1",
+      "run_name": "alex_261124_next_205830_gdn_long_adaptation_s186"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 5000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          1000,
+          2500,
+          5000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 185,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630000000,
+        "total_training_tokens": 327680000,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3000,
+        "train_soft_limit_seconds": 2520,
+        "work_soft_limit_seconds": 2940,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "reset_adaptation",
+      "arm": "reset_adaptation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185/state_step_40000.pt",
+      "resume_sha256": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb",
+      "run_name": "alex_261124_next_205830_gdn_reset_adaptation_s185"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 5000,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [
+          1000,
+          2500,
+          5000
+        ],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 186,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630100000,
+        "total_training_tokens": 327680000,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          2048,
+          4096,
+          8192,
+          16384,
+          32768,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 512,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 3000,
+        "train_soft_limit_seconds": 2520,
+        "work_soft_limit_seconds": 2940,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "reset_adaptation",
+      "arm": "reset_adaptation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s186/state_step_40000.pt",
+      "resume_sha256": "8e45eb75935ab77930b348ae4fd09a16f5937127fa8224334d1247ce2637efc1",
+      "run_name": "alex_261124_next_205830_gdn_reset_adaptation_s186"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 0,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 185,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630000000,
+        "total_training_tokens": 0,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          16384,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 64,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false,
+        "cohort_size": 512
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 900,
+        "train_soft_limit_seconds": 420,
+        "work_soft_limit_seconds": 840,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "layer_ablation",
+      "arm": "layer_ablation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s185/state_step_40000.pt",
+      "resume_sha256": "41d4ef6b3d54df3f1d5d1685eb4e0d212320298eef13049718c18f0edb77eaeb",
+      "run_name": "alex_261124_next_205830_gdn_layer_ablation_s185"
+    },
+    {
+      "protocol_version": 1,
+      "purpose": "Assess convergence and long-history generalization at 4x256 across fresh seeds and peak learning rates",
+      "model": {
+        "implementation": "reference",
+        "layers": 4,
+        "width": 256,
+        "heads": 4,
+        "key_dim": 64,
+        "expand_v": 2.0,
+        "intermediate_size": 768,
+        "chunk_size": 64,
+        "dtype": "float32",
+        "precision": "bfloat16",
+        "family": "gated_deltanet"
+      },
+      "data": {
+        "family": "ar1",
+        "bound": 0.95,
+        "noise_std": 0.5,
+        "initial_value": 0.0
+      },
+      "training": {
+        "seeds": [
+          185,
+          186,
+          187
+        ],
+        "data_seed": 410000000,
+        "lengths": [
+          65536
+        ],
+        "tokens_per_step": 65536,
+        "steps": 0,
+        "optimizer": "Adam",
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "schedule": "warmup_cosine",
+        "grad_clip": 1.0,
+        "checkpoint_steps": [],
+        "log_every": 100,
+        "reset_every": 0,
+        "warmup_steps": 200,
+        "peak_learning_rates": [
+          0.0001,
+          0.0003
+        ],
+        "seed": 186,
+        "learning_rate": 3e-05,
+        "min_learning_rate": 3e-06,
+        "effective_data_seed": 630100000,
+        "total_training_tokens": 0,
+        "warmup_start_learning_rate": 1e-05,
+        "lifetime_training_tokens": 655360000,
+        "microbatch_chunks": 4
+      },
+      "evaluation": {
+        "origins": [
+          16384,
+          65536
+        ],
+        "policies": [
+          "full",
+          "window2048"
+        ],
+        "window": 2048,
+        "seed": 920000000,
+        "series": 64,
+        "confirmation_set_opened": false,
+        "precision_audit_seed": 185,
+        "precision_audit_origins": [
+          2048,
+          16384
+        ],
+        "precision_audit_series": 4,
+        "during_training_every": 1000,
+        "precision_audit_arm": "lr1e4",
+        "precision_audit_enabled": false,
+        "cohort_size": 512
+      },
+      "modal": {
+        "profile": "alexander-tian",
+        "gpu": "H100",
+        "cpu": 4,
+        "memory_mib": 16384,
+        "max_containers": 10,
+        "timeout_seconds": 900,
+        "train_soft_limit_seconds": 420,
+        "work_soft_limit_seconds": 840,
+        "retries": 0,
+        "budget_usd": 35
+      },
+      "wandb": {
+        "entity": "alexander-tian-ucb",
+        "project": "project182",
+        "username": "alexander-tian"
+      },
+      "source_sha256": {
+        "forecast_data.py": "e1bd558210442bd39dcf31bfec7c88aee8bbd4b8e45346228464ce9656c3a80e",
+        "forecast_reference.py": "9521b9b81fd3009b8ae1b9919b1c93cc0a38554f8106b8272f11253636b8de67",
+        "forecast_reference_train.py": "aaa7273f1e1f7137494ab4af539913e8cf1d64632384f1d7747b3c2a02a10a4e",
+        "forecast_adaptation.py": "b7ba2e8af1a72551b4189b49b0c696a812bf8e370edfdfb194fe5bf2eb1cde94"
+      },
+      "kind": "layer_ablation",
+      "arm": "layer_ablation",
+      "resume_from": "/artifacts/forecast_reference_train/alex_261124_ref4x256_40k_200555_gdn_lr1e4_s186/state_step_40000.pt",
+      "resume_sha256": "8e45eb75935ab77930b348ae4fd09a16f5937127fa8224334d1247ce2637efc1",
+      "run_name": "alex_261124_next_205830_gdn_layer_ablation_s186"
+    }
+  ],
+  "workers": 10,
+  "concurrent_workers": 10,
+  "estimated_max_compute_usd": 31.305586400000003,
+  "spec": {
+    "seeds": [
+      185,
+      186
+    ],
+    "parent_batch": "alex_261124_ref4x256_40k_200555",
+    "fresh": {
+      "steps": 80000,
+      "architectures": [
+        "gated_deltanet",
+        "transformer_nope"
+      ],
+      "peak_lr": 0.0001,
+      "warmup_steps": 1000,
+      "final_lr": 1e-05
+    },
+    "adaptation": {
+      "steps": 5000,
+      "source_checkpoint_step": 40000,
+      "tokens_per_step": 65536,
+      "arms": [
+        "long_adaptation",
+        "reset_adaptation"
+      ],
+      "reset_control_chunk": 2048,
+      "reset_control_microbatch_chunks": 4,
+      "restore_optimizer": true,
+      "warmup_steps": 200,
+      "initial_lr": 1e-05,
+      "peak_lr": 3e-05,
+      "final_lr": 3e-06
+    },
+    "ablation": {
+      "origins": [
+        16384,
+        65536
+      ],
+      "final_suffix": 2048,
+      "series": 64,
+      "cohort_size": 512,
+      "conditions": [
+        "carry",
+        "layer_1",
+        "layer_2",
+        "layer_3",
+        "layer_4",
+        "all_recurrent",
+        "conv_only",
+        "all_states"
+      ]
+    },
+    "modal": {
+      "profile": "alexander-tian",
+      "gpu": "H100",
+      "jobs": 10,
+      "budget_usd": 35,
+      "precision_experiments": false,
+      "automatic_retries": 0
+    }
+  },
+  "git_commit": "da68bb270f5e4ee6d430878541450ed5bd74f65f",
+  "launcher_sha256": "35cdf0a3f18dccebd11b89b7e2783b0b9932cc0e696f8eae028ba667177a2643"
+}
